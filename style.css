@@ -1,0 +1,181 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    color: white;
+    cursor: default;
+    overflow-x: hidden;
+}
+
+.home{
+    height: 100vh;
+    background: #13072e;
+}
+
+nav{
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+}
+
+.nav-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo{
+    height: 80px;
+}
+
+.nav-icon p{
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.nav-text{
+    margin-top: 14px; 
+    display: flex;
+}
+
+.nav-list{
+    list-style: none;
+    display: flex;
+}
+
+.nav-item{
+    margin-left: 5vw;
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+
+.nav-item a{
+    color: white;
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+.nav-item a:hover{
+    opacity: 1;
+    font-weight: 400;
+}
+
+.nav-button{
+    display: flex;
+}
+
+.nav-button .btn{
+    font-size: 1.25rem;
+    height: 2.5rem;
+    width: 8rem;
+    margin-right: 2vw;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    background: white;
+    transition: all 0.3s ease-in-out; 
+}
+
+.btn i{
+    color: black;
+    border: none;
+    margin-left: 10px;
+}
+
+.btn:hover{
+    background: transparent;
+    color: white;
+    font-weight: 400;
+}
+
+.btn:hover i{
+    color: white;
+}
+
+.home-text{
+    height: 75vh;
+    width: 95vw;
+    background:linear-gradient(135deg, #13072e, #3f2182) ;
+    margin-top: 50px;
+    margin-left: 2.5vw;
+    border-radius: 30px;
+    display: flex;
+}
+
+.top-button{
+    background-color: #b3aaff;
+    border: none;
+    width: 18rem;
+    height: 2.5rem;
+    border-radius: 30px;
+    margin-top: 12vh;
+    margin-left: 6vw;
+    font-size: 1.15rem;
+    font-weight: 400;
+}
+
+.mid-text{
+    width: 40vw;
+    margin-left: 6vw;
+    margin-top: 50px;
+}
+
+.mid-text p{
+    font-size: 1.15rem;
+    line-height: 1.75rem;
+}
+
+.explore-btn{
+    margin-left: 6vw;
+    margin-top: 50px;
+    font-size: 1.255rem;
+    height: 2.5rem;
+    width: 10rem;
+    margin-right: 2vw;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out; 
+}
+
+.explore-btn i{
+    color: black;
+    border: none;
+    margin-left: 10px;
+}
+
+.explore-btn i{
+    color: black;
+    border: none;
+    margin-left: 10px;
+}
+
+.explore-btn:hover{
+    background: rgb(255, 219, 126);
+}
+
+.home-image{
+    width: 500px;
+    margin-left: 230px;
+    margin-top: 30px;
+}
+
+.home-image {
+    animation: mymove 5s infinite;
+  }
+  
+  @keyframes mymove {
+    from {left: 0px;}
+    to {left: 200px;}
+  }
+
+
