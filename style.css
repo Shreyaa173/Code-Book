@@ -12,7 +12,7 @@ html{
 }
 
 body{
-    height: 100vh;
+    height: 90vh;
     width: 100vw;
     color: white;
     cursor: default;
@@ -137,7 +137,7 @@ nav{
     height: 75vh;
     width: 95vw;
     background:linear-gradient(135deg, #13072e, #3f2182) ;
-    margin-top: 50px;
+    margin-top: 150px;
     margin-left: 2.5vw;
     border-radius: 30px;
     display: flex;
@@ -214,24 +214,32 @@ nav{
     height: 100vh;
     width: 100vw;
 }
- 
-.course-page .search{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    margin-left: 50px;
-}
 
 .course-scroll{
     display: flex;
-    margin-top: 80px;
+    /* margin-top: 20px; */
 }
 
 .course-scroll h2{
-    font-size: 2rem;
+    font-size: 5rem;
     font-weight: 700;
     margin-left: 100px;
-    margin-right: 20px;    
+    margin-right: 20px;   
+    margin-top: -6vw; 
+}
+
+.course-page .search{
+    width: 100%;
+    display: flex;
+    justify-content: right;
+}
+
+.search button{
+    margin-right: 50px;
+}
+
+.search i{
+    margin-right: 100px;
 }
 
 .search input{
@@ -301,14 +309,16 @@ nav{
 
 .courses{
     display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(240px , 1fr)); */
     grid-template-columns: repeat(3, 1fr); 
     gap: 20px;
     margin-left: 5vw;
+    margin-top: 50px;
 }
 
 .course-box{
-    height: 350px;
-    width: 300px;
+    height: 50vh;
+    width: 20vw;
     border-radius: 30px;
     border: 2px solid #dad6fc;
     margin-top: 10vh;  
