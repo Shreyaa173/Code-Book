@@ -2,9 +2,13 @@
     margin: 0;
     padding: 0;
     font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: normal;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+html{
+    scroll-behavior: smooth;
 }
 
 body{
@@ -13,10 +17,24 @@ body{
     color: white;
     cursor: default;
     overflow-x: hidden;
+    background: #13072e;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cfc9ff;
+    border-radius: 10px;
 }
 
 .home{
-    height: 100vh;
+    height: 95vh;
     background: #13072e;
 }
 
@@ -25,6 +43,11 @@ nav{
     display: flex;
     justify-content: space-between;
     padding-top: 30px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #13072e;
+    z-index: 2;
 }
 
 .nav-icon{
@@ -73,6 +96,11 @@ nav{
     display: flex;
 }
 
+.nav-button a{
+    text-decoration: none;
+    color: black;
+}
+
 .nav-button .btn{
     font-size: 1.25rem;
     height: 2.5rem;
@@ -95,6 +123,10 @@ nav{
     background: transparent;
     color: white;
     font-weight: 400;
+}
+
+.btn:hover a{
+    color: white;
 }
 
 .btn:hover i{
@@ -147,6 +179,11 @@ nav{
     transition: all 0.3s ease-in-out; 
 }
 
+.explore-btn a{
+    text-decoration: none;
+    color: black;
+}
+
 .explore-btn i{
     color: black;
     border: none;
@@ -171,11 +208,212 @@ nav{
 
 .home-image {
     animation: mymove 5s infinite;
-  }
-  
-  @keyframes mymove {
-    from {left: 0px;}
-    to {left: 200px;}
-  }
+}
+
+.courses{
+    height: 100vh;
+    width: 100vw;
+}
+ 
+.course-page .search{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+}
+
+.course-scroll{
+    display: flex;
+    margin-top: 80px;
+}
+
+.course-scroll h2{
+    font-size: 2rem;
+    font-weight: 700;
+    margin-left: 100px;
+    margin-right: 20px;    
+}
+
+.search input{
+    border-radius: 30px;
+    border: none;
+    height: 3rem;
+    width: 20rem;
+    padding-left: 20px;
+    font-size: 1.25rem;
+    color: rgb(41, 41, 41);
+    background-color: aliceblue;
+}
+
+.search button{
+    background-color: aliceblue;
+    border: none;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    margin-left: -50px;
+}
+
+.search i{
+    font-size: 1.5rem;    
+    cursor: pointer;
+    color: black;
+}  
+
+.dropdown-container {
+    position: relative;
+    display: inline-block;
+    width: 200px;
+    text-align: center;
+}
+.dropdown-button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #cfc9ff;
+    cursor: pointer;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #cfc9ff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: opacity 0.3s ease-in-out;
+}
+.dropdown-content a {
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+    color: #333;
+    background-color: #cfc9ff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.dropdown-content a:hover {
+    background-color: #3f2182;
+    color: white;
+}
+
+.courses{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
+    margin-left: 5vw;
+}
+
+.course-box{
+    height: 350px;
+    width: 300px;
+    border-radius: 30px;
+    border: 2px solid #dad6fc;
+    margin-top: 10vh;  
+    position: relative;
+    transition: all 0.4s ease-in;
+}
+
+.course-image img{
+    width: 100%;
+    border-top-left-radius: 27px;
+    border-top-right-radius: 27px;
+}
+
+.course-text{
+    margin-left: 20px;    
+}
+
+.course-name{
+    font-size: 1.75rem;
+    font-weight: 500;
+}
+
+.course-author{
+    position: relative;
+    bottom: -20px;
+}
+
+.course-author i{
+    margin-right: 10px;
+}
+
+.lessons{
+    position: relative;
+    bottom: -40px;
+}
+
+.lessons i{
+    margin-right: 10px;
+}
+
+.course-box:hover{
+    transform: scale(1.01);
+    box-shadow: 2px 2px 20px #dfdbfc;
+}
+
+/* li a {
+    text-decoration : none; 
+    color : black;
+}
 
 
+.courses-list {
+  width: 300px;  
+  background-color: transparent;
+  position: relative;
+  left: 30vw;
+  top: -9vh;
+}
+
+span {
+  width: 550px; 
+  padding : 10px;
+  background : #d2cef9; 
+  color: black;
+  font-weight: 500;
+  border-radius: 5px;
+  font-size : 1.2em;
+  font-variant : small-caps;
+  cursor : pointer;
+}
+
+span::after {
+  float: right;
+  content: "";
+}
+
+.slide {
+  clear:both;
+  width:100%;
+  height:0px;
+  overflow: hidden;
+  text-align: center;
+  transition: height .4s ease;
+}
+
+.slide li {
+    padding : 10px;
+    margin-top: -10px;
+    margin-left: -20px;
+    background-color: #d2cef9;
+}
+
+#touch {
+    position: relative;
+    opacity: 0;
+    height: 0px;
+}   
+
+.slide li a{
+    border-bottom: 1px solid black;
+}
+
+
+
+#touch:checked + .slide {
+    height: 300px;
+    background-color: transparent;
+}  */
