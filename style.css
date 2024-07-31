@@ -12,7 +12,7 @@ html{
 }
 
 body{
-    height: 90vh;
+    height: 100vh;
     width: 100vw;
     color: white;
     cursor: default;
@@ -34,20 +34,22 @@ body{
 }
 
 .home{
-    height: 95vh;
+    height: auto;
     background: #13072e;
 }
 
 nav{
-    height: 50px;
+    height: 20px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding-top: 30px;
     position: fixed;
     top: 0;
     width: 100%;
     background: #13072e;
     z-index: 2;
+    padding-bottom: 25px;
 }
 
 .nav-icon{
@@ -73,6 +75,7 @@ nav{
 .nav-list{
     list-style: none;
     display: flex;
+    padding-bottom: 25px;
 }
 
 .nav-item{
@@ -89,7 +92,7 @@ nav{
 
 .nav-item a:hover{
     opacity: 1;
-    font-weight: 400;
+    font-weight: 500;
 }
 
 .nav-button{
@@ -134,7 +137,7 @@ nav{
 }
 
 .home-text{
-    height: 75vh;
+    height: auto;
     width: 95vw;
     background:linear-gradient(135deg, #13072e, #3f2182) ;
     margin-top: 150px;
@@ -171,17 +174,19 @@ nav{
     margin-top: 50px;
     font-size: 1.255rem;
     height: 2.5rem;
-    width: 10rem;
+    width: 18rem;
     margin-right: 2vw;
     border-radius: 30px;
     border: none;
     cursor: pointer;
-    transition: all 0.3s ease-in-out; 
+    background: rgb(255, 204, 74);
+    transition: box-shadow 0.3s ease-in-out; 
 }
 
 .explore-btn a{
     text-decoration: none;
     color: black;
+    font-weight: 400;
 }
 
 .explore-btn i{
@@ -197,22 +202,20 @@ nav{
 }
 
 .explore-btn:hover{
-    background: rgb(255, 219, 126);
+    box-shadow: 1px 1px 10px rgb(255, 234, 182) ;
 }
 
 .home-image{
     width: 500px;
     margin-left: 230px;
-    margin-top: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-.home-image {
-    animation: mymove 5s infinite;
-}
-
-.courses{
-    height: 100vh;
+.course-page{
+    height: auto;
     width: 100vw;
+    margin-top: 100px;
 }
 
 .course-scroll{
@@ -220,33 +223,33 @@ nav{
     /* margin-top: 20px; */
 }
 
-.course-scroll h2{
-    font-size: 5rem;
-    font-weight: 700;
-    margin-left: 100px;
-    margin-right: 20px;   
-    margin-top: -6vw; 
-}
-
-.course-page .search{
-    width: 100%;
+.course-head{
+    margin-top: 100px;
     display: flex;
-    justify-content: right;
 }
 
-.search button{
-    margin-right: 50px;
+.search{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
-.search i{
-    margin-right: 100px;
+.search h2{
+    font-size: 7rem;
+    font-weight: 700;  
+    padding-left: -50px;
+}
+
+.search-bar{
+    margin-right: -150px;
 }
 
 .search input{
     border-radius: 30px;
     border: none;
     height: 3rem;
-    width: 20rem;
+    width: 30rem;
     padding-left: 20px;
     font-size: 1.25rem;
     color: rgb(41, 41, 41);
@@ -254,12 +257,9 @@ nav{
 }
 
 .search button{
-    background-color: aliceblue;
     border: none;
-    height: 3rem;
-    width: 3rem;
-    border-radius: 50%;
-    margin-left: -50px;
+    position: relative;
+    right: 60px;
 }
 
 .search i{
@@ -310,20 +310,19 @@ nav{
 .courses{
     display: grid;
     /* grid-template-columns: repeat(auto-fit, minmax(240px , 1fr)); */
-    grid-template-columns: repeat(3, 1fr); 
+    grid-template-columns: repeat(4, 1fr); 
     gap: 20px;
-    margin-left: 5vw;
-    margin-top: 50px;
+    margin-left: 2vw;
 }
 
 .course-box{
     height: 50vh;
     width: 20vw;
     border-radius: 30px;
-    border: 2px solid #dad6fc;
-    margin-top: 10vh;  
+    border: 2px solid #dad6fc; 
     position: relative;
     transition: all 0.4s ease-in;
+    margin-bottom: 15px;
 }
 
 .course-image img{
@@ -427,3 +426,62 @@ span::after {
     height: 300px;
     background-color: transparent;
 }  */
+
+.testimonals{
+    height: 100vh;
+    width: 100%;
+    padding-top: 100px;
+}
+
+.testimonals h1{
+    text-align: center;
+    font-size: 5rem;
+    font-weight: 700;  
+}
+
+.user-card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user{
+    height: auto;
+    width: 95vw;
+    background:linear-gradient(135deg, #13072e, #3f2182);
+    margin-top: 50px;
+    padding-bottom: 30px;
+    border-radius: 30px;   
+}
+
+.user i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 6rem;
+    margin-top: 20px;
+}
+
+.user p{
+    font-size: 18px;
+    text-align: center;
+    padding-left: 20vw;
+    padding-right: 20vw;
+    margin-top: 20px;
+    line-height: 2rem;
+}
+
+.user img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    padding-left: 43vw;
+    padding-right: 43vw;
+    margin-top: 40px;
+}
+
+.user-text .name{
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
