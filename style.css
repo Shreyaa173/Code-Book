@@ -442,6 +442,78 @@ nav{
 }
 
 
+.contact-us{
+    height: 80vh;
+    margin-top: 5vw;
+    width: 100%;
+    display: flex;
+}
+
+.form{
+    margin-top: 30px;
+    flex-basis: 55%;
+    justify-content: center;
+    margin-left: 3vw;
+}
+
+.form input,textarea{
+    width: 22vw;
+    height: 3.5vw;
+    margin-bottom: 30px;
+    margin-left: 30px;
+    border-radius: 10px;
+    border: none;
+    text-align: left;
+    padding-left: 20px;
+    color: black;
+}
+
+.phone{
+    margin-left: 10px;
+}
+
+.form ::placeholder{
+    font-size: 1rem;
+}
+
+.form textarea{
+    height: 12vw;
+    padding-top: 10px;
+}
+
+.submit-btn{
+    margin-top: -10px;
+    margin-left: 5.5rem;
+    width: 14rem;
+}
+.details{
+    flex-basis: 40%;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.details h1{
+    font-size: 6vw;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    margin-top: -1rem;
+}
+
+.details p{
+    margin-bottom: 20px;
+    font-size: 18px;
+    width: 35vw;
+    line-height: 1.75rem;
+}
+
+.details p i{
+    margin-right: 20px;
+}
+
+
+
+
+
 
 
 
