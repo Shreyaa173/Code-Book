@@ -22,6 +22,7 @@ body{
 
 ::-webkit-scrollbar {
     width: 8px;
+    display: none;
 }
 
 ::-webkit-scrollbar-track {
@@ -396,7 +397,7 @@ nav{
     display: grid;
     grid-auto-flow: column;
     gap: 16px;
-
+    transition: transform 0.5s ease-in-out;
 }
 
 .carousels .card{
@@ -426,7 +427,7 @@ nav{
     display: none;  
 }
 
-.slider{
+.slider {
     position: absolute;
     right: 15px;
     bottom: 30%;
@@ -439,8 +440,8 @@ nav{
     background-color: #bdb4ff;
     color: black;
     font-size: 1.5rem;
+    outline: none;
 }
-
 
 .contact-us{
     height: 80vh;
@@ -486,6 +487,7 @@ nav{
     margin-left: 5.5rem;
     width: 14rem;
 }
+
 .details{
     flex-basis: 40%;
     justify-content: center;
@@ -509,6 +511,130 @@ nav{
 .details p i{
     margin-right: 20px;
 }
+
+.footer{
+    background-color: #fff;
+    height: 60vh;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    color: black;
+    font-weight: 500;
+}
+
+.footer-top{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer .left{
+    width: 40%;
+}
+
+.footer .right{
+    width: 50%;
+}
+
+.footer .left .nav-icon{
+    float: left;
+    color: black;
+    margin-top: 20px; 
+    margin-bottom: 20px;
+}
+
+.footer .left .nav-icon .logo{
+    height: 60px;
+    margin-left: 20px;
+}
+
+.footer .left .nav-icon p{
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.about-text {
+    clear: both;
+    margin-top: 20px;
+    margin-left: 30px;
+    line-height: 1.75rem;
+}
+ 
+.foot {
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    border-top: 1.5px solid rgba(0,0,0,0.4);
+    font-size: 14px;
+    color: #333;
+    width: 93%;
+    margin-left: 2%;
+    margin-top: -60px;
+}
+
+.resources{
+    margin-top: 50px;
+    display: flex;
+}
+
+.resources .first{
+    flex-basis: 30%;
+}
+
+.resources .second{
+    flex-basis: 30%;
+}
+
+.resources .third{
+    flex-basis: 30%;
+}
+
+.third h4{
+    font-size: 17px;
+    font-weight: 300;
+    margin-bottom: 30px;
+    line-height: 1.75rem;
+}
+
+.third .search{
+    width: 20rem;
+}
+
+.third input{
+    border: 1px solid black;
+    height: 2.5rem;
+    background-color: white;
+}
+
+.third button{
+    background-color: white;   
+    height: 30px;  
+    margin-left: 30px;  
+}
+
+.third i{
+    color: black;   
+    font-size: rem; 
+}
+
+.resources h3{
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.resources li{
+    list-style: none;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.resources li a{
+    text-decoration: none;
+    color: black;
+}
+
+
+
+
+
 
 
 
