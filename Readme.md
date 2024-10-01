@@ -14,6 +14,9 @@
 
 In today’s digital world, coding skills are essential for success. CodeBook is here to support both learners and educators by offering a vast collection of resources and tools to help you master coding. With easy-to-follow tutorials, real-time code editors, and project ideas, CodeBook is your partner in coding excellence.
 
+## CodeBook: Empowering Education through Coding Resources
+[Live Demo](https://codebook-eight.vercel.app/)
+
 ## Why Choose CodeBook
 
 ### 1. Comprehensive Learning Resources
