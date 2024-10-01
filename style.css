@@ -60,17 +60,18 @@ nav{
 }
 
 .logo{
-    height: 80px;
+    height: 100px;
 }
 
 .nav-icon p{
-    font-size: 1.25rem;
+    font-size: 1.75rem;
     font-weight: 700;
 }
 
 .nav-text{
     margin-top: 14px; 
     display: flex;
+    margin-left: 10px;
 }
 
 .nav-list{
@@ -83,6 +84,8 @@ nav{
     margin-left: 5vw;
     font-size: 1.25rem;
     cursor: pointer;
+    transition: all 0.3s ease-in-out; 
+    transition: background-color 0.3s ease-in-out;
 }
 
 .nav-item a{
@@ -98,11 +101,13 @@ nav{
 
 .nav-button{
     display: flex;
+
 }
 
 .nav-button a{
     text-decoration: none;
     color: black;
+    text-align: center;
 }
 
 .nav-button .btn{
@@ -115,22 +120,26 @@ nav{
     cursor: pointer;
     background: white;
     transition: all 0.3s ease-in-out; 
+    transition: background-color 0.3s ease-in-out;
 }
 
 .btn i{
     color: black;
     border: none;
     margin-left: 10px;
+    
 }
 
 .btn:hover{
     background: transparent;
     color: white;
     font-weight: 400;
+    
 }
 
 .btn:hover a{
     color: white;
+
 }
 
 .btn:hover i{
@@ -405,6 +414,7 @@ nav{
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    
 }
 
 .carousels .dragging .card{
