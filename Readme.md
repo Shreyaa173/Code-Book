@@ -84,17 +84,9 @@ CodeBook aims to continually evolve to meet the needs of educators and learners 
 
 Contributions are always welcome! Here's how you can contribute to CodeBook:
 
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature-branch`).
-3. Make your changes and commit them (`git commit -m 'Add feature'`).
-4. Push to the branch (`git push origin feature-branch`).
-5. Open a Pull Request.
-
-## Run Locally
-
-To run CodeBook locally, follow these steps:
-
-1. Clone the project:
-
-   ```bash
-   git clone https://github.com/YourUsername/CodeBook
+1. Star the Repository
+2. Fork the repository.
+3. Create a new branch (`git checkout -b feature-branch`).
+4. Make your changes and commit them (`git commit -m 'Add feature'`).
+5. Push to the branch (`git push origin feature-branch`).
+6. Open a Pull Request.
