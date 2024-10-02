@@ -263,16 +263,15 @@ nav{
 .courses{
     display: grid;
     grid-template-columns: repeat(4, 1fr); 
-    gap: 50px;
-  margin-left: 1.5rem;
+    gap: 20px;
+    margin-left: 3vw;
 }
 
 .course-box{
-    height: 45vh;
-    width: 16vw;
-    margin-left: 2rem;
+    height: 50vh;
+    width: 20vw;
     border-radius: 30px;
-    border: 2px solid #595859; 
+    border: 2px solid #dad6fc; 
     position: relative;
     transition: all 0.4s ease-in;
     margin-bottom: 15px;
@@ -324,8 +323,8 @@ nav{
 }
 
 .course-box:hover{
-    transform: scale(1.0);
-    box-shadow: 2px 2px 20px #949396;
+    transform: scale(1.01);
+    box-shadow: 2px 2px 20px #dfdbfc;
 }
 
 .testimonals{
