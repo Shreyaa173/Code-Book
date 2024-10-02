@@ -136,6 +136,49 @@ nav{
 .btn:hover i{
     color: white;
 }
+.auth-form{
+    display:none;
+    flex-direction: column;
+    justify-content:space-evenly;
+    align-items: center;
+    background:linear-gradient(135deg, #13072e, #3f2182) ;
+    height:400px;
+    width: 300px;
+    padding: 10px;
+    border-radius:10% ;
+    box-shadow: 0 0  5px 3px plum;
+    position: fixed ;
+    left: 40%;
+    top: 20%;
+}
+.auth-heading{
+    font-weight: 100;
+}
+
+.auth-input{
+    height:30px;
+    width: 200px;
+    color:plum;
+    text-align: center;
+    font-weight: 600;
+    box-shadow: 0 0  5px 3px plum;
+    background-color:transparent;
+    /* border: 2px solid black; */
+    border-radius: 10px;
+}
+.auth-button{
+    height:30px;
+    width: 200px;
+    color: white;
+    border: none;
+    background-color: purple;
+    border-radius: 10px;
+}
+.auth-button:hover{
+    transform: scale(0.9);
+    background-color: rgb(173, 24, 173);
+
+}
 
 .home-text{
     height: auto;
@@ -168,6 +211,17 @@ nav{
 .mid-text p{
     font-size: 1.15rem;
     line-height: 1.75rem;
+}
+.closeBtn{
+    height: 30px;
+    width: 100px;
+    background: rgb(255, 115, 115);
+    color: white;
+    border: none;
+    border-radius: 30px;
+}
+.closeBtn:hover{
+    cursor: pointer;
 }
 
 .explore-btn{

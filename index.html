@@ -20,6 +20,24 @@
 </head>
 <body>
     <main>
+        <form action="#" class="auth-form signup-form" >
+            <h1>Register Now</h1>
+            <input class="auth-input" type="text"name="name" placeholder="Enter Name">
+            <input class="auth-input" type="email" name="email" placeholder="Enter Email">
+            <input class="auth-input" type="password" name="password" placeholder="Enter password">
+            <button class="auth-button" type="submit">Register</button>
+            <p>Already have account?</p>
+            <button class="closeBtn">Close</button>
+        </form>
+
+        <form class="auth-form login-form" action="#"  style="display: none;">
+            <h1 class="auth-heading">Login Now</h1>
+            <input class="auth-input" type="email"name="email" placeholder="Enter Email">
+            <input class="auth-input"  type="password" name="password" placeholder="Enter Password">
+            <button class="auth-button" type="submit">Log in</button>
+           
+            <button class="closeBtn">Close</button>
+        </form>
         <div class="home">
             <nav>
                 <div class="nav-icon">
@@ -34,10 +52,11 @@
                     </ul>
                 </div>
                     <div class="nav-button">
-                        <button class="btn"><a href="#">Sign-up<i class="fa-solid fa-arrow-right"></i></a></button>
-                        <button class="btn"><a href="#">Log-in<i class="fa-solid fa-arrow-right"></i></a></button>
+                        <button class="btn signup" ><a >Sign-up<i class="fa-solid fa-arrow-right"></i></a></button>
+                        <button class="btn login"><a >Log-in<i class="fa-solid fa-arrow-right"></i></a></button>
                     </div>
             </nav>
+           
             <div class="home-text">
                 <div class="left-text">
                     <div class="top-text">
