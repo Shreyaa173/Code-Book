@@ -61,44 +61,49 @@
             <div class="search">
                 <h2>Our Courses</h2>
                 <div class="search-bar">
-                    <input type="text" placeholder="Explore Courses..." spellcheck="false">
+                    <input type="text" id="search-input" placeholder="Search for a course..." onkeyup="filterCourses()">
                     <button><i class="fa-solid fa-magnifying-glass"></i></button>
                 </div>
             </div>
         </div>   
-            <div class="course-page" id="course-page"> 
-                <div class="courses">
-                    <a href="#" class="course-box">
-                        <div class="course-image">
-                            <img src="./Assests/java.png" alt="Java">
-                        </div>
-                        <div class="course-text">
-                            <p class="course-name">Java</p>
-                            <p class="course-author"><i class="fa-solid fa-user-tie"></i>By Kunal Kushwaha</p>
-                            <p class="lessons"><i class="fa-brands fa-leanpub"></i>65 Lessons</p>
-                        </div>
-                    </a>
-                    <a href="#" class="course-box">
-                        <div class="course-image">
-                            <img src="./Assests/C.png" alt="C">
-                        </div>
-                        <div class="course-text">
-                            <p class="course-name">C</p>
-                            <p class="course-author"><i class="fa-solid fa-user-tie"></i>By Sandeep Jain</p>
-                            <p class="lessons"><i class="fa-brands fa-leanpub"></i>50 Lessons</p>
-                        </div>
-                    </a>
-                    <a href="#" class="course-box">
-                        <div class="course-image">
-                            <img src="./Assests/CPP.png" alt="C++">
-                        </div>
-                        <div class="course-text">
-                            <p class="course-name">C++</p>
-                            <p class="course-author"><i class="fa-solid fa-user-tie"></i>By Gaurav Sen</p>
-                            <p class="lessons"><i class="fa-brands fa-leanpub"></i>45 Lessons</p>
-                        </div>
-                    </a>
-                    <a href="#" class="course-box">
+        <div class="course-page" id="course-page">
+            <div class="courses">
+             
+                <a href="#" class="course-box" data-course="java">
+                    <div class="course-image">
+                        <img src="./Assests/java.png" alt="Java">
+                    </div>
+                    <div class="course-text">
+                        <p class="course-name">Java</p>
+                        <p class="course-author"><i class="fa-solid fa-user-tie"></i>By Kunal Kushwaha</p>
+                        <p class="lessons"><i class="fa-brands fa-leanpub"></i>65 Lessons</p>
+                    </div>
+                </a>
+        
+        
+                <a href="#" class="course-box" data-course="c">
+                    <div class="course-image">
+                        <img src="./Assests/C.png" alt="C">
+                    </div>
+                    <div class="course-text">
+                        <p class="course-name">C</p>
+                        <p class="course-author"><i class="fa-solid fa-user-tie"></i>By Sandeep Jain</p>
+                        <p class="lessons"><i class="fa-brands fa-leanpub"></i>50 Lessons</p>
+                    </div>
+                </a>
+        
+             
+                <a href="#" class="course-box" data-course="cpp">
+                    <div class="course-image">
+                        <img src="./Assests/CPP.png" alt="C++">
+                    </div>
+                    <div class="course-text">
+                        <p class="course-name">C++</p>
+                        <p class="course-author"><i class="fa-solid fa-user-tie"></i>By Gaurav Sen</p>
+                        <p class="lessons"><i class="fa-brands fa-leanpub"></i>45 Lessons</p>
+                    </div>
+                </a>
+                    <a href="#" class="course-box" data-course="c#">
                         <div class="course-image">
                             <img src="./Assests/Chash.png" alt="C#">
                         </div>
@@ -108,7 +113,7 @@
                             <p class="lessons"><i class="fa-brands fa-leanpub"></i>40 Lessons</p>
                         </div>
                     </a>
-                    <a href="#" class="course-box">
+                    <a href="#" class="course-box" data-course="ruby">
                         <div class="course-image">
                             <img src="./Assests/ruby.png" alt="Ruby">
                         </div>
@@ -118,7 +123,7 @@
                             <p class="lessons"><i class="fa-brands fa-leanpub"></i>55 Lessons</p>
                         </div>
                     </a>
-                    <a href="#" class="course-box">
+                    <a href="#" class="course-box" data-course="python">
                         <div class="course-image">
                             <img src="./Assests/python.png" alt="Python">
                         </div>
@@ -128,7 +133,7 @@
                             <p class="lessons"><i class="fa-brands fa-leanpub"></i>70 Lessons</p>
                         </div>
                     </a>
-                    <a href="#" class="course-box">
+                    <a href="#" class="course-box" data-course="ccss">
                         <div class="course-image">
                             <img src="./Assests/CSS.png" alt="CSS">
                         </div>
@@ -138,7 +143,7 @@
                             <p class="lessons"><i class="fa-brands fa-leanpub"></i>60 Lessons</p>
                         </div>
                     </a>
-                    <a href="#" class="course-box">
+                    <a href="#" class="course-box" data-course="go">
                         <div class="course-image">
                             <img src="./Assests/go.png" alt="Go">
                         </div>
@@ -148,7 +153,7 @@
                             <p class="lessons"><i class="fa-brands fa-leanpub"></i>35 Lessons</p>
                         </div>
                     </a>
-                    <a href="#" class="course-box">
+                    <a href="#" class="course-box" data-course="html">
                         <div class="course-image">
                             <img src="./Assests/HTML.png" alt="HTML">
                         </div>
@@ -158,7 +163,7 @@
                             <p class="lessons"><i class="fa-brands fa-leanpub"></i>25 Lessons</p>
                         </div>
                     </a>
-                    <a href="#" class="course-box">
+                    <a href="#" class="course-box" data-course="JavaScript">
                         <div class="course-image">
                             <img src="./Assests/JS.png" alt="JavaScript">
                         </div>
@@ -168,7 +173,7 @@
                             <p class="lessons"><i class="fa-brands fa-leanpub"></i>55 Lessons</p>
                         </div>
                     </a>
-                    <a href="#" class="course-box">
+                    <a href="#" class="course-box" data-course="kotlin">
                         <div class="course-image">
                             <img src="./Assests/kotlin.png" alt="Kotlin">
                         </div>
@@ -178,7 +183,7 @@
                             <p class="lessons"><i class="fa-brands fa-leanpub"></i>42 Lessons</p>
                         </div>
                     </a>
-                    <a href="#" class="course-box">
+                    <a href="#" class="course-box" data-course="node.js">
                         <div class="course-image">
                             <img src="./Assests/node.png" alt="Node.js">
                         </div>
@@ -188,7 +193,7 @@
                             <p class="lessons"><i class="fa-brands fa-leanpub"></i>50 Lessons</p>
                         </div>
                     </a>
-                    <a href="#" class="course-box">
+                    <a href="#" class="course-box" data-course="swift">
                         <div class="course-image">
                             <img src="./Assests/swift.png" alt="Swift">
                         </div>
@@ -198,7 +203,7 @@
                             <p class="lessons"><i class="fa-brands fa-leanpub"></i>65 Lessons</p>
                         </div>
                     </a>
-                    <a href="#" class="course-box">
+                    <a href="#" class="course-box" data-course="php">
                         <div class="course-image">
                             <img src="./Assests/php.png" alt="PHP">
                         </div>
@@ -208,7 +213,7 @@
                             <p class="lessons"><i class="fa-brands fa-leanpub"></i>65 Lessons</p>
                         </div>
                     </a>
-                    <a href="#" class="course-box">
+                    <a href="#" class="course-box" data-course="react">
                         <div class="course-image">
                             <img src="./Assests/react.png" alt="React">
                         </div>
@@ -218,7 +223,7 @@
                             <p class="lessons"><i class="fa-brands fa-leanpub"></i>65 Lessons</p>
                         </div>
                     </a>
-                    <a href="#" class="course-box">
+                    <a href="#" class="course-box" data-course="next js">
                         <div class="course-image">
                             <img src="./Assests/next.png" alt="Next JS">
                         </div>
