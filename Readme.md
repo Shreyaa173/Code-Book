@@ -5,7 +5,7 @@
 * Whether you're a beginner or an experienced coder, CodeBook has something to offer to boost your coding skills.
 
 <p align="center">
-  <img src="https://github.com/Shreyaa173/Code-Book/blob/master/Assests/logo.png" alt="Logo" width="300" />
+  <img src="https://github.com/Shreyaa173/Code-Book/blob/master/src/assets/logo.png" alt="Logo" width="300" />
 </p>
 
 ---
