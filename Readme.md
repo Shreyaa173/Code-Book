@@ -73,15 +73,12 @@ CodeBook aims to continually evolve to meet the needs of educators and learners 
 
 ## Screenshots
 
-![App Screenshot](https://github.com/Shreyaa173/Code-Book/blob/master/Assests/1.png)  
+![App Screenshot](https://github.com/Shreyaa173/Code-Book/blob/master/src/assets/1.png)  
+![App Screenshot](https://github.com/Shreyaa173/Code-Book/blob/master/src/assets/2.png)  
+![App Screenshot](https://github.com/Shreyaa173/Code-Book/blob/master/src/assets/3.png)  
+![App Screenshot](https://github.com/Shreyaa173/Code-Book/blob/master/src/assets/4.png)  
+![App Screenshot](https://github.com/Shreyaa173/Code-Book/blob/master/src/assets/5.png)  
 
-![App Screenshot](https://github.com/Shreyaa173/Code-Book/blob/master/Assests/2.png) 
-
-![App Screenshot](https://github.com/Shreyaa173/Code-Book/blob/master/Assests/3.png) 
-
-![App Screenshot](https://github.com/Shreyaa173/Code-Book/blob/master/Assests/4.png)
-
-![App Screenshot](https://github.com/Shreyaa173/Code-Book/blob/master/Assests/5.png)  
 
 ## Contributing
 
