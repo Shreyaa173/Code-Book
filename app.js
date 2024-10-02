@@ -56,6 +56,20 @@ const scrollNext = () => {
         carousel.scrollLeft = 0; // Reset scroll to the beginning if at the end
     }
 }
+function filterCourses() {
+    let input = document.getElementById('search-input').value.toLowerCase();
+    let courseBoxes = document.querySelectorAll('.course-box');
+
+    courseBoxes.forEach(function(course) {
+        let courseName = course.querySelector('.course-name').innerText.toLowerCase();
+        if (courseName.includes(input)) {
+            course.style.display = 'block';  // Show course if matched
+        } else {
+            course.style.display = 'none';  // Hide course if not matched
+        }
+    });
+}
+
 
 // Add event listeners for dragging functionality
 carousel.addEventListener("mousedown", dragStart);
