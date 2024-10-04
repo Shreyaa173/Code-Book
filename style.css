@@ -213,120 +213,179 @@ nav{
     margin-bottom: 20px;
 }
 
-.course-page{
-    height: auto;
+/* General layout improvements */
+.course-page {
     width: 100vw;
-    margin-top: 100px;
-}
-
-.course-head{
-    margin-top: 100px;
+    margin-top: 80px;
+    padding: 20px;
+  }
+  
+  .course-head {
+    margin-top: 80px;
     display: flex;
-}
-
-.search{
-    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .search {
+    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-}
-
-.search h2{
-    font-size: 7rem;
-    font-weight: 700;  
-    padding-left: -50px;
-}
-
-.search input{
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+  
+  .search h2 {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #333;
+    margin-right: 20px;
+  }
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    position: relative;
+  }
+  
+  .search input {
     border-radius: 30px;
-    border: none;
-    height: 3rem;
-    width: 30rem;
+    border: 1px solid #ccc;
+    height: 3.5rem;
+    width: 100%;
     padding-left: 20px;
     font-size: 1.25rem;
-    color: rgb(41, 41, 41);
-    background-color: aliceblue;
-}
-
-.search button{
+    color: #333;
+    background-color: #f9f9f9;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .search input:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .search button {
     border: none;
-    position: relative;
-    right: 60px;
-}
-
-.search i{
-    font-size: 1.5rem;    
+    background-color: transparent;
     cursor: pointer;
-    color: black;
-}  
-
-.courses{
+    position: absolute;
+    right: 10px;
+  }
+  
+  .search i {
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #555;
+  }
+  
+  .search button:hover i {
+    color: #007bff;
+  }
+  
+  /* Courses grid */
+  .courses {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); 
-    gap: 50px;
-  margin-left: 1.5rem;
-}
-
-.course-box{
-    height: 45vh;
-    width: 16vw;
-    margin-left: 2rem;
-    border-radius: 30px;
-    border: 2px solid #595859; 
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-left: 3vw;
+  }
+  
+  .course-box {
+    height: 55vh;
+    width: 100%;
+    border-radius: 20px;
+    border: 1px solid #ececf9;
     position: relative;
-    transition: all 0.4s ease-in;
-    margin-bottom: 15px;
-}
-
-.course-image{
-    width: 100%;  
+    overflow: hidden;
+    transition: all 0.3s ease;
+    background-color: #fff;
+  }
+  
+  .course-image {
+    width: 100%;
     height: 60%;
-}
-
-.course-image img{
-    width: 100%;  
+    overflow: hidden;
+  }
+  
+  .course-image img {
+    width: 100%;
     height: 100%;
-    border-top-left-radius: 27px;
-    border-top-right-radius: 27px;
-}
-
-.course-text{
-    margin-left: 20px; 
-}
-
-.course-page a{
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  
+  .course-text {
+    padding: 20px;
+    text-align: left;
+  }
+  
+  .course-page a {
     text-decoration: none;
-    color: white;
-}
-
-.course-name{
-    margin-top: 5px;
-    font-size: 1.75rem;
-    font-weight: 500;   
-}
-
-.course-author{
-    position: relative;
-    bottom: -20px;
-}
-
-.course-author i{
-    margin-right: 10px;
-}
-
-.lessons{
-    position: relative;
-    bottom: -40px;
-}
-
-.lessons i{
-    margin-right: 10px;
-}
-
-.course-box:hover{
-    transform: scale(1.0);
-    box-shadow: 2px 2px 20px #949396;
-}
+    color: #333;
+  }
+  
+  .course-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  
+  .course-author {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 8px;
+  }
+  
+  .course-author i {
+    margin-right: 8px;
+  }
+  
+  .lessons {
+    font-size: 0.95rem;
+    color: #777;
+  }
+  
+  .lessons i {
+    margin-right: 8px;
+  }
+  
+  /* Hover effects */
+  .course-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  }
+  
+  .course-box:hover .course-name {
+    color: #007bff;
+  }
+  
+  .search input:hover {
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.1);
+  }
+  
+  .search input:focus {
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .search h2 {
+      font-size: 2.5rem;
+    }
+  
+    .courses {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+  
+    .search-bar {
+      width: 80%;
+    }
+  }
+  
 
 .testimonals{
     height: auto;
