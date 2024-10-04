@@ -61,9 +61,12 @@ nav{
 
 .logo{
   height: 80px;
+  margin-left: 5%
+
 }
 
 .nav-icon p{
+  width: 200px;
   font-size: 1.25rem;
   font-weight: 700;
 }
@@ -239,7 +242,7 @@ nav{
 .search h2 {
   font-size: 4rem;
   font-weight: 700;
-  color: #333;
+  color: white;
   margin-right: 20px;
 }
 
@@ -288,14 +291,14 @@ nav{
 /* Courses grid */
 .courses {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-  margin-left: 3vw;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-left: vw;
 }
 
 .course-box {
-  height: 55vh;
-  width: 100%;
+  height: 50vh;
+  width: 90%;
   border-radius: 20px;
   border: 1px solid #ececf9;
   position: relative;
@@ -313,7 +316,7 @@ nav{
 .course-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  /* object-fit: cover; */
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
@@ -364,7 +367,7 @@ nav{
 }
 
 .search input:hover {
-  box-shadow: 0 0 10px rgba(0, 123, 255, 0.1);
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
 }
 
 .search input:focus {

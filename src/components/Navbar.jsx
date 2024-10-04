@@ -1,10 +1,11 @@
 import React from 'react'
+import Logo from "../assets/logo.png"
 
 function Navbar() {
   return (
     <nav>
          <div className="nav-icon">
-                <img src="./Assests/logo.png" alt="" className="logo"/>
+                <img src={Logo} alt="" className="logo"/>
                 <p>Code Book</p>
                 </div>
                 <div className="nav-text">
