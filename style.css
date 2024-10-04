@@ -239,7 +239,7 @@ nav{
   .search h2 {
     font-size: 4rem;
     font-weight: 700;
-    color: #333;
+    color: white;
     margin-right: 20px;
   }
   
@@ -288,7 +288,7 @@ nav{
   /* Courses grid */
   .courses {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 30px;
     margin-left: 3vw;
   }
