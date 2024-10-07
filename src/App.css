@@ -74,6 +74,7 @@ nav{
 .nav-text{
   margin-top: 14px; 
   display: flex;
+  word-wrap: break-word;
 }
 
 .nav-list{
@@ -141,10 +142,10 @@ nav{
 }
 
 .home-text{
-  height: auto;
+  height: fit-content;
   width: 95vw;
   background:linear-gradient(135deg, #13072e, #3f2182) ;
-  margin-top: 150px;
+  margin-top: 100px;
   margin-left: 2.5vw;
   border-radius: 30px;
   display: flex;
@@ -724,20 +725,3 @@ nav{
 .search button:hover i {
   color: #007bff;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
