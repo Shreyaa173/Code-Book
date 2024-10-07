@@ -231,7 +231,7 @@ nav{
   flex-direction: column;
 }
 
-.search {
+.search-icon {
   width: 100%;
   display: flex;
   align-items: center;
@@ -239,11 +239,10 @@ nav{
   margin-bottom: 40px;
 }
 
-.search h2 {
+.search-icon h2 {
   font-size: 5rem;
   font-weight: 700;
-  color: white;
-  
+  color: white;  
 }
 
 .search-bar {
@@ -254,38 +253,38 @@ nav{
   position: relative;
 }
 
-.search input {
+.search-icon .search-bar input {
   border-radius: 30px;
   border: 1px solid #ccc;
   height: 3.5rem;
-  width: 70%;
+  width: 50%;
   padding-left: 20px;
   font-size: 1.25rem;
   color: #333;
-  background-color: #f9f9f9;
+  background-color: #f1f1f1;
   transition: box-shadow 0.3s ease;
 }
 
-.search input:focus {
+.search-icon input:focus {
   outline: none;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.search button {
+.search-icon .mag {
   border: none;
   background-color: transparent;
   cursor: pointer;
-  position: absolute;
-  right: 225px;
+  position: absolute;  
+  right: 200px;
 }
 
-.search i {
+.search-icon i {
   font-size: 1.5rem;
   cursor: pointer;
   color: #555;
 }
 
-.search button:hover i {
+.search-icon button:hover i {
   color: #007bff;
 }
 
@@ -367,7 +366,7 @@ nav{
   color: #007bff;
 }
 
-.search input:hover {
+.search-icon input:hover {
   box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
 }
 
@@ -681,6 +680,51 @@ nav{
   text-decoration: none;
   color: black;
 }
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  position: relative;
+}
+
+.search input {
+  border-radius: 30px;
+  border: 1px solid #5c5c5c;
+  height: 2.5rem;
+  width: 90%;
+  padding-left: 20px;
+  font-size: 1.1rem;
+  color: #333;
+  background-color: #f9f9f9;
+  transition: box-shadow 0.3s ease;
+}
+
+.search input:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.search button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  position: absolute;
+  right: 85px;
+  padding-top: 7px;
+}
+
+.search i {
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #555;
+}
+
+.search button:hover i {
+  color: #007bff;
+}
+
 
 
 
