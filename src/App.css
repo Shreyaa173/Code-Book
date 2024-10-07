@@ -84,7 +84,7 @@ nav{
 
 .nav-item{
   margin-left: 5vw;
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   cursor: pointer;
 }
 
@@ -170,7 +170,7 @@ nav{
 
 .mid-text p{
   font-size: 1.15rem;
-  line-height: 1.75rem;
+  line-height: 1.85rem;
 }
 
 .explore-btn{
@@ -291,7 +291,7 @@ nav{
 /* Courses grid */
 .courses {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 2fr);
   gap: 20px;
   margin-left: vw;
 }
@@ -577,7 +577,7 @@ nav{
 
 .footer{
   background-color: #fff;
-  height: 60vh;
+  height: 55vh;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
   color: black;
@@ -614,11 +614,12 @@ nav{
   font-size: 20px;
 }
 
-.about-text {
+.about-text h3 {
   clear: both;
-  margin-top: 20px;
+  margin-top: 10px;
   margin-left: 30px;
   line-height: 1.75rem;
+  font-size: 16px;
 }
 
 .foot {
@@ -626,10 +627,9 @@ nav{
   padding: 20px;
   background-color: white;
   border-top: 1.5px solid rgba(0,0,0,0.4);
-  font-size: 14px;
+  font-size: 16px;
   color: #333;
-  width: 93%;
-  margin-left: 2%;
+  width: 100%;
   margin-top: -60px;
 }
 
@@ -658,7 +658,7 @@ nav{
 }
 
 .third .search{
-  width: 20rem;
+  width: 16rem;
 }
 
 .third input{
@@ -668,9 +668,10 @@ nav{
 }
 
 .third button{
-  background-color: white;   
+  background-color: transparent; 
   height: 30px;  
   margin-left: 30px;  
+  margin-right: 50px;  
 }
 
 .third i{
