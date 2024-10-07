@@ -4,7 +4,7 @@ import Logo from "../assets/logo.png"
 function Navbar() {
   return (
     <nav>
-         <div className="nav-icon">
+        <div className="nav-icon">
                 <img src={Logo} alt="" className="logo"/>
                 <p>Code Book</p>
                 </div>
@@ -19,7 +19,8 @@ function Navbar() {
                     <button className="btn"><a href="#">Sign-up<i className="fa-solid fa-arrow-right"></i></a></button>
                     <button className="btn"><a href="#">Log-in<i className="fa-solid fa-arrow-right"></i></a></button>
             </div>
-    </nav>
+            
+            </nav>
   )
 }
 
