@@ -643,20 +643,22 @@ nav{
 }
 
 .third .search{
-  width: 16rem;
+  width: 18rem;
+  margin-left: -40px;
 }
 
 .third input{
   border: 1px solid black;
   height: 2.5rem;
   background-color: white;
+  position: relative;
 }
 
 .third button{
   background-color: transparent; 
   height: 30px;  
-  margin-left: 30px;  
-  margin-right: 50px;  
+  position: absolute;  
+  right: 100px;
 }
 
 .third i{
