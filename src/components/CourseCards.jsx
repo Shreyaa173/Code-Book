@@ -36,7 +36,7 @@ function CourseCards() {
           <Card imgurl={node} coursename={"Node.js"} authorname={"Hitesh Choudhary"} lessons={50} ytlink={"https://www.youtube.com/@HiteshCodeLab"} />
           <Card imgurl={swift} coursename={"Swift"} authorname={"Kunal Kushwaha"} lessons={65} ytlink={"https://www.youtube.com/@kunalkushwaha"} />
           <Card imgurl={php} coursename={"PHP"} authorname={"Anurag Tiwari"} lessons={65} ytlink={""} />
-          <Card imgurl={react} coursename={"React"} authorname={"Amman Dhattarwal"} lessons={65} ytlink={"https://www.youtube.com/@AmanDhattarwal"} />
+          <Card imgurl={react} coursename={"React"} authorname={"Aman Dhattarwal"} lessons={65} ytlink={"https://www.youtube.com/@AmanDhattarwal"} />
           <Card imgurl={next} coursename={"Next.js"} authorname={"College Wallah"} lessons={25} ytlink={"https://www.youtube.com/@CollegeWallahbyPW"} />
         </div>
       </div>
