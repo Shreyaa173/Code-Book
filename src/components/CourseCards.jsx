@@ -22,7 +22,9 @@ function CourseCards() {
     <>
       <div className="course-page" id="course-page">
         <div className="courses">
-          <Card imgurl={java} coursename={"Java"} authorname={"Kunal Kushwaha"} lessons={65} ytlink={"https://www.youtube.com/@kunalkushwaha"} />
+          <a href="https://www.youtube.com/playlist?list=PL9gnSGHSqcnr_DxHsP7AW9ftq0AtAyYqJ" target="_blank" rel="noopener noreferrer">
+            <Card imgurl={java} coursename={"Java"} authorname={"Kunal Kushwaha"} lessons={65} ytlink={"https://www.youtube.com/@kunalkushwaha"} />
+          </a>
           <Card imgurl={c} coursename={"C"} authorname={"Sandeep Jain"} lessons={50} ytlink={"https://www.youtube.com/@sandeepjain"} />
           <Card imgurl={CPP} coursename={"CPP"} authorname={"Gaurav Sen"} lessons={45} ytlink={"https://www.youtube.com/@gkcs"} />
           <Card imgurl={Chash} coursename={"C#"} authorname={"Anuj Bhaiya"} lessons={40} ytlink={"https://www.youtube.com/@AnujBhaiya"} />
