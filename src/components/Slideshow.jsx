@@ -40,7 +40,7 @@ const Slideshow = () => {
             if (!isDragging) return;
             e.preventDefault();
             const x = e.pageX - carousel.offsetLeft;
-            const walk = (x - startX) * 3; // Adjust speed
+            const walk = (x - startX) * 3; 
             carousel.scrollLeft = scrollLeft - walk;
         };
 
@@ -56,7 +56,7 @@ const Slideshow = () => {
             autoScrollInterval = setInterval(() => {
                 carousel.scrollLeft += carouselItemWidth;
                 if (carousel.scrollLeft + carousel.offsetWidth >= carousel.scrollWidth) {
-                    carousel.scrollLeft = 0; // Reset scroll
+                    carousel.scrollLeft = 0; 
                 }
             }, 1000);
         };
@@ -64,7 +64,7 @@ const Slideshow = () => {
         const scrollNext = () => {
             carousel.scrollLeft += carouselItemWidth;
             if (carousel.scrollLeft + carousel.offsetWidth >= carousel.scrollWidth) {
-                carousel.scrollLeft = 0; // Reset scroll
+                carousel.scrollLeft = 0; 
             }
         };
 

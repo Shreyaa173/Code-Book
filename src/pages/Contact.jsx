@@ -10,7 +10,7 @@ function Contact() {
       style={{ background: '#13072e' }}
     >
       <div className="container mx-auto px-4 lg:flex lg:space-x-12">
-        {/* Form Section */}
+        
         <div className="bg-white shadow-md rounded-lg p-8 lg:w-1/2 mb-8 lg:mb-0">
           <form action="" className="space-y-4">
             <input
