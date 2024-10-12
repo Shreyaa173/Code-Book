@@ -293,14 +293,15 @@ nav{
 .courses {
   display: grid;
   grid-template-columns: repeat(4, 2fr);
-  gap: 20px;
-  margin-left: 1vw;
+  gap: 40px;
+  margin-left: 3vw;
+  margin-right: 2vw;
 }
 
 .course-box {
-  height: 50vh;
-  width: 90%;
-  border-radius: 20px;
+  height: 40vh;
+  width: 250px;
+  border-radius: 10px;
   border: 1px solid #ececf9;
   position: relative;
   overflow: hidden;
