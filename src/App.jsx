@@ -1,19 +1,19 @@
-import './App.css'
-import Home from './components/Home'
-import Courses from './components/Courses'
-import Slideshow from './components/Slideshow'
-import Contact from './components/Contact'
-import Footer from './components/Footer'
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from '../src/pages/home';
+import Navbar from '../src/components/Navbar';
+import Contact from './pages/Contact';
+
 function App() {
   return (
-    <div>
-        <Home></Home>
-        <Courses></Courses>
-        <Slideshow></Slideshow>
-        <Contact></Contact>
-        <Footer></Footer>
-    </div>
-  )
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;
