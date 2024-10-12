@@ -1,82 +1,85 @@
 body {
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center;     /* Center vertically */
-    height: 100vh;           /* Full viewport height */
-    margin: 0;               /* Remove default margin */
-    background-color:#13072e; /* Light grey background */
-  }
-  
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;     /* Center vertically */
+  height: 100vh;           /* Full viewport height */
+  margin: 0;               /* Remove default margin */
+  background-color: #13072e; /* Background color */
+}
 
-  .auth-container {
-    width: 400px;             /* Set a fixed width */
-    max-width: 90%;           /* Make it responsive */
-    padding: 40px;            /* Add padding */
-    border: 1px solid #1147bdb4; /* Lighter border color */
-    border-radius: 15px;      /* More pronounced rounded corners */
-    box-shadow: 0 8px 20px rgb(68, 5, 185); /* Soft shadow effect */
-    background-color: #13072e; /* White background for the form */
-    text-align: center;       /* Center the text inside the container */
-    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition */
-  }
-  
-  .auth-container:hover {
-    transform: translateY(-5px); /* Slight lift on hover */
-    box-shadow: 0 12px 24px rgba(37, 148, 238, 0.959); /* Enhanced shadow on hover */
-  }
-  
-  h2 {
-    margin-bottom: 20px;      /* Space below the heading */
-    font-family: 'Arial', sans-serif; /* Font family */
-    color: #343a40;           /* Darker text color */
-  }
-  
-  .auth-form {
-    display: flex;             /* Use flexbox for form layout */
-    flex-direction: column;    /* Column layout */
-  }
-  
-  .form-group {
-    margin-bottom: 20px;      /* Space between form groups */
-  }
-  
-  label {
-    margin-bottom: 5px;       /* Space below labels */
-    font-size: 1.2em;         /* Slightly larger font size */
-    color: #495057;           /* Darker label color */
-  }
-  
-  input {
-    padding: 15px;            /* Increase padding for input fields */
-    border: 1px solid #ced4da; /* Light border for inputs */
-    border-radius: 10px;      /* Rounded corners */
-    font-size: 1em;           /* Larger font size for input text */
-    transition: border-color 0.3s; /* Smooth transition for border color */
-  }
-  
-  input:focus {
-    outline: none;            /* Remove outline */
-    border-color: #007bff;   /* Blue border on focus */
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Shadow effect on focus */
-  }
-  
-  .btn {
-    padding: 15px;            /* Increase button padding */
-    font-size: 1.2em;         /* Larger font size for button */
-    background-color: #007bff; /* Bootstrap primary color */
-    color: white;             /* Text color */
-    border: none;             /* No border */
-    border-radius: 10px;      /* Rounded corners */
-    cursor: pointer;          /* Pointer cursor on hover */
-    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
-  }
-  
-  .btn:hover {
-    background-color: #0056b3; /* Darker blue on hover */
-    transform: translateY(-2px); /* Lift button slightly on hover */
-  }
-  
-  .btn:active {
-    transform: translateY(0); /* Reset lift on click */
-  }
-  
+.auth-container {
+  width: 400px;             /* Set a fixed width */
+  max-width: 90%;           /* Make it responsive */
+  padding: 40px;            /* Add padding */
+  border: 1px solid #1147bdb4; /* Lighter border color */
+  border-radius: 15px;      /* Rounded corners */
+  box-shadow: 0 8px 20px rgb(68, 5, 185); /* Shadow effect */
+  background-color: #13072e; /* Background for the form */
+  text-align: center;       /* Center the text inside the container */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition */
+}
+
+.auth-container:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 12px 24px rgba(37, 148, 238, 0.959); /* Enhanced shadow on hover */
+}
+
+h2 {
+  margin-bottom: 20px;      /* Space below the heading */
+  font-family: 'Arial', sans-serif; /* Font family */
+  color: #ffffff;           /* Text color */
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;    /* Column layout */
+}
+
+.form-group {
+  margin-bottom: 20px;      /* Space between form groups */
+}
+
+label {
+  display: block;           /* Make labels block elements */
+  margin-bottom: 5px;       /* Space below labels */
+  font-size: 1.2em;         /* Font size */
+  color: #ffffff;           /* Label color */
+  text-align: left;         /* Align text to the left */
+  width: 100%;              /* Full width */
+}
+
+input {
+  padding: 15px;            /* Increase padding for input fields */
+  border: 1px solid #ced4da; /* Light border for inputs */
+  border-radius: 10px;      /* Rounded corners */
+  font-size: 1em;           /* Larger font size for input text */
+  transition: border-color 0.3s; /* Smooth transition for border color */
+  width: 100%;              /* Full width for input */
+}
+
+input:focus {
+  outline: none;            /* Remove outline */
+  border-color: #007bff;   /* Blue border on focus */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Shadow effect on focus */
+}
+
+.btn {
+  padding: 15px;            /* Increase button padding */
+  font-size: 1.2em;         /* Larger font size for button */
+  background-color: #007bff; /* Bootstrap primary color */
+  color: white;             /* Text color */
+  border: none;             /* No border */
+  border-radius: 10px;      /* Rounded corners */
+  cursor: pointer;          /* Pointer cursor on hover */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+  width: 100%;              /* Full width for button */
+}
+
+.btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: translateY(-2px); /* Lift button slightly on hover */
+}
+
+.btn:active {
+  transform: translateY(0); /* Reset lift on click */
+}
