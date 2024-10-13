@@ -78,6 +78,10 @@ function CourseCards() {
         </SwiperSlide>
 
         <SwiperSlide>
+          <Card imgurl={CSS} coursename={"CSS"} authorname={"Prateek Narang"} lessons={60} ytlink={"https://www.youtube.com/@PrateekNarang27/playlists"} />
+            </SwiperSlide>
+
+            <SwiperSlide>
           <Card imgurl={go} coursename={"Go"} authorname={"Akash Thakur"} lessons={35} ytlink={""} />
         </SwiperSlide>
 
@@ -110,8 +114,17 @@ function CourseCards() {
         </SwiperSlide>
 
         <SwiperSlide>
+          <Card imgurl={php} coursename={"PHP"} authorname={"Anurag Tiwari"} lessons={65} ytlink={"https://www.youtube.com/@anuragtiwarime"} />
+         </SwiperSlide>
+
+          <SwiperSlide>
+          <Card imgurl={react} coursename={"React.js"} authorname={"Amman Dhattarwal"} lessons={65} ytlink={"https://www.youtube.com/watch?v=gY5sGvq-8h8"} />
+            </SwiperSlide>
+
+          <SwiperSlide>
           <Card imgurl={next} coursename={"Next.js"} authorname={"College Wallah"} lessons={25} ytlink={"https://www.youtube.com/@CollegeWallahbyPW"} />
         </SwiperSlide>
+
         <div className="slider-controler">
           <div className="swiper-button-prev slider-arrow">
             <ion-icon name="arrow-back-outline"></ion-icon>
@@ -128,3 +141,4 @@ function CourseCards() {
 }
 
 export default CourseCards;
+

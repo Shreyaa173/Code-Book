@@ -11,5 +11,5 @@ export default function Card({imgurl,coursename,authorname,lessons,ytlink}) {
             <p className="lessons"><i className="fa-brands fa-leanpub"></i>{lessons} Lessons</p>
         </div>
     </a>
-  )
+  );
 }
