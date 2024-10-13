@@ -1,8 +1,7 @@
 import React from 'react'
-
-export default function Card({imgurl,coursename,authorname,lessons}) {
+export default function Card({imgurl,coursename,authorname,lessons,ytlink}) {
   return (
-    <a href="#" className="course-box">
+    <a href={ytlink} target="_blank" className="course-box">
         <div className="course-image">
             <img src={imgurl} alt={coursename}/>
         </div>

@@ -1,0 +1,141 @@
+.course-card-sec {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.swiper_container {
+  height: 35rem;
+  padding: 10%;
+  padding-bottom: 15%;
+  position: relative;
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 37rem;
+  height: 35rem;
+  position: relative;
+  border-radius: 40px;
+  background-color:white;
+  border: solid 3px black;
+  box-shadow: 10px 10px 25px black;
+}
+.course-box{
+    text-decoration: none !important;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 40px;
+}
+.course-text{
+    color: black;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.course-text .course-name, .course-author, .lessons{
+    text-decoration: none !important;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+@media (max-width: 500px) {
+  .swiper_container {
+    height: 47rem;
+  }
+  .swiper-slide {
+    width: 28rem !important;
+    height: 36rem !important;
+  }
+  .swiper-slide img {
+    width: 28rem !important;
+    height: 36rem !important;
+  }
+}
+
+ .swiper-slide img {
+  width: 25rem;
+  height: 25rem;
+  border-radius: 2rem;
+  object-fit: cover;
+} 
+
+.swiper-slide-shadow-left,
+.swiper-slide-shadow-right {
+  display: none;
+}
+
+.slider-controler {
+  position: relative;
+  bottom: -15%;
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+}
+
+
+@media (max-width: 990px) {
+  .slider-controler .swiper-button-next {
+    left: 70% !important;
+    transform: translateX(-70%) !important;
+  }
+}
+
+@media (max-width: 450px) {
+  .slider-controler .swiper-button-next {
+    left: 80% !important;
+    transform: translateX(-80%) !important;
+  }
+}
+
+@media (max-width: 990px) {
+  .slider-controler .swiper-button-prev {
+    left: 30% !important;
+    transform: translateX(-30%) !important;
+  }
+}
+
+@media (max-width: 450px) {
+  .slider-controler .swiper-button-prev {
+    left: 20% !important;
+    transform: translateX(-20%) !important;
+  }
+}
+
+.slider-controler .slider-arrow {
+  background-color: #e8d8d8;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  filter: drop-shadow(0px 8px 24px rgb(255, 255, 255));
+}
+
+.slider-controler .slider-arrow ion-icon {
+  font-size: 2.5rem;
+  color: #4d0698;
+}
+
+.slider-controler .slider-arrow::after {
+  content: '';
+}
+
+.swiper-pagination {
+  position: relative;
+  width: 150px !important;
+  bottom: 1rem;
+}
+
+.swiper-pagination .swiper-pagination-bullet {
+    background-color: #ccc; /* Color for inactive dots */
+    filter: drop-shadow(0px 8px 24px rgb(237, 232, 232));
+  }
+  
+  .swiper-pagination .swiper-pagination-bullet-active {
+    background-color: #ecc4c4; /* Color for active dot */
+  }
+  

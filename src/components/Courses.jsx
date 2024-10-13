@@ -2,7 +2,7 @@ import React from 'react'
 import CourseCards from './CourseCards'
 function Courses() {
   return (
-    <div>
+    <div className='course-page'>
         <div className="course-head" id="course-head">
             <div className="search-icon">
                 <h2>Our Courses</h2>
