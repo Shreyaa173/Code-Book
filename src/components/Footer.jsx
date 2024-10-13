@@ -41,7 +41,7 @@ function Footer() {
                                 <h3>Subscribe to our NewsLetter</h3>
                                 <h4 className="subscribe-text">Stay in the loop and subscribe to Code book's Newsletter</h4>
                                 <div className="search">
-                                    <input type="text" placeholder="Enter your email" spellcheck="false"/>
+                                    <input type="text" placeholder="Enter your email" spellCheck="false"/>
                                     <button><i className="fa-solid fa-arrow-right"></i></button>
                                 </div>
                             </div>        
