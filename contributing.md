@@ -23,8 +23,7 @@ If you have an idea for a new feature or improvement, please submit an issue usi
 
 ### 3. Submitting Pull Requests
 
-Here’s how to submit a pull request (PR):
-
+Make sure you have written which issue you solved in the PR.
 1. **Fork the repository** and create a new branch:
    ```bash
    git checkout -b my-feature-branch
