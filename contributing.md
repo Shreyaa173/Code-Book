@@ -2,10 +2,6 @@
 
 Thank you for considering contributing to **Code-Book**! Your efforts help improve the project and are greatly appreciated. Below are the guidelines for contributing to this repository.
 
-## Code of Conduct
-
-We expect all contributors to follow the [Code of Conduct](https://github.com/Shreyaa173/Code-Book/blob/main/CODE_OF_CONDUCT.md) to ensure a welcoming and inclusive environment.
-
 ## How to Contribute
 
 ### 1. Reporting Bugs
