@@ -7,7 +7,7 @@ function TestimonialCard({description,imgurl,name,role,location}) {
                 <div className="user">
                     <i className="fa-solid fa-quote-left"></i>
                     <p>{description}</p>
-                    <img src={imgurl} alt="image" draggable="false"/>
+                    <img src={imgurl} alt="image" draggable="false" className='testimonial-image'/>
                     <div className="user-text">
                         <p className="name">{name}</p>
                         <p>{role}, {location}</p>

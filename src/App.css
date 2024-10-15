@@ -725,3 +725,10 @@ nav{
 .search button:hover i {
   color: #007bff;
 }
+
+.testimonial-image {
+    width: 100%;
+    height: auto;
+    max-width: 150px;
+    object-fit: cover;  
+}
