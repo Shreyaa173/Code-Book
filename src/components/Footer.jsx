@@ -2,24 +2,20 @@ import React, { useState } from 'react';
 import logo from "../assets/logo.png";
 
 function Footer() {
-  const [email, setEmail] = useState('');
-  const [isValid, setIsValid] = useState(false);
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
-  const handleEmailChange = (event) => {
-    const value = event.target.value;
-    setEmail(value);
-    
-    // Basic email validation
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    setIsValid(emailPattern.test(value));
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
   };
 
-  const handleSubmit = () => {
-    if (isValid) {
-      alert(`Email ${email} submitted!`);
-      // Here you can add the logic to handle email submission (e.g., API call)
+  const handleSubscription = (e) => {
+    e.preventDefault();
+    if (email) {
+      setMessage("Subscription added! 🎉");
+      setEmail("");
     } else {
-      alert('Please enter a valid email address.');
+      setMessage("Please enter a valid email address.");
     }
   };
 
@@ -33,7 +29,7 @@ function Footer() {
               <p>Code Book</p>
             </div> 
             <div className="about-text">
-              <h3>Welcome to Code Book—your go-to resource hub for mastering coding. Whether you're a beginner or an experienced developer, we provide curated tutorials, coding challenges, and guides to enhance your skills across various programming languages and frameworks. Our mission is to create a community where learning to code is accessible, engaging, and fun for everyone.</h3>
+              <h3>Welcome to Code Book—your go-to resource hub for mastering coding...</h3>
             </div>
           </div>
           
@@ -61,50 +57,28 @@ function Footer() {
               </div> 
               <div className="third">
                 <h3>Subscribe to our Newsletter</h3>
-                <div className="email-container" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '50px' }}>
-  <div className="email-input" style={{ display: 'flex', justifyContent: 'center', width: '100%', maxWidth: '400px' }}>
-    <input 
-      type="email" 
-      value={email} 
-      onChange={handleEmailChange} 
-      placeholder="Enter your email" 
-      spellCheck="false" 
-      style={{ flex: 1, height: '2.5rem', borderRadius: '30px', border: '1px solid #ccc', padding: '0 10px' }} 
-    />
-    <span className="checkmark" style={{ display: isValid ? 'inline' : 'none', color: 'green', marginLeft: '10px', fontSize: '20px' }}>
-      &#10003;
-    </span>
-  </div>
-  </div>
-  <button 
-    className="explore-btn submit-btn" 
-    onClick={handleSubmit} 
-    style={{
-      marginTop: '10px',
-      fontSize: '1.255rem',
-      height: '2.5rem',
-      width: '12rem',
-      borderRadius: '30px',
-      border: 'none',
-      cursor: 'pointer',
-      background: 'rgb(255, 204, 74)',
-      transition: 'box-shadow 0.3s ease-in-out'
-    }}
-  >
-    Submit
-  </button>
-
-
-
-                
-               
-              </div>
+                <h4 className="subscribe-text">Stay in the loop and subscribe to Code Book's Newsletter</h4>
+                <form className="search" onSubmit={handleSubscription}>
+                  <input 
+                    type="email" 
+                    placeholder="Enter your email" 
+                    spellCheck="false" 
+                    value={email}
+                    onChange={handleEmailChange}
+                    required
+                  />
+                  <button type="submit">
+                    <i className="fa-solid fa-arrow-right"></i>
+                  </button>
+                </form>
+                {message && <p className="subscription-message">{message}</p>}
+              </div>        
             </div>
           </div>
         </div>
-      </div>
-      <div className="foot">
-        <p>&copy; 2024 Code Book. All Rights Reserved.</p>
+        <div className="foot" style={{ marginTop: '20px' }}>
+          <p>&copy; 2024 Code Book. All Rights Reserved.</p>
+        </div>
       </div>
     </div>
   );
