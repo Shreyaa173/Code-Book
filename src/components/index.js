@@ -8,4 +8,5 @@ import Navbar from "./Navbar";
 import Slideshow from "./Slideshow";
 import TestimonialCard from "./TestimonialCard";
 import Home from './Home';
+import ProgressBar from "./ProgressBar";
 export {Card,Contact,CourseCards,Courses,Footer,Home,Introduction,Navbar,Slideshow,TestimonialCard};

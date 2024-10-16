@@ -10,6 +10,46 @@
 html {
   scroll-behavior: smooth;
 }
+.progress-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px; /* Ensure the height is visible */
+  background-color: rgba(255, 255, 255, 0.1); /* Light background for contrast */
+  z-index: 1000; /* Make sure it's on top */
+}
+
+.progress-bar {
+  height: 100%; /* Matches the container's height */
+  width: 0; /* Will change dynamically */
+  background: linear-gradient(90deg, #0077ff, #00ffff); /* Visible color gradient */
+  box-shadow: 0 0 15px rgba(0, 119, 255, 0.8), 0 0 30px rgba(0, 255, 255, 0.8); /* Visible glow effect */
+  transition: width 0.4s ease; /* Smoother transition */
+}
+
+/* Custom Scrollbar for WebKit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+  height: 12px; /* Height of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1); /* Track background similar to progress container */
+  border-radius: 10px; /* Rounded corners */
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, #0077ff, #00ffff); /* Gradient similar to progress bar */
+  border-radius: 10px; /* Rounded corners for the thumb */
+  box-shadow: 0 0 15px rgba(0, 119, 255, 0.8), 0 0 30px rgba(0, 255, 255, 0.8); /* Glowing effect */
+  transition: background 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(90deg, #0056b3, #00cccc); /* Darker gradient on hover */
+  box-shadow: 0 0 20px rgba(0, 119, 255, 1), 0 0 40px rgba(0, 255, 255, 1); /* Stronger glowing effect on hover */
+}
 
 body {
   height: 100%;
@@ -20,7 +60,7 @@ body {
   background: #13072e;
 }
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   width: 8px;
   display: none;
 }
@@ -32,7 +72,7 @@ body {
 ::-webkit-scrollbar-thumb {
   background: #cfc9ff;
   border-radius: 10px;
-}
+} */
 
 .home {
   height: auto;
@@ -51,6 +91,9 @@ nav {
   background: #13072e;
   z-index: 2;
   padding-bottom: 25px;
+}
+.nav-up{
+  display: contents;
 }
 
 .nav-icon {
@@ -210,7 +253,7 @@ nav {
 }
 
 .home-image {
-  width: 500px;
+  width: 30rem;
   margin-left: 230px;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -752,4 +795,281 @@ h1{
     height: auto;
     max-width: 150px;
     object-fit: cover;  
+}
+@media (max-width:660px){
+  .home-text{
+    flex-direction: column;
+  }
+  .mid-text {
+    width: 80vw;
+  }
+  .home-image {
+    margin: 0px;
+    width: -webkit-fill-available;
+    padding: 20px;
+  }
+  .search-icon{
+    flex-direction: column;
+  }
+  .search-icon h2 {
+    padding: 10px;
+    font-size: 3rem;
+  }
+  .search-bar {
+    width: 80%;
+  }
+  .search-icon .search-bar input{
+    width: 100%;
+  }
+  .search-icon .mag{
+    position: static;
+  }
+  .courses{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .course-page{
+    padding: 0px;
+  }
+  .testimonals .why{
+    font-size: 3rem;
+  }
+  .wrapper .carousels{
+    width: 100vw;
+  }
+  .contact-us{
+    flex-direction: column;
+    margin-top: 20vw;
+  }
+  .form{
+        margin-left: 30px;
+  }
+  .form input, textarea {
+    width: 65vw;
+    height: 5vh;
+  }
+  .center{
+      display: flex;
+      flex-direction: column;
+  }
+  .contact-us .center input {
+    width: 65vw;
+  }
+  .submit-btn{
+    margin-left: 3rem;
+  }
+  .details p{
+    width: 80vw;
+    padding: 40px;
+  }
+  .footer{
+    height: auto;
+    margin-top: 20rem;
+  }
+  .footer-top{
+    flex-direction: column;
+  }
+  .foot{
+    margin-top: 0px;
+    width: auto;
+  }
+  .resources {
+    flex-wrap: wrap;
+    margin: 20px;
+}
+.about-text{
+  width: 80vw;
+}
+.third .search{
+  margin-left: 0px;
+}
+
+}
+@media (min-width: 660px) and (max-width: 1200px) {
+  nav{
+    padding: 70px 0;
+  }
+  .nav-up{
+    display: flex;
+    flex-direction: column;
+  }
+  .nav-icon p{
+    font-size: 2rem;
+  }
+  .nav-item {
+    font-size: 1.5rem;
+  }
+  .home-text {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    margin-top: 200px;
+    padding: 20px 0;
+  }
+
+  .mid-text {
+    width: 60vw; /* Adjusted for better readability */
+  }
+
+  .home-image {
+    width: 100%; /* Scaled for medium-sized screens */
+    margin: 10px auto;
+    padding: 20px 0;
+  }
+
+  .search-icon {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .search-icon h2 {
+    padding: 1rem;
+    font-size: 4rem;
+
+  }
+
+  .search-bar {
+    width: 60%; /* Adjust search bar for mid-sized screens */
+  }
+
+  .search-icon .search-bar input {
+    width: 100%;
+  }
+
+  .search-icon .mag {
+    position: static;
+    margin-left: 10px;
+  }
+
+  .courses {
+    grid-template-columns: repeat(2, 2fr);
+    padding: 20px;
+    width: 100%;
+    gap: 20px;
+    margin: 0px;
+  }
+  .course-box{
+    width: 100%;
+  }
+
+  .course-page {
+    padding: 10px;
+    margin-top: 0px;
+    width: 90vw;
+  }
+
+  .wrapper .carousels {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .testimonals .why {
+    font-size: 4rem;
+  }
+  .contact-us {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5vw;
+    padding: 20px 0 20px 0;
+  }
+
+  .form {
+    margin-left: 0;
+    width: 90%;
+  }
+
+  .form input,
+  textarea {
+    width: 93%;
+    height: 4vh;
+  }
+
+  .center {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .contact-us .center input {
+    width: 80%;
+  }
+
+  .submit-btn {
+    margin-left: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+  }
+
+  .details p {
+    width: 70vw;
+    padding: 20px;
+    font-size: 1.5rem; 
+  }
+
+  .footer {
+    height: auto;
+    margin-top: 0px ;
+    padding: 20px;
+  }
+
+  .footer-top {
+    justify-content: space-around;
+    flex-direction: column;
+    gap: 20px;
+
+  }
+  .footer .right{
+    width: 100%;
+  }
+
+  .foot {
+    margin-top: 0;
+    width: auto;
+  }
+
+  .resources {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px;
+  }
+
+  .about-text {
+    width: 60vw;
+  }
+
+  .third .search {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1700px) {
+  .home-image {
+    margin-left: 100px;
+  }
+  .explore-btn{
+    margin-bottom: 50px;
+    padding: 30px;
+    width: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .courses{
+    grid-template-columns: repeat(3, 2fr);
+    gap: 2rem;
+    margin: 0;
+  }
+  .course-page a {
+    width: 100%;
+    height: 100%;
+  }
+  .contact-us{
+    margin-bottom: 20px;
+    width: 100%;
+    height: auto;
+  }
 }

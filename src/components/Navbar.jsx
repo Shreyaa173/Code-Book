@@ -1,9 +1,12 @@
 import React from "react";
 import Logo from "../assets/logo.png";
+import ProgressBar from "./ProgressBar";
 
 function Navbar() {
   return (
     <nav>
+      <ProgressBar/>
+      <div className="nav-up">
       <div className="nav-icon">
         <img src={Logo} alt="" className="logo" />
         <p>Code Book</p>
@@ -20,6 +23,7 @@ function Navbar() {
             <a href="#contact">Contact</a>
           </li>
         </ul>
+      </div>
       </div>
       <div className="nav-button">
         <button className="btn">
