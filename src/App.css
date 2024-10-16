@@ -395,10 +395,12 @@ nav {
   position: relative;
 }
 
-.testimonals h1 {
+.testimonals .why {
   text-align: center;
   font-size: 5rem;
   font-weight: 700;
+  margin-top: -3rem;
+  margin-bottom: 2rem;
 }
 
 .user-card {
@@ -512,7 +514,6 @@ nav {
 }
 
 .form {
-  margin-top: 100px;
   flex-basis: 55%;
   justify-content: center;
   margin-left: 3vw;
@@ -520,7 +521,7 @@ nav {
 
 .form input,
 textarea {
-  width: 22vw;
+  width: 33.5vw;
   height: 3.5vw;
   margin-bottom: 30px;
   margin-left: 30px;
@@ -529,6 +530,11 @@ textarea {
   text-align: left;
   padding-left: 20px;
   color: black;
+  font-size: 1.1rem;
+}
+
+.contact-us .center input{
+  width: 15vw;
 }
 
 .phone {
@@ -556,11 +562,12 @@ textarea {
   margin-right: 10px;
 }
 
-.details h1 {
+h1{
   font-size: 6vw;
   font-weight: 700;
-  margin-bottom: 3rem;
-  margin-top: -1rem;
+  margin-top: 2rem;
+  text-align: center;
+  margin-bottom: -2rem;
 }
 
 .details p {

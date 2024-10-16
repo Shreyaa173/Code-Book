@@ -1,7 +1,7 @@
 import React from 'react'
 
 function TestimonialCard({description,imgurl,name,role,location}) {
-  return (
+return (
         <li className="card">
             <div className="user-card">
                 <div className="user">
@@ -15,7 +15,7 @@ function TestimonialCard({description,imgurl,name,role,location}) {
                 </div>
             </div>
         </li>
-  )
+)
 }
 
 export default TestimonialCard

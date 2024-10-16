@@ -116,7 +116,7 @@ function Slideshow() {
     <>
       <div className="slideshow-container">
         <div className="testimonals" id="testimonal">
-          <h1>Why Choose Us???</h1>
+          <h1 className="why">Why Choose Us???</h1>
           <div className="wrapper">
             <ul ref={carouselref} className="carousels">
               <TestimonialCard
