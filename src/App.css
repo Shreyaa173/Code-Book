@@ -309,7 +309,7 @@ nav {
   overflow: hidden;
   transition: all 0.3s ease;
   background-color: #fff;
-  margin-bottom: 20vh;
+  margin-bottom: 10vh;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
