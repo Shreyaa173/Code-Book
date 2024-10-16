@@ -29,7 +29,8 @@ function Footer() {
               <p>Code Book</p>
             </div> 
             <div className="about-text">
-              <h3>Welcome to Code Book—your go-to resource hub for mastering coding...</h3>
+              <h3>Welcome to Code Book—your go-to resource hub for mastering coding. Whether you're a beginner or an experienced developer, we provide curated tutorials, coding challenges, and guides to enhance your skills across various programming languages and frameworks. Our mission is to create a community where learning to code is accessible, engaging, and fun for everyone.
+                        </h3>
             </div>
           </div>
           
