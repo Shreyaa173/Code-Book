@@ -122,7 +122,6 @@ nav {
 .nav-list {
   list-style: none;
   display: flex;
-  padding-bottom: 25px;
 }
 
 .nav-item {
@@ -150,7 +149,12 @@ nav {
   text-decoration: none;
   color: black;
 }
-
+.nav-content{
+  display: flex;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+}
 .nav-button .btn {
   font-size: 1.25rem;
   height: 2.5rem;
@@ -182,6 +186,10 @@ nav {
 .btn:hover i {
   color: white;
 }
+.hamburger{
+  display: none;
+}
+
 
 .home-text {
   height: fit-content;
@@ -800,6 +808,68 @@ h1{
   .home-text{
     flex-direction: column;
   }
+  .show{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    height: auto;
+    top: 100px;
+    padding: 20px 0;
+  }
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+
+  /* .nav-text, .nav-button {
+    display: none;
+  } */
+
+  .nav-icon p{
+    font-size: 2rem;
+  }
+  .nav-content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #13072e;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .nav-content.show {
+    opacity: 1;
+    visibility: visible;
+  }
+  .nav-item{
+    margin-left: 0;
+    font-size: 1.5rem;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 25px;
+  }
+
+  .nav-button {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 1rem;
+  }
+
+  .fa-bars, .fa-times {
+    font-size: 2rem;
+    color: white;
+    padding: 25px;
+  }
   .mid-text {
     width: 80vw;
   }
@@ -889,7 +959,10 @@ h1{
 }
 @media (min-width: 660px) and (max-width: 1200px) {
   nav{
-    padding: 70px 0;
+    padding: 20px 0;
+    height: auto;
+        display: flex;
+        flex-direction: column;
   }
   .nav-up{
     display: flex;
