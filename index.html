@@ -35,6 +35,21 @@
         <div class="loader"></div>
     </div>
     <div id="root"></div>
+
+    <script>
+        window.embeddedChatbotConfig = {
+        chatbotId: "rfrWIJLugIrq6XpUHDKwC",
+        domain: "www.chatbase.co"
+        }
+        </script>
+        <script
+        src="https://www.chatbase.co/embed.min.js"
+        chatbotId="rfrWIJLugIrq6XpUHDKwC"
+        domain="www.chatbase.co"
+        defer>
+        </script>
+    <script type="module" src="./src/main.jsx"></script> <!-- Use relative path -->
+
     <script type="module" src="./src/main.jsx"></script>
     <script>
         window.addEventListener('load', function() {
@@ -43,5 +58,6 @@
             }, 1000); // Hide loader after 1 second (adjust as needed)
         });
     </script>
+
 </body>
 </html>
