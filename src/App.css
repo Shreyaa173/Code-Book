@@ -45,7 +45,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding-top: 30px;
-  position: fixed;
+  position:   fixed;
   top: 0;
   width: 100%;
   background: #13072e;
@@ -61,84 +61,203 @@ nav {
 
 .logo {
   height: 80px;
-  margin-left: 5%
+  margin-left: 30%
+}
+ 
+.nav-icon {
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  cursor: pointer;  
+}
+
+.nav-icon:hover {
+  transform: scale(1.1) rotate(2deg);  
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);  
+}
+
+.nav-icon img {
+  transition: transform 0.3s ease;  
+}
+
+.nav-icon:hover img {
+  transform: scale(1.1);  
 }
 
 .nav-icon p {
-  width: 200px;
-  font-size: 1.25rem;
-  font-weight: 700;
+  margin-left: 10px;  
+  width: 400px;
+  font-size: 1.2rem;  
+  font-weight: bold;  
+  color:whitesmoke;  
+  transition: color 0.3s ease, text-shadow 0.3s ease;  
 }
 
+.nav-icon:hover p {
+  color: #3498db;  
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);  
+}
+
+
+
+
+ 
 .nav-text {
   margin-top: 14px;
   display: flex;
   word-wrap: break-word;
+  margin-left:400px ;
 }
+
+
+
 
 .nav-list {
   list-style: none;
   display: flex;
   padding-bottom: 25px;
 }
+ 
+ 
+
+.nav-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  gap: 40px;
+}
 
 .nav-item {
-  margin-left: 5vw;
-  font-size: 1.15rem;
-  cursor: pointer;
+  position: relative;
 }
 
 .nav-item a {
-  color: white;
   text-decoration: none;
-  opacity: 0.8;
+  color:  whitesmoke;
+  font-size: 1rem;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .nav-item a:hover {
-  opacity: 1;
-  font-weight: 500;
+  color: #007BFF;  
+  transform: translateY(-3px) scale(1.05) rotateY(5deg); 
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.5);  
+  background-color: rgba(0, 123, 255, 0.1);  
 }
 
+
+.nav-item a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 2px;
+  background-color: #007BFF;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.nav-item a:hover::after {
+  transform: scaleX(1);
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-5px);
+  }
+}
+
+.nav-item a {
+  animation: bounce 0.5s ease;
+}
+
+
+ 
+
+
+
+
+
+ 
 .nav-button {
   display: flex;
+  gap: 15px;
+  margin-right: 35px;
 }
 
-.nav-button a {
-  text-decoration: none;
-  color: black;
-}
-
-.nav-button .btn {
-  font-size: 1.25rem;
-  height: 2.5rem;
-  width: 8rem;
-  margin-right: 2vw;
+.btn {
+  background-color: #007BFF;  
+  color: #fff;  
   border-radius: 30px;
-  border: none;
-  cursor: pointer;
-  background: white;
-  transition: all 0.3s ease-in-out;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease; /* Smooth transitions */
+  display: inline-flex;
+  align-items: center;
+  position: relative;  
+  overflow: hidden;  
 }
 
-.btn i {
-  color: black;
-  border: none;
-  margin-left: 10px;
+.btn a {
+  color: inherit; 
+  display: block;
+  text-decoration: none;  
 }
 
 .btn:hover {
-  background: transparent;
-  color: white;
-  font-weight: 400;
+  background-color: #0056b3;  
+  color: #FFD700;  
+  transform: translateY(-4px) scale(1.05);  
+  box-shadow: 0 8px 20px rgba(0, 123, 255, 0.4);  
 }
 
-.btn:hover a {
-  color: white;
+.btn:hover::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);  
+  transform: translate(-50%, -50%) scale(0);
+  animation: ripple 0.6s linear forwards;  
+  z-index: 0;  
+}
+
+@keyframes ripple {
+  to {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;  
+  }
 }
 
 .btn:hover i {
-  color: white;
+  transform: translateX(5px) rotate(15deg);  
+  transition: transform 0.3s ease;
 }
+
+.btn i {
+  margin-left: 5px;
+  transition: transform 0.3s ease;
+}
+
+
+
+
+
+
+
+ 
 
 .home-text {
   height: fit-content;
