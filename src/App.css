@@ -253,40 +253,77 @@ nav {
   position: relative;
 }
 
-.search-icon .search-bar input {
+.search-bar input {
   border-radius: 30px;
   border: 1px solid #ccc;
   height: 3.5rem;
-  width: 50%;
+  width: 100%; /* Ensures input takes up full width within the search-bar container */
   padding-left: 20px;
+  padding-right: 60px; /* Adjust padding to fit the search icon */
   font-size: 1.25rem;
   color: #333;
   background-color: #f1f1f1;
   transition: box-shadow 0.3s ease;
 }
 
-.search-icon input:focus {
+.search-bar input:focus {
   outline: none;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.search-icon .mag {
+/* Styling for the search icon (magnifying glass) */
+.search-bar .mag {
   border: none;
   background-color: transparent;
   cursor: pointer;
   position: absolute;
-  right: 200px;
+  right: 20px; /* Moves the icon closer to the right edge of the input field */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.search-icon i {
+.search-bar i {
+  position: absolute;
+  right: 50px; /* Position the icon inside the input field */
+  font-size: 1.5rem;
+  color: #555;
   font-size: 1.5rem;
   cursor: pointer;
   color: #555;
+  transition: color 0.3s ease;
 }
 
-.search-icon button:hover i {
+/* Hover effect for the search icon */
+.search-bar button:hover i {
   color: #007bff;
 }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .search-icon {
+    flex-direction: column;
+  }
+
+  .search-icon h2 {
+    font-size: 3rem; /* Adjusted for smaller screens */
+    margin-bottom: 20px;
+  }
+
+  .search-bar {
+    width: 80%; /* Adjusts search bar width for smaller screens */
+  }
+
+  .search-bar input {
+    font-size: 1rem; /* Adjust input font size for smaller screens */
+    height: 3rem; /* Reduce height for better alignment */
+  }
+
+  .search-bar i {
+    font-size: 1.25rem;
+  }
+}
+
 
 /* Courses grid */
 .courses {
