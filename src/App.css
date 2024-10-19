@@ -10,45 +10,64 @@
 html {
   scroll-behavior: smooth;
 }
+
 .progress-container {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 6px; /* Ensure the height is visible */
-  background-color: rgba(255, 255, 255, 0.1); /* Light background for contrast */
-  z-index: 1000; /* Make sure it's on top */
+  height: 6px;
+  /* Ensure the height is visible */
+  background-color: rgba(255, 255, 255, 0.1);
+  /* Light background for contrast */
+  z-index: 1000;
+  /* Make sure it's on top */
 }
 
 .progress-bar {
-  height: 100%; /* Matches the container's height */
-  width: 0; /* Will change dynamically */
-  background: linear-gradient(90deg, #0077ff, #00ffff); /* Visible color gradient */
-  box-shadow: 0 0 15px rgba(0, 119, 255, 0.8), 0 0 30px rgba(0, 255, 255, 0.8); /* Visible glow effect */
-  transition: width 0.4s ease; /* Smoother transition */
+  height: 100%;
+  /* Matches the container's height */
+  width: 0;
+  /* Will change dynamically */
+  background: linear-gradient(90deg, #0077ff, #00ffff);
+  /* Visible color gradient */
+  box-shadow: 0 0 15px rgba(0, 119, 255, 0.8), 0 0 30px rgba(0, 255, 255, 0.8);
+  /* Visible glow effect */
+  transition: width 0.4s ease;
+  /* Smoother transition */
 }
 
 /* Custom Scrollbar for WebKit browsers (Chrome, Safari) */
 ::-webkit-scrollbar {
-  width: 12px; /* Width of the scrollbar */
-  height: 12px; /* Height of the scrollbar */
+  width: 12px;
+  /* Width of the scrollbar */
+  height: 12px;
+  /* Height of the scrollbar */
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.1); /* Track background similar to progress container */
-  border-radius: 10px; /* Rounded corners */
+  background: rgba(255, 255, 255, 0.1);
+  /* Track background similar to progress container */
+  border-radius: 10px;
+  /* Rounded corners */
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(90deg, #0077ff, #00ffff); /* Gradient similar to progress bar */
-  border-radius: 10px; /* Rounded corners for the thumb */
-  box-shadow: 0 0 15px rgba(0, 119, 255, 0.8), 0 0 30px rgba(0, 255, 255, 0.8); /* Glowing effect */
-  transition: background 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+  background: linear-gradient(90deg, #0077ff, #00ffff);
+  /* Gradient similar to progress bar */
+  border-radius: 10px;
+  /* Rounded corners for the thumb */
+  box-shadow: 0 0 15px rgba(0, 119, 255, 0.8), 0 0 30px rgba(0, 255, 255, 0.8);
+  /* Glowing effect */
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  /* Smooth transition */
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(90deg, #0056b3, #00cccc); /* Darker gradient on hover */
-  box-shadow: 0 0 20px rgba(0, 119, 255, 1), 0 0 40px rgba(0, 255, 255, 1); /* Stronger glowing effect on hover */
+  background: linear-gradient(90deg, #0056b3, #00cccc);
+  /* Darker gradient on hover */
+  box-shadow: 0 0 20px rgba(0, 119, 255, 1), 0 0 40px rgba(0, 255, 255, 1);
+  /* Stronger glowing effect on hover */
 }
 
 body {
@@ -92,7 +111,8 @@ nav {
   z-index: 2;
   padding-bottom: 25px;
 }
-.nav-up{
+
+.nav-up {
   display: contents;
 }
 
@@ -149,12 +169,14 @@ nav {
   text-decoration: none;
   color: black;
 }
-.nav-content{
+
+.nav-content {
   display: flex;
-    justify-content: space-around;
-    width: 100%;
-    align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  align-items: center;
 }
+
 .nav-button .btn {
   font-size: 1.25rem;
   height: 2.5rem;
@@ -186,7 +208,8 @@ nav {
 .btn:hover i {
   color: white;
 }
-.hamburger{
+
+.hamburger {
   display: none;
 }
 
@@ -584,7 +607,7 @@ textarea {
   font-size: 1.1rem;
 }
 
-.contact-us .center input{
+.contact-us .center input {
   width: 15vw;
 }
 
@@ -613,7 +636,7 @@ textarea {
   margin-right: 10px;
 }
 
-h1{
+h1 {
   font-size: 6vw;
   font-weight: 700;
   margin-top: 2rem;
@@ -799,16 +822,18 @@ h1{
 }
 
 .testimonial-image {
-    width: 100%;
-    height: auto;
-    max-width: 150px;
-    object-fit: cover;  
+  width: 100%;
+  height: auto;
+  max-width: 150px;
+  object-fit: cover;
 }
-@media (max-width:660px){
-  .home-text{
+
+@media (max-width:660px) {
+  .home-text {
     flex-direction: column;
   }
-  .show{
+
+  .show {
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -816,6 +841,7 @@ h1{
     top: 100px;
     padding: 20px 0;
   }
+
   .hamburger {
     display: block;
     cursor: pointer;
@@ -826,9 +852,10 @@ h1{
     display: none;
   } */
 
-  .nav-icon p{
+  .nav-icon p {
     font-size: 2rem;
   }
+
   .nav-content {
     position: absolute;
     top: 100%;
@@ -846,7 +873,8 @@ h1{
     opacity: 1;
     visibility: visible;
   }
-  .nav-item{
+
+  .nav-item {
     margin-left: 0;
     font-size: 1.5rem;
   }
@@ -865,115 +893,146 @@ h1{
     gap: 1rem;
   }
 
-  .fa-bars, .fa-times {
+  .fa-bars,
+  .fa-times {
     font-size: 2rem;
     color: white;
     padding: 25px;
   }
+
   .mid-text {
     width: 80vw;
   }
+
   .home-image {
     margin: 0px;
     width: -webkit-fill-available;
     padding: 20px;
   }
-  .search-icon{
+
+  .search-icon {
     flex-direction: column;
   }
+
   .search-icon h2 {
     padding: 10px;
     font-size: 3rem;
   }
+
   .search-bar {
     width: 80%;
   }
-  .search-icon .search-bar input{
+
+  .search-icon .search-bar input {
     width: 100%;
   }
-  .search-icon .mag{
+
+  .search-icon .mag {
     position: static;
   }
-  .courses{
+
+  .courses {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
   }
-  .course-page{
+
+  .course-page {
     padding: 0px;
   }
-  .testimonals .why{
+
+  .testimonals .why {
     font-size: 3rem;
   }
-  .wrapper .carousels{
+
+  .wrapper .carousels {
     width: 100vw;
   }
-  .contact-us{
+
+  .contact-us {
     flex-direction: column;
     margin-top: 20vw;
   }
-  .form{
-        margin-left: 30px;
+
+  .form {
+    margin-left: 30px;
   }
-  .form input, textarea {
+
+  .form input,
+  textarea {
     width: 65vw;
     height: 5vh;
   }
-  .center{
-      display: flex;
-      flex-direction: column;
-  }
-  .contact-us .center input {
-    width: 65vw;
-  }
-  .submit-btn{
-    margin-left: 3rem;
-  }
-  .details p{
-    width: 80vw;
-    padding: 40px;
-  }
-  .footer{
-    height: auto;
-    margin-top: 20rem;
-  }
-  .footer-top{
-    flex-direction: column;
-  }
-  .foot{
-    margin-top: 0px;
-    width: auto;
-  }
-  .resources {
-    flex-wrap: wrap;
-    margin: 20px;
-}
-.about-text{
-  width: 80vw;
-}
-.third .search{
-  margin-left: 0px;
-}
 
-}
-@media (min-width: 660px) and (max-width: 1200px) {
-  nav{
-    padding: 20px 0;
-    height: auto;
-        display: flex;
-        flex-direction: column;
-  }
-  .nav-up{
+  .center {
     display: flex;
     flex-direction: column;
   }
-  .nav-icon p{
+
+  .contact-us .center input {
+    width: 65vw;
+  }
+
+  .submit-btn {
+    margin-left: 3rem;
+  }
+
+  .details p {
+    width: 80vw;
+    padding: 40px;
+  }
+
+  .footer {
+    height: auto;
+    margin-top: 20rem;
+  }
+
+  .footer-top {
+    flex-direction: column;
+  }
+
+  .foot {
+    margin-top: 0px;
+    width: auto;
+  }
+
+  .resources {
+    flex-wrap: wrap;
+    margin: 20px;
+  }
+
+  .about-text {
+    width: 80vw;
+  }
+
+  .third .search {
+    margin-left: 0px;
+  }
+
+}
+
+@media (min-width: 660px) and (max-width: 1200px) {
+  nav {
+    padding: 20px 0;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-up {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-icon p {
     font-size: 2rem;
   }
+
   .nav-item {
     font-size: 1.5rem;
   }
+
   .home-text {
     flex-direction: row;
     justify-content: space-between;
@@ -983,11 +1042,13 @@ h1{
   }
 
   .mid-text {
-    width: 60vw; /* Adjusted for better readability */
+    width: 60vw;
+    /* Adjusted for better readability */
   }
 
   .home-image {
-    width: 100%; /* Scaled for medium-sized screens */
+    width: 100%;
+    /* Scaled for medium-sized screens */
     margin: 10px auto;
     padding: 20px 0;
   }
@@ -1004,7 +1065,8 @@ h1{
   }
 
   .search-bar {
-    width: 60%; /* Adjust search bar for mid-sized screens */
+    width: 60%;
+    /* Adjust search bar for mid-sized screens */
   }
 
   .search-icon .search-bar input {
@@ -1023,7 +1085,8 @@ h1{
     gap: 20px;
     margin: 0px;
   }
-  .course-box{
+
+  .course-box {
     width: 100%;
   }
 
@@ -1037,9 +1100,11 @@ h1{
     width: 100%;
     margin: 0 auto;
   }
+
   .testimonals .why {
     font-size: 4rem;
   }
+
   .contact-us {
     flex-direction: column;
     justify-content: space-between;
@@ -1080,12 +1145,12 @@ h1{
   .details p {
     width: 70vw;
     padding: 20px;
-    font-size: 1.5rem; 
+    font-size: 1.5rem;
   }
 
   .footer {
     height: auto;
-    margin-top: 0px ;
+    margin-top: 0px;
     padding: 20px;
   }
 
@@ -1095,7 +1160,8 @@ h1{
     gap: 20px;
 
   }
-  .footer .right{
+
+  .footer .right {
     width: 100%;
   }
 
@@ -1119,11 +1185,13 @@ h1{
     width: 100%;
   }
 }
+
 @media (min-width: 1200px) and (max-width: 1700px) {
   .home-image {
     margin-left: 100px;
   }
-  .explore-btn{
+
+  .explore-btn {
     margin-bottom: 50px;
     padding: 30px;
     width: 20rem;
@@ -1131,16 +1199,19 @@ h1{
     justify-content: center;
     align-items: center;
   }
-  .courses{
+
+  .courses {
     grid-template-columns: repeat(3, 2fr);
     gap: 2rem;
     margin: 0;
   }
+
   .course-page a {
     width: 100%;
     height: 100%;
   }
-  .contact-us{
+
+  .contact-us {
     margin-bottom: 20px;
     width: 100%;
     height: auto;
