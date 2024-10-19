@@ -1,22 +1,63 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Code Book</title>
-    <link rel="icon" href="./src/assets/logo.png">
-    
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Poppins:wght@100..900&display=swap" rel="stylesheet">
+    <!-- ... existing head content ... -->
+    <style>
+        #loader-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* background-color: #100d0d; */
+            background-image:url(src/assets/bk.jpg) ;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+        .loader {
+            border: 16px solid #f3f3f3;
+            border-top: 16px solid #250141;
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            animation: spin 2s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
 </head>
 <body>
+    <div id="loader-wrapper">
+        <div class="loader"></div>
+    </div>
     <div id="root"></div>
+
+    <script>
+        window.embeddedChatbotConfig = {
+        chatbotId: "rfrWIJLugIrq6XpUHDKwC",
+        domain: "www.chatbase.co"
+        }
+        </script>
+        <script
+        src="https://www.chatbase.co/embed.min.js"
+        chatbotId="rfrWIJLugIrq6XpUHDKwC"
+        domain="www.chatbase.co"
+        defer>
+        </script>
     <script type="module" src="./src/main.jsx"></script> <!-- Use relative path -->
+
+    <script type="module" src="./src/main.jsx"></script>
+    <script>
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.getElementById('loader-wrapper').style.display = 'none';
+            }, 1000); // Hide loader after 1 second (adjust as needed)
+        });
+    </script>
+
 </body>
 </html>
