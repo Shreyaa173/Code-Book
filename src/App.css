@@ -357,11 +357,27 @@ nav {
   margin-bottom: 8px;
 }
 
+.youtube-link {
+  font-size: 1rem;
+  color: #777;
+  margin-bottom: 8px;
+}
+
 .course-author i {
   margin-right: 8px;
 }
 
 .lessons {
+  font-size: 0.95rem;
+  color: #777;
+}
+
+.books {
+  font-size: 0.95rem;
+  color: #777;
+  
+}
+.docs {
   font-size: 0.95rem;
   color: #777;
 }
