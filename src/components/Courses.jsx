@@ -1,9 +1,20 @@
+
 import React from 'react'
 import CourseCards from './CourseCards'
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 
+import React, { useState } from 'react';
+import CourseCards from './CourseCards';
+
+
 function Courses() {
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const handleSearchChange = (e) => {
+    setSearchTerm(e.target.value.toLowerCase());
+  };
+
   return (
     <div>
       <div className="course-head" id="course-head">
@@ -22,8 +33,26 @@ function Courses() {
         </div>
       </div>  
       <CourseCards />
+
+            <input
+              type="text"
+              placeholder="Explore Courses..."
+              spellCheck="false"
+              value={searchTerm}
+              onChange={handleSearchChange}
+            />
+            <button className='mag'><i className="fa-solid fa-magnifying-glass"></i></button>
+          </div>
+        </div>
+      </div>
+      <CourseCards searchTerm={searchTerm} />
+
     </div>
-  )
+  );
 }
 
+
 export default Courses
+
+export default Courses;
+
