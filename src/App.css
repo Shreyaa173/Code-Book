@@ -1012,7 +1012,7 @@ h1 {
 
 }
 
-@media (min-width: 660px) and (max-width: 1200px) {
+@media (min-width: 661px) and (max-width: 1200px) {
   nav {
     padding: 20px 0;
     height: auto;
@@ -1186,7 +1186,7 @@ h1 {
   }
 }
 
-@media (min-width: 1200px) and (max-width: 1700px) {
+@media (min-width: 1201px) and (max-width: 1700px) {
   .home-image {
     margin-left: 100px;
   }
