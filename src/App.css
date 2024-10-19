@@ -529,7 +529,6 @@ textarea {
   border: none;
   text-align: left;
   padding-left: 20px;
-  color: black;
   font-size: 1.1rem;
 }
 
@@ -545,10 +544,9 @@ textarea {
   font-size: 1rem;
 }
 
-.form textarea {
-  height: 12vw;
-  padding-top: 10px;
-}
+/* .form textarea {
+  
+} */
 
 .submit-btn {
   margin-top: -10px;

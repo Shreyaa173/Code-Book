@@ -20,12 +20,12 @@ function Footer() {
   };
 
   return (
-    <div>
+    <div className='text-black'>
       <div className="footer">
         <div className="footer-top">
           <div className="left">
             <div className="nav-icon">
-              <img src={logo} alt="" className="logo" />
+              <img src={logo} alt="" width={100} height={100} className="logo" />
               <p>Code Book</p>
             </div> 
             <div className="about-text">

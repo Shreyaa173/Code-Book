@@ -7,6 +7,7 @@ const userController = require("./controllers/auth");
 const database = require("./config/database");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
+const contactUS = require("./controllers/contact");
 
 // Loading environment variables from .env file
 require("dotenv").config();
@@ -30,6 +31,7 @@ app.use(
 
 // Setting up routes
 app.use("/api/v1/auth", userController);
+app.use("/api/v1/reach", contactUS);
 
 // Testing the server
 app.get("/", (req, res) => {
