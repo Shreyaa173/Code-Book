@@ -661,12 +661,14 @@ h1{
 }
 
 .footer {
-  background-color: #fff;
+  /* background-color: #fff; */
+  background: linear-gradient(135deg, #13072e, #3f2182);
   height: 55vh;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
-  color: black;
+  color: white;
   font-weight: 500;
+  border-top: 2px solid white;
 }
 
 .footer-top {
@@ -684,7 +686,7 @@ h1{
 
 .footer .left .nav-icon {
   float: left;
-  color: black;
+  color: white;
   margin-top: 20px;
   margin-bottom: 20px;
 }
@@ -714,10 +716,15 @@ h1{
   border-top: 1.5px solid rgba(0, 0, 0, 0.4);
   font-size: 16px;
   color: #333;
-  width: 100%;
+  width: 75%;
+  border-radius: 50px;
+  margin: auto;
   margin-top: -60px;
 }
-
+.foot p{
+  font-family:'FontAwesome';
+  letter-spacing: 2px;
+}
 .resources {
   margin-top: 50px;
   display: flex;
@@ -779,7 +786,11 @@ h1{
 
 .resources li a {
   text-decoration: none;
-  color: black;
+  color: white;
+  transition: color 0.2s ease-in-out;
+}
+.resources li a:hover {
+  color: cyan;
 }
 
 .search-bar {
