@@ -1079,7 +1079,7 @@ h1 {
   }
 
   .courses {
-    grid-template-columns: repeat(2, 2fr);
+    grid-template-columns: repeat(3, 2fr);
     padding: 20px;
     width: 100%;
     gap: 20px;
@@ -1088,6 +1088,7 @@ h1 {
 
   .course-box {
     width: 100%;
+    height: 70%;
   }
 
   .course-page {
@@ -1201,7 +1202,7 @@ h1 {
   }
 
   .courses {
-    grid-template-columns: repeat(3, 2fr);
+    grid-template-columns: repeat(4, 2fr);
     gap: 2rem;
     margin: 0;
   }
