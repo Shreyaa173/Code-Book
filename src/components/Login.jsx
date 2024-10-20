@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Login.css";
+import { Link } from "react-router-dom";
 
 export default function LoginPage() {
   const [email, setEmail] = useState("");
@@ -62,7 +63,7 @@ export default function LoginPage() {
             </button>
           </form>
           <div className='signup-link'>
-            Don't have an account? <a href='/signup'>Sign up</a>
+            Don't have an account? <Link to='/signup'>Sign up</Link>
           </div>
         </div>
       </div>
