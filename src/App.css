@@ -301,7 +301,7 @@ nav {
 }
 
 .course-box {
-  height: 50vh;
+  height: 70vh;
   width: 80%;
   border-radius: 20px;
   border: 1px solid #ececf9;
@@ -312,6 +312,7 @@ nav {
   margin-bottom: 10vh;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  
 }
 
 
@@ -381,6 +382,15 @@ nav {
   font-size: 0.95rem;
   color: #777;
 }
+.books i{
+  font-size: 0.95rem;
+  color: #777;
+  
+}
+.docs i{
+  font-size: 0.95rem;
+  color: #777;
+}
 
 .lessons i {
   margin-right: 8px;
@@ -392,7 +402,7 @@ nav {
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
-.course-box:hover .course-name {
+.course-box .course-name {
   color: #007bff;
 }
 
