@@ -26,13 +26,22 @@ function CourseCards({ searchTerm }) {
       lessons: 65,
       ytlink:
         "https://www.youtube.com/playlist?list=PL9gnSGHSqcnr_DxHsP7AW9ftq0AtAyYqJ",
-    },
+        docsLink:
+        "https://docs.oracle.com/en/java/",
+        bookslink:
+        "https://github.com/EbookFoundation/free-programming-books/blob/main/books/free-programming-books-langs.md#java"
+       
+      },
     {
       imgurl: c,
       coursename: "C",
       authorname: "Sandeep Jain",
       lessons: 50,
       ytlink: "https://www.youtube.com/@sandeepjain",
+      docsLink:
+      "https://www.geeksforgeeks.org/c-programming-language/?ref=ghm",
+      bookslink:
+      "https://github.com/EbookFoundation/free-programming-books/blob/main/books/free-programming-books-langs.md#c"
     },
     {
       imgurl: CPP,
@@ -40,6 +49,10 @@ function CourseCards({ searchTerm }) {
       authorname: "Gaurav Sen",
       lessons: 45,
       ytlink: "https://www.youtube.com/@gkcs",
+      docsLink:
+      "https://www.geeksforgeeks.org/c-plus-plus/?ref=ghm",
+      bookslink:
+      "https://github.com/EbookFoundation/free-programming-books/blob/main/books/free-programming-books-langs.md#c-2"
     },
     {
       imgurl: Chash,
@@ -47,13 +60,20 @@ function CourseCards({ searchTerm }) {
       authorname: "Anuj Bhaiya",
       lessons: 40,
       ytlink: "https://www.youtube.com/@AnujBhaiya",
+      docsLink:
+      "https://learn.microsoft.com/en-us/dotnet/csharp/",
+      bookslink:"https://github.com/EbookFoundation/free-programming-books/blob/main/books/free-programming-books-langs.md#c-1"
+
     },
     {
       imgurl: Ruby,
       coursename: "Ruby",
-      authorname: "Bhavin Patel",
-      lessons: 55,
-      ytlink: "",
+      authorname: "Rajat Talesra",
+      lessons: 1,
+      ytlink: "https://www.youtube.com/watch?v=w9yNsTAp-Mg&ab_channel=RajatTalesra",
+      docsLink:
+      "https://www.tutorialspoint.com/ruby/index.htm",
+      bookslink:"https://github.com/EbookFoundation/free-programming-books/blob/main/books/free-programming-books-langs.md#ruby"
     },
     {
       imgurl: python,
@@ -61,6 +81,8 @@ function CourseCards({ searchTerm }) {
       authorname: "Tanay Pratap",
       lessons: 70,
       ytlink: "https://www.youtube.com/@tanaypratap",
+      docsLink:"https://docs.python.org/3/",
+      bookslink:"https://github.com/EbookFoundation/free-programming-books/blob/main/books/free-programming-books-langs.md#python"
     },
     {
       imgurl: CSS,
@@ -68,13 +90,17 @@ function CourseCards({ searchTerm }) {
       authorname: "Prateek Narang",
       lessons: 60,
       ytlink: "https://www.youtube.com/@PrateekNarang27/playlists",
+      docsLink: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+      bookslink: "https://github.com/EbookFoundation/free-programming-books/blob/main/books/free-programming-books-langs.md#html-and-css"
     },
     {
       imgurl: go,
       coursename: "Go",
-      authorname: "Akash Thakur",
-      lessons: 35,
-      ytlink: "",
+      authorname: "freeCodeCamp",
+      lessons: 1,
+      ytlink: "https://www.youtube.com/watch?v=un6ZyFkqFKo&ab_channel=freeCodeCamp.org",
+      docsLink: "https://golang.org/doc/",
+      bookslink: "https://github.com/EbookFoundation/free-programming-books/blob/main/books/free-programming-books-langs.md#go"
     },
     {
       imgurl: HTML,
@@ -82,6 +108,8 @@ function CourseCards({ searchTerm }) {
       authorname: "Vishal Kumar",
       lessons: 25,
       ytlink: "https://www.youtube.com/@tbhvishalkumar",
+      docsLink: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+      bookslink: "https://github.com/EbookFoundation/free-programming-books/blob/main/books/free-programming-books-langs.md#html-and-css"
     },
     {
       imgurl: JS,
@@ -89,6 +117,8 @@ function CourseCards({ searchTerm }) {
       authorname: "Nikhil Malankar",
       lessons: 55,
       ytlink: "https://www.youtube.com/@nikmlnkr",
+      docsLink: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+      bookslink: "https://github.com/EbookFoundation/free-programming-books/blob/main/books/free-programming-books-langs.md#javascript"
     },
     {
       imgurl: kotlin,
@@ -96,6 +126,9 @@ function CourseCards({ searchTerm }) {
       authorname: "Sanket Singh",
       lessons: 42,
       ytlink: "https://www.youtube.com/@SanketSingh1",
+      docsLink: "https://kotlinlang.org/docs/home.html",
+      bookslink: "https://github.com/EbookFoundation/free-programming-books/blob/main/books/free-programming-books-langs.md#kotlin"
+
     },
     {
       imgurl: node,
@@ -103,6 +136,8 @@ function CourseCards({ searchTerm }) {
       authorname: "Hitesh Choudhary",
       lessons: 50,
       ytlink: "https://www.youtube.com/@HiteshCodeLab",
+      docsLink: "https://nodejs.org/en/docs/",
+      bookslink: "https://github.com/EbookFoundation/free-programming-books/blob/main/books/free-programming-books-langs.md#nodejs"
     },
     {
       imgurl: swift,
@@ -110,6 +145,8 @@ function CourseCards({ searchTerm }) {
       authorname: "Kunal Kushwaha",
       lessons: 65,
       ytlink: "https://www.youtube.com/@kunalkushwaha",
+      docsLink: "https://swift.org/documentation/",
+      bookslink: "https://github.com/EbookFoundation/free-programming-books/blob/main/books/free-programming-books-langs.md#swift"
     },
     {
       imgurl: php,
@@ -117,6 +154,8 @@ function CourseCards({ searchTerm }) {
       authorname: "Anurag Tiwari",
       lessons: 65,
       ytlink: "https://www.youtube.com/@anuragtiwarime",
+      docsLink: "https://www.php.net/docs.php",
+      bookslink: "https://github.com/EbookFoundation/free-programming-books/blob/main/books/free-programming-books-langs.md#php"
     },
     {
       imgurl: react,
@@ -124,6 +163,8 @@ function CourseCards({ searchTerm }) {
       authorname: "Amman Dhattarwal",
       lessons: 65,
       ytlink: "https://www.youtube.com/watch?v=gY5sGvq-8h8",
+      docsLink: "https://reactjs.org/docs/getting-started.html",
+      bookslink: "https://github.com/EbookFoundation/free-programming-books/blob/main/books/free-programming-books-langs.md#react"
     },
     {
       imgurl: next,
@@ -131,6 +172,8 @@ function CourseCards({ searchTerm }) {
       authorname: "College Wallah",
       lessons: 25,
       ytlink: "https://www.youtube.com/@CollegeWallahbyPW",
+      docsLink: "https://nextjs.org/docs",
+      bookslink: "https://github.com/EbookFoundation/free-programming-books/blob/main/books/free-programming-books-langs.md#nextjs"
     },
   ];
 
@@ -151,6 +194,8 @@ function CourseCards({ searchTerm }) {
               authorname={course.authorname}
               lessons={course.lessons}
               ytlink={course.ytlink}
+              docsLink={course.docsLink}
+              bookslink={course.bookslink}
             />
           ))
         ) : (
