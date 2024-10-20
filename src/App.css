@@ -461,7 +461,7 @@ nav {
 .search input:focus {
   box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
 }
-
+/* Testimonials Section */
 .testimonals {
   height: auto;
   width: 100%;
@@ -475,109 +475,188 @@ nav {
   font-weight: 700;
   margin-top: -3rem;
   margin-bottom: 2rem;
+  color: white;
 }
 
+/* Carousel Container */
+.wrapper {
+  position: relative;
+  padding:20px;
+}
+
+.wrapper .carousels {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 60px 10px;
+  white-space: nowrap; /* Prevent wrapping of items */
+}
+
+.carousels::-webkit-scrollbar {
+  display: none; /* Hide scrollbar */
+}
+
+/* Individual Testimonial Card */
+.carousels .card {
+  min-width: 300px; /* Set a minimum width for each card */
+  flex: 0 0 auto; /* Prevent cards from shrinking or growing */
+  background: linear-gradient(135deg, #13072e, #3f2182); /* Card background */
+  border-radius: 20px;
+  padding: 20px;
+  color: white;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  list-style: none;
+}
+
+.carousels .card:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* User Card Styling */
 .user-card {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 30px;
 }
 
 .user {
-  height: auto;
-  width: 95vw;
-  background: linear-gradient(135deg, #13072e, #3f2182);
-  margin-top: 50px;
-  padding-bottom: 30px;
-  border-radius: 30px;
+  background: none;
+  padding-bottom: 20px;
+  border-radius: 20px;
 }
 
 .user i {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 6rem;
-  margin-top: 20px;
+  font-size: 3rem;
+  margin-top: 10px;
+  color: #bdb4ff;
 }
 
+/* Adjust Text Padding */
 .user p {
   font-size: 18px;
   text-align: center;
-  padding-left: 20vw;
-  padding-right: 20vw;
+  padding: 0 20px; /* Reduced padding to prevent overflow */
   margin-top: 10px;
-  line-height: 2rem;
+  line-height: 1.5;
+  white-space: normal; /* Allow text to wrap properly */
+  overflow: hidden; /* Hide overflow */
 }
 
+/* User Image */
 .user img {
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
-  padding-left: 43vw;
-  padding-right: 43vw;
-  margin-top: 40px;
+  margin: 20px 0;
+  object-fit: cover;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+/* Name and Role */
 .user-text .name {
   font-size: 1.25rem;
   font-weight: 500;
+  margin: 10px 0;
 }
 
-.carousels :where(.card, img) {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.user-text {
+  font-size: 1rem;
+  color: #ccc;
 }
 
-.wrapper .carousels {
-  display: grid;
-  grid-auto-flow: column;
-  gap: 16px;
-  transition: transform 0.5s ease-in-out;
-}
-
-.carousels .card {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.carousels .dragging .card {
-  cursor: grab;
-  user-select: none;
-}
-
-.carousels {
-  display: flex;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  cursor: grab;
-}
-
-.testimonals::-webkit-scrollbar {
-  display: none;
-}
-
-.carousels::-webkit-scrollbar {
-  display: none;
-}
-
+/* Button for Sliding */
 .slider {
   position: absolute;
-  right: 15px;
-  bottom: 30%;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 50px;
   width: 50px;
   border-radius: 50%;
-  background-color: #bdb4ff;
+  background-color: #bdb4ff; /* Light purple */
   color: black;
   font-size: 1.5rem;
-  outline: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
+}
+
+/* Position the Next button */
+.slider:nth-of-type(2) { /* Select the second slider button (Next) */
+  right: 15px;
+  bottom: 30%;
+}
+
+/* Position the Previous button */
+.slider:nth-of-type(1) { /* Select the first slider button (Previous) */
+  left: 15px; /* Position it on the left */
+  bottom: 30%;
+}
+
+.slider:hover {
+  background-color: #9d94ff; /* Darker purple on hover */
+  transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+/* Optional: Add transition effects for smoothness */
+.slider:active {
+  transform: scale(0.95); /* Slightly shrink on click */
+}
+
+
+/* Custom scrollbar removal */
+.testimonals::-webkit-scrollbar {
+  display: none;
+}
+.dots-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; /* Adjust as needed */
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 5px; /* Space between dots */
+  background-color: #bbb; /* Inactive dot color */
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dot.active {
+  background-color: #4caf50; /* Active dot color */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .testimonals .why {
+    font-size: 3rem;
+  }
+
+  .carousels .card {
+    min-width: 250px;
+  }
+
+  .user img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .slider {
+    height: 40px;
+    width: 40px;
+    font-size: 1.25rem;
+  }
 }
 
 .contact-us {
@@ -589,7 +668,6 @@ nav {
 
 .form {
   flex-basis: 55%;
-  justify-content: center;
   margin-left: 3vw;
 }
 
@@ -656,12 +734,14 @@ h1 {
 }
 
 .footer {
-  background-color: #fff;
+  /* background-color: #fff; */
+  background: linear-gradient(135deg, #13072e, #3f2182);
   height: 55vh;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
-  color: black;
+  color: white;
   font-weight: 500;
+  border-top: 2px solid white;
 }
 
 .footer-top {
@@ -679,7 +759,7 @@ h1 {
 
 .footer .left .nav-icon {
   float: left;
-  color: black;
+  color: white;
   margin-top: 20px;
   margin-bottom: 20px;
 }
@@ -709,10 +789,15 @@ h1 {
   border-top: 1.5px solid rgba(0, 0, 0, 0.4);
   font-size: 16px;
   color: #333;
-  width: 100%;
+  width: 75%;
+  border-radius: 50px;
+  margin: auto;
   margin-top: -60px;
 }
-
+.foot p{
+  font-family:'FontAwesome';
+  letter-spacing: 2px;
+}
 .resources {
   margin-top: 50px;
   display: flex;
@@ -774,7 +859,11 @@ h1 {
 
 .resources li a {
   text-decoration: none;
-  color: black;
+  color: white;
+  transition: color 0.2s ease-in-out;
+}
+.resources li a:hover {
+  color: cyan;
 }
 
 .search-bar {
