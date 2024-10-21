@@ -12,10 +12,13 @@ function Navbar() {
       <div className='nav-text'>
         <ul className='nav-list'>
           <li className='nav-item'>
-            <Link to='/login'>Courses</Link>
+            <a href='#introduction'>Home</a>
           </li>
           <li className='nav-item'>
-            <a href='#testimonal'>Testimonials</a>
+            <a href='#course-head'>Courses</a>
+          </li>
+          <li className='nav-item'>
+            <a href='#testimonial'>Testimonials</a>
           </li>
           <li className='nav-item'>
             <a href='#contact'>Contact</a>
