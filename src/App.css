@@ -39,7 +39,7 @@ body {
   background: #13072e;
 }
 
-nav {
+#nav1 {
   height: 20px;
   display: flex;
   justify-content: space-between;
@@ -53,36 +53,36 @@ nav {
   padding-bottom: 25px;
 }
 
-.nav-icon {
+.nav-icon1 {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.logo {
+.logo1 {
   height: 80px;
   margin-left: 5%
 }
 
-.nav-icon p {
+/* .nav-icon1 p {
   width: 200px;
   font-size: 1.25rem;
   font-weight: 700;
-}
+} */
 
-.nav-text {
+.nav-text1 {
   margin-top: 14px;
   display: flex;
   word-wrap: break-word;
 }
 
-.nav-list {
+.nav-list1 {
   list-style: none;
   display: flex;
   padding-bottom: 25px;
 }
 
-.nav-item {
+.nav-item1 {
   margin-left: 5vw;
   font-size: 1.15rem;
   cursor: pointer;
@@ -105,13 +105,14 @@ nav {
     width: 110%;
   }
 }
+
 .nav-item a {
   color: white;
   text-decoration: none;
   opacity: 0.8;
 }
 
-.nav-item a:hover {
+.nav-item1 a:hover {
   opacity: 1;
   font-weight: 500;
 }
@@ -704,19 +705,19 @@ h1{
   width: 50%;
 }
 
-.footer .left .nav-icon {
+.footer .left .nav-icon1 {
   float: left;
   color: white;
   margin-top: 20px;
   margin-bottom: 20px;
 }
 
-.footer .left .nav-icon .logo {
+.footer .left .nav-icon1 .logo1 {
   height: 60px;
   margin-left: 20px;
 }
 
-.footer .left .nav-icon p {
+.footer .left .nav-icon1 p {
   font-weight: 700;
   font-size: 20px;
 }

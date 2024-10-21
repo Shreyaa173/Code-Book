@@ -1,30 +1,29 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import "./App.css";
-import { Home, Courses, Slideshow, Contact, Footer } from "./components/index";
-import Navbar from "./components/Navbar";
-import Login from "./components/Login"; // Make sure this path is correct
-import Signup from "./components/Signup";
-
+import './App.css'
+import Hom from './components/Hom';
+import Template from "./components/Auth/Template"
+import { Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router } from 'react-router-dom';
 function App() {
   return (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/courses' element={<Courses />} />
-        <Route path='/login' element={<Login />} />
-        <Route path='/signup' element={<Signup />} />
-        {/* Add other routes here */}
-      </Routes>
-      <div>
-        <Courses />
-        <Slideshow />
-        <Contact />
-        <Footer />
-      </div>
-    </Router>
-  );
+		<Router>
+			<div>
+				<Routes>
+					<Route
+						path="/"
+						element={<Hom />}
+					/>
+					<Route
+						path="/signup"
+						element={<Template formType={"signup"} />}
+					/>
+					<Route
+						path="/login"
+						element={<Template formType={"login"} />}
+					/>
+				</Routes>
+			</div>
+		</Router>
+	);
 }
 
-export default App;
+export default App
