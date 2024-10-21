@@ -39,50 +39,50 @@ body {
   background: #13072e;
 }
 
-nav {
-  height: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 30px;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: #13072e;
-  z-index: 2;
-  padding-bottom: 25px;
+.text-black{
+  color: black;
 }
 
-.nav-icon {
+#nav1 {
+  height: 80px;
+  padding-top: 15px;
+  position: fixed;
+  top: 0;
+  background: #13072e;
+  z-index: 2;
+  padding-bottom: 10px;
+}
+
+.nav-icon1 {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.logo {
+.logo1 {
   height: 80px;
   margin-left: 5%
 }
 
-.nav-icon p {
+/* .nav-icon1 p {
   width: 200px;
   font-size: 1.25rem;
   font-weight: 700;
-}
+} */
 
-.nav-text {
+.nav-text1 {
   margin-top: 14px;
   display: flex;
   word-wrap: break-word;
 }
 
-.nav-list {
+.nav-list1 {
   list-style: none;
   display: flex;
   padding-bottom: 25px;
 }
 
-.nav-item {
+.nav-item1 {
   margin-left: 5vw;
   font-size: 1.15rem;
   cursor: pointer;
@@ -105,13 +105,15 @@ nav {
     width: 110%;
   }
 }
+
 .nav-item a {
+
   color: white;
   text-decoration: none;
   opacity: 0.8;
 }
 
-.nav-item a:hover {
+.nav-item1 a:hover {
   opacity: 1;
   font-weight: 500;
 }
@@ -408,7 +410,7 @@ nav {
 .search input:focus {
   box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
 }
-/* Testimonials Section */
+
 .testimonals {
   height: auto;
   width: 100%;
@@ -422,188 +424,109 @@ nav {
   font-weight: 700;
   margin-top: -3rem;
   margin-bottom: 2rem;
-  color: white;
 }
 
-/* Carousel Container */
-.wrapper {
-  position: relative;
-  padding:20px;
-}
-
-.wrapper .carousels {
-  display: flex;
-  gap: 16px;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  padding: 60px 10px;
-  white-space: nowrap; /* Prevent wrapping of items */
-}
-
-.carousels::-webkit-scrollbar {
-  display: none; /* Hide scrollbar */
-}
-
-/* Individual Testimonial Card */
-.carousels .card {
-  min-width: 300px; /* Set a minimum width for each card */
-  flex: 0 0 auto; /* Prevent cards from shrinking or growing */
-  background: linear-gradient(135deg, #13072e, #3f2182); /* Card background */
-  border-radius: 20px;
-  padding: 20px;
-  color: white;
-  text-align: center;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
-  list-style: none;
-}
-
-.carousels .card:hover {
-  transform: scale(1.05); /* Slight zoom effect on hover */
-}
-
-/* User Card Styling */
 .user-card {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-left: 30px;
 }
 
 .user {
-  background: none;
-  padding-bottom: 20px;
-  border-radius: 20px;
+  height: auto;
+  width: 95vw;
+  background: linear-gradient(135deg, #13072e, #3f2182);
+  margin-top: 50px;
+  padding-bottom: 30px;
+  border-radius: 30px;
 }
 
 .user i {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 3rem;
-  margin-top: 10px;
-  color: #bdb4ff;
+  font-size: 6rem;
+  margin-top: 20px;
 }
 
-/* Adjust Text Padding */
 .user p {
   font-size: 18px;
   text-align: center;
-  padding: 0 20px; /* Reduced padding to prevent overflow */
+  padding-left: 20vw;
+  padding-right: 20vw;
   margin-top: 10px;
-  line-height: 1.5;
-  white-space: normal; /* Allow text to wrap properly */
-  overflow: hidden; /* Hide overflow */
+  line-height: 2rem;
 }
 
-/* User Image */
 .user img {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
-  margin: 20px 0;
-  object-fit: cover;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  padding-left: 43vw;
+  padding-right: 43vw;
+  margin-top: 40px;
 }
 
-/* Name and Role */
 .user-text .name {
   font-size: 1.25rem;
   font-weight: 500;
-  margin: 10px 0;
 }
 
-.user-text {
-  font-size: 1rem;
-  color: #ccc;
+.carousels :where(.card, img) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Button for Sliding */
+.wrapper .carousels {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 16px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousels .card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.carousels .dragging .card {
+  cursor: grab;
+  user-select: none;
+}
+
+.carousels {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  cursor: grab;
+}
+
+.testimonals::-webkit-scrollbar {
+  display: none;
+}
+
+.carousels::-webkit-scrollbar {
+  display: none;
+}
+
 .slider {
   position: absolute;
+  right: 15px;
+  bottom: 30%;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 50px;
   width: 50px;
   border-radius: 50%;
-  background-color: #bdb4ff; /* Light purple */
+  background-color: #bdb4ff;
   color: black;
   font-size: 1.5rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
-}
-
-/* Position the Next button */
-.slider:nth-of-type(2) { /* Select the second slider button (Next) */
-  right: 15px;
-  bottom: 30%;
-}
-
-/* Position the Previous button */
-.slider:nth-of-type(1) { /* Select the first slider button (Previous) */
-  left: 15px; /* Position it on the left */
-  bottom: 30%;
-}
-
-.slider:hover {
-  background-color: #9d94ff; /* Darker purple on hover */
-  transform: scale(1.05); /* Slightly increase size on hover */
-}
-
-/* Optional: Add transition effects for smoothness */
-.slider:active {
-  transform: scale(0.95); /* Slightly shrink on click */
-}
-
-
-/* Custom scrollbar removal */
-.testimonals::-webkit-scrollbar {
-  display: none;
-}
-.dots-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px; /* Adjust as needed */
-}
-
-.dot {
-  height: 10px;
-  width: 10px;
-  margin: 0 5px; /* Space between dots */
-  background-color: #bbb; /* Inactive dot color */
-  border-radius: 50%;
-  display: inline-block;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.dot.active {
-  background-color: #4caf50; /* Active dot color */
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .testimonals .why {
-    font-size: 3rem;
-  }
-
-  .carousels .card {
-    min-width: 250px;
-  }
-
-  .user img {
-    width: 80px;
-    height: 80px;
-  }
-
-  .slider {
-    height: 40px;
-    width: 40px;
-    font-size: 1.25rem;
-  }
+  outline: none;
 }
 
 .contact-us {
@@ -615,6 +538,7 @@ nav {
 
 .form {
   flex-basis: 55%;
+  justify-content: center;
   margin-left: 3vw;
 }
 
@@ -628,7 +552,6 @@ textarea {
   border: none;
   text-align: left;
   padding-left: 20px;
-  color: black;
   font-size: 1.1rem;
 }
 
@@ -644,10 +567,9 @@ textarea {
   font-size: 1rem;
 }
 
-.form textarea {
-  height: 12vw;
-  padding-top: 10px;
-}
+/* .form textarea {
+  
+} */
 
 .submit-btn {
   margin-top: -10px;
@@ -681,14 +603,12 @@ h1{
 }
 
 .footer {
-  /* background-color: #fff; */
-  background: linear-gradient(135deg, #13072e, #3f2182);
+  background-color: #cccccc;
   height: 55vh;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
-  color: white;
+  color: black !important;
   font-weight: 500;
-  border-top: 2px solid white;
 }
 
 .footer-top {
@@ -704,19 +624,19 @@ h1{
   width: 50%;
 }
 
-.footer .left .nav-icon {
+.footer .left .nav-icon1 {
   float: left;
-  color: white;
+  color: black;
   margin-top: 20px;
   margin-bottom: 20px;
 }
 
-.footer .left .nav-icon .logo {
+.footer .left .nav-icon1 .logo1 {
   height: 60px;
   margin-left: 20px;
 }
 
-.footer .left .nav-icon p {
+.footer .left .nav-icon1 p {
   font-weight: 700;
   font-size: 20px;
 }
@@ -732,19 +652,14 @@ h1{
 .foot {
   text-align: center;
   padding: 20px;
-  background-color: white;
+  background-color: #cccccc;
   border-top: 1.5px solid rgba(0, 0, 0, 0.4);
   font-size: 16px;
   color: #333;
-  width: 75%;
-  border-radius: 50px;
-  margin: auto;
+  width: 100%;
   margin-top: -60px;
 }
-.foot p{
-  font-family:'FontAwesome';
-  letter-spacing: 2px;
-}
+
 .resources {
   margin-top: 50px;
   display: flex;
@@ -806,11 +721,7 @@ h1{
 
 .resources li a {
   text-decoration: none;
-  color: white;
-  transition: color 0.2s ease-in-out;
-}
-.resources li a:hover {
-  color: cyan;
+  color: black;
 }
 
 .search-bar {
