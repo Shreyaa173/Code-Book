@@ -1,5 +1,12 @@
+
+import React from 'react'
+import CourseCards from './CourseCards'
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
+
 import React, { useState } from 'react';
 import CourseCards from './CourseCards';
+
 
 function Courses() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -14,6 +21,19 @@ function Courses() {
         <div className="search-icon">
           <h2>Our Courses</h2>
           <div className="search-bar">
+            <input 
+              type="text" 
+              placeholder="Explore Courses... " 
+              
+              spellCheck="false" 
+            /> 
+            <i className="fas fa-search" style={{position:"relative"}}></i>
+           
+          </div>
+        </div>
+      </div>  
+      <CourseCards />
+
             <input
               type="text"
               placeholder="Explore Courses..."
@@ -26,8 +46,13 @@ function Courses() {
         </div>
       </div>
       <CourseCards searchTerm={searchTerm} />
+
     </div>
   );
 }
 
+
+export default Courses
+
 export default Courses;
+
