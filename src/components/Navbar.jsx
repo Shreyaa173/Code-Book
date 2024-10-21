@@ -26,10 +26,13 @@ function Navbar() {
       <div className={`nav-content ${isOpen ? 'show' : ''}`}>
         <ul className="nav-list">
           <li className="nav-item">
+            <a href="#introduction">Home</a>
+          </li>
+          <li className="nav-item">
             <Link to="/login">Courses</Link>
           </li>
           <li className="nav-item">
-            <a href="#testimonal">Testimonials</a>
+            <a href="#testimonial">Testimonials</a>
           </li>
           <li className="nav-item">
             <a href="#contact">Contact</a>
