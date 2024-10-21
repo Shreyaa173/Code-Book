@@ -9,6 +9,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 .progress-container {
@@ -1020,6 +1021,11 @@ h1 {
     position: static;
   }
 
+  .course-box{
+    height: 20rem;
+    width: 17rem;
+    margin-bottom: 0;
+  }
   .courses {
     display: flex;
     flex-wrap: wrap;
@@ -1176,8 +1182,9 @@ h1 {
   }
 
   .course-box {
-    width: 100%;
-    height: 70%;
+    width: auto;
+    height: 20rem;
+    margin-bottom: 0;
   }
 
   .course-page {
@@ -1291,14 +1298,19 @@ h1 {
   }
 
   .courses {
-    grid-template-columns: repeat(4, 2fr);
-    gap: 2rem;
     margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
   }
 
+  .course-box{
+    margin-bottom: 0;
+  }
   .course-page a {
-    width: 100%;
-    height: 100%;
+    width: 20rem;
+        height: 25rem;
   }
 
   .contact-us {
