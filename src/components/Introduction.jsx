@@ -3,7 +3,7 @@ import home from "../assets/home.png"
 function Introduction() {
   return (
     <>
-        <div className="home-text">
+        <div className="home-text" id="introduction">
                     <div className="left-text">
                         <div className="top-text">
                             <button className="top-button">Code Your Way to Success</button>
