@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import CourseCards from './CourseCards';
+import CourseCards from './AllCourseCard';
 
-function Courses() {
+function AllCourse() {
   const [searchTerm, setSearchTerm] = useState("");
 
   const handleSearchChange = (e) => {
@@ -30,4 +30,4 @@ function Courses() {
   );
 }
 
-export default Courses;
+export default AllCourse;

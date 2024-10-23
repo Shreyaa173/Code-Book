@@ -1,8 +1,8 @@
 import React from 'react'
 import home from "../assets/home.png"
 function Introduction() {
-  return (
-    <>
+return (
+    <>  <div className='home'>
         <div className="home-text" id="introduction">
                     <div className="left-text">
                         <div className="top-text">
@@ -20,8 +20,9 @@ function Introduction() {
                     </div>
         </div>
         <div className="explore" id="explore"></div>
+        </div>
     </>
-  )
+)
 }
 
 export default Introduction

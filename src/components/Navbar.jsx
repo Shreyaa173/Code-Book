@@ -16,7 +16,7 @@ function Navbar() {
       <ProgressBar />
       <div className="nav-up">
         <div className="nav-icon">
-          <img src={Logo} alt="Logo" className="logo" />
+          <a href="/"><img src={Logo} alt="Logo" className="logo" /></a>
           <p>Code Book</p>
         </div>
         <div className={`hamburger ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
@@ -29,13 +29,13 @@ function Navbar() {
             <a href="/">Home</a>
           </li>
           <li className="nav-item">
-            <a href="/">Courses</a>
+            <a href="#explore">Courses</a>
           </li>
           <li className="nav-item">
-            <a href="/">Testimonials</a>
+            <a href="#testimonials">Testimonials</a>
           </li>
           <li className="nav-item">
-            <a href="/">Contact</a>
+            <a href="#contact">Contact</a>
           </li>
         </ul>
         <div className="nav-button">
