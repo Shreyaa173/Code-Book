@@ -8,3 +8,6 @@ export const endpoints = {
 	LOGIN_API: BASE_URL + "/auth/login",
 };
 
+export const contactusEndpoint = {
+	CONTACT_US_API: BASE_URL + "/reach/contact",
+};
