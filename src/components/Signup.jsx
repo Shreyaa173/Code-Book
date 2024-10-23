@@ -18,8 +18,6 @@ export default function SignupPage() {
     }
 
     console.log("Signup attempted with:", { name, email, password });
-    // Example: Redirect after successful signup
-    // window.location.href = '/welcome';
   };
 
   return (
