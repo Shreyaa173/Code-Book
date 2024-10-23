@@ -433,6 +433,17 @@ nav {
   margin-right: 8px;
 }
 
+.arrow-container {
+  text-align: center; /* Center align the arrow */
+  margin-top: 20px; /* Add some spacing */
+  margin-left: 20px; /* Add some spacing */
+}
+
+.arrow-image {
+  width: 200px; /* Set desired width */
+  height: auto; /* Maintain aspect ratio */
+}
+
 .course-box:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
@@ -728,7 +739,7 @@ h1 {
 
 .footer {
   /* background-color: #fff; */
-  background: linear-gradient(135deg, #13072e, #7560a1);
+  background: linear-gradient(135deg, #13072e, #624d91);
   height: 55vh;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
