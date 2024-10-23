@@ -42,8 +42,8 @@ function Footer() {
                   <li><a href="/">Home</a></li>
                   <li><a href="/">About Us</a></li>
                   <li><a href="/">FAQ / Help</a></li>
-                  <li><a href="/">Privacy Policy</a></li>
-                  <li><a href="/">Terms of Service</a></li>
+                  <li><a href="/privacy-policy">Privacy Policy</a></li>
+                  <li><a href="/terms-of-use">Terms of Use</a></li>
                 </ul>
               </div>  
               <div className="second">
