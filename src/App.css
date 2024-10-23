@@ -356,7 +356,7 @@ nav {
 .courses {
   display: grid;
   grid-template-columns: repeat(4, 2fr);
-  gap: 50px;
+  gap: 28px;
   justify-content: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
