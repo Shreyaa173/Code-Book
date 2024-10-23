@@ -1,190 +1,205 @@
 /* Container to center the card */
 .container {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(to bottom, #e0c8ff, #430c7a);
-    padding: 16px;
-    animation: fadeIn 1s ease-in-out;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, #e0c8ff, #430c7a);
+  padding: 16px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Basic card styling */
+.card {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: slideIn 0.5s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Card header styling */
+.card-header {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.icon {
+  font-size: 32px;
+  margin-right: 8px;
+}
+
+.card-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.description {
+  font-size: 14px;
+  color: #ffffff;
+}
+
+/* Card content styling */
+.card-content {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Form styling */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.form-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.form-input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+
+/* Forgot password link styling */
+.forgot-password {
+  text-align: right;
+  margin-top: 8px;
+}
+
+.forgot-password a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.forgot-password a:hover {
+  text-decoration: underline;
+}
+
+/* Error alert styling */
+.error-alert {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 8px;
+  border-radius: 4px;
+  margin-top: 8px;
+  animation: shake 0.3s ease-in-out;
+}
+
+/* Button styling */
+.login-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #401291;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 16px;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-button:hover {
+  background-color: #e0c8ff;
+  color: #333;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.login-button i {
+  margin-left: 8px;
+}
+
+/* Signup link styling */
+.signup-link {
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 60px;
+  font-size: 14px;
+}
+
+.signup-link a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  
-  /* Basic card styling */
-  .card {
-    width: 100%;
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    animation: slideIn 0.5s ease-in-out;
+  to {
+    opacity: 1;
   }
-  
-  .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
   }
-  
-  /* Card header styling */
-  .card-header {
-    margin-bottom: 20px;
-    text-align: center;
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
-  
-  .logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 8px;
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
   }
-  
-  .icon {
-    font-size: 32px;
-    margin-right: 8px;
+  25% {
+    transform: translateX(-5px);
   }
-  
-  .card-title {
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
+  50% {
+    transform: translateX(5px);
   }
-  
-  .description {
-    font-size: 14px;
-    color: #ffffff;
+  75% {
+    transform: translateX(-5px);
   }
-  
-  /* Card content styling */
-  .card-content {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  /* Form styling */
-  .form {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
-  
-  .form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    animation: fadeIn 1s ease-in-out;
-  }
-  
-  .form-label {
-    font-size: 14px;
-    font-weight: 500;
-    color: #333;
-  }
-  
-  .form-input {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 14px;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .form-input:focus {
-    border-color: #007bff;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-    outline: none;
-  }
-  
-  /* Error alert styling */
-  .error-alert {
-    background-color: #f8d7da;
-    color: #721c24;
-    padding: 8px;
-    border-radius: 4px;
-    margin-top: 8px;
-    animation: shake 0.3s ease-in-out;
-  }
-  
-  /* Button styling */
-  .login-button {
-    width: 100%;
-    padding: 12px;
-    background-color: #401291;
-    color: white;
-    font-size: 16px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: 16px;
-    margin-bottom: 20px;
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .login-button:hover {
-    background-color: #e0c8ff;
-    color: #333;
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  .login-button i {
-    margin-left: 8px;
-  }
-  
-  /* Signup link styling */
-  .signup-link {
-    text-align: center;
-    margin-bottom: 20px;
-    margin-top: 60px;
-    font-size: 14px;
-  }
-  
-  .signup-link a {
-    color: #007bff;
-    text-decoration: none;
-  }
-  
-  .signup-link a:hover {
-    text-decoration: underline;
-  }
-  
-  /* Animations */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  
-  @keyframes slideIn {
-    from {
-      transform: translateY(20px);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-  
-  @keyframes shake {
-    0%, 100% {
-      transform: translateX(0);
-    }
-    25% {
-      transform: translateX(-5px);
-    }
-    50% {
-      transform: translateX(5px);
-    }
-    75% {
-      transform: translateX(-5px);
-    }
-  }
+}
