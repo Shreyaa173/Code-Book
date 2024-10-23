@@ -5,7 +5,12 @@ import AllCourses from "./components/AllCourses";
 import Home from "./components/Home";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
+
+import PrivacyPolicy from "./components/PrivacyPolicy"; 
+import TermsOfUse from "./components/TermsOfUse";
 import RecoverPasswordPage from "./components/RecoverPasswordPage";
+
+
 
 function App() {
   return (
@@ -14,7 +19,13 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/login' element={<Login />} />
         <Route path='/signup' element={<Signup />} />
-        <Route path='/recover-password' element={<RecoverPasswordPage />}
+
+        <Route path='/privacy-policy' element={<PrivacyPolicy />} /> 
+        <Route path='/terms-of-use' element={<TermsOfUse />} />
+        <Route path='/courses' element={<AllCourses />} />
+           <Route path='/recover-password' element={<RecoverPasswordPage />}
+
+
       </Routes>
     </Router>
   );
