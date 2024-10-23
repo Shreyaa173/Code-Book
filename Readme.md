@@ -8,7 +8,7 @@
 
 # CodeBook: Empowering Education through Coding Resources
 
-* CodeBook is a web app I built using HTML, CSS, and JavaScript to empower education by providing coding resources and tools.
+* CodeBook is a web app I built using React to empower education by providing coding resources and tools.
 * CodeBook is a one-stop platform for learners and educators to access comprehensive coding tutorials, interactive code editors, and curated project ideas.
 * Whether you're a beginner or an experienced coder, CodeBook has something to offer to boost your coding skills.
 
