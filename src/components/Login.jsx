@@ -17,8 +17,6 @@ export default function LoginPage() {
     }
 
     console.log("Login attempted with:", { email, password });
-    // Example: Redirect after successful login
-    // window.location.href = '/dashboard';
   };
 
   return (

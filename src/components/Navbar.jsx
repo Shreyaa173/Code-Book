@@ -40,14 +40,14 @@ function Navbar() {
         </ul>
         <div className="nav-button">
         <button className="btn">
-    <Link to="/signup">
+    <a href="/signup">
       Sign-up <i className="fa-solid fa-arrow-right"></i>
-    </Link>
+    </a>
   </button>
   <button className="btn">
-    <Link to="/login">
+    <a href="/login">
       Log-in <i className="fa-solid fa-arrow-right"></i>
-    </Link>
+    </a>
   </button>
         </div>
       </div>
