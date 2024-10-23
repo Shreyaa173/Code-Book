@@ -39,21 +39,21 @@ function Footer() {
               <div className="first">
                 <h3>Quick Links</h3>
                 <ul>
-                  <li><a href="home.html">Home</a></li>
-                  <li><a href="about-us.html">About Us</a></li>
-                  <li><a href="faq.html">FAQ / Help</a></li>
-                  <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                  <li><a href="terms-of-service.html">Terms of Service</a></li>
+                  <li><a href="/">Home</a></li>
+                  <li><a href="/">About Us</a></li>
+                  <li><a href="/">FAQ / Help</a></li>
+                  <li><a href="/">Privacy Policy</a></li>
+                  <li><a href="/">Terms of Service</a></li>
                 </ul>
               </div>  
               <div className="second">
                 <h3>Connect with us</h3>
                 <ul>
-                  <li><a href="home.html">Instagram</a></li>
-                  <li><a href="about-us.html">Github</a></li>
-                  <li><a href="faq.html">Twitter</a></li>
-                  <li><a href="privacy-policy.html">Linkedin</a></li>
-                  <li><a href="terms-of-service.html">Discord</a></li>
+                  <li><a href="/">Instagram</a></li>
+                  <li><a href="/">Github</a></li>
+                  <li><a href="/">Twitter</a></li>
+                  <li><a href="/">Linkedin</a></li>
+                  <li><a href="/">Discord</a></li>
                 </ul>
               </div> 
               <div className="third">

@@ -168,6 +168,7 @@ function CourseCards({ searchTerm }) {
           </a>
         )}
       </div>
+      <div id="testimonials"></div>
     </div>
   );
 }

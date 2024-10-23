@@ -9,8 +9,8 @@ function Courses() {
   };
 
   return (
-    <div>
-      <div className="course-head" id="course-head">
+    <div id='courses'>
+      <div className="course-head">
         <div className="search-icon">
           <h2>Our Courses</h2>
           <div className="search-bar">

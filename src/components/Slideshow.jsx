@@ -156,8 +156,8 @@ function Slideshow() {
 
   return (
     <div className="slideshow-container">
-      <div className="testimonials" id="testimonial">
-        <h1 className="why">Why Choose Us???</h1>
+      <div className="testimonials">
+        <h1 className="why">Why Choose Us??</h1>
         <div className="wrapper">
         <div className="dots-container">
           {testimonials.map((_, index) => (
@@ -187,6 +187,7 @@ function Slideshow() {
             <button ref={btnNext} className="slider">
               <i className="fa-solid fa-angle-right"></i>
             </button>
+            <div id="contact"></div>
           </div>
         </div>
       </div>
