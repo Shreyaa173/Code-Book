@@ -1,44 +1,59 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+
 import Logo from "../assets/logo.png";
+import ProgressBar from "./ProgressBar";
 
 function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <nav>
-      <div className='nav-icon'>
-        <img src={Logo} alt='Code Book Logo' className='logo' />
-        <p>Code Book</p>
+      <ProgressBar />
+      <div className="nav-up">
+        <div className="nav-icon">
+          <img src={Logo} alt="Logo" className="logo" />
+          <p>Code Book</p>
+        </div>
+        <div className={`hamburger ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
+          <i className={`fa ${isOpen ? 'fa-times' : 'fa-bars'}`} aria-hidden="true"></i>
+        </div>
       </div>
-      <div className='nav-text'>
-        <ul className='nav-list'>
-          <li className='nav-item'>
-            <a href='#introduction'>Home</a>
+      <div className={`nav-content ${isOpen ? 'show' : ''}`}>
+        <ul className="nav-list">
+          <li className="nav-item">
+            <a href="#introduction">Home</a>
           </li>
-          <li className='nav-item'>
-            <a href='#course-head'>Courses</a>
+          <li className="nav-item">
+            <Link to="/login">Courses</Link>
           </li>
-          <li className='nav-item'>
-            <a href='#testimonial'>Testimonials</a>
+          <li className="nav-item">
+            <a href="#testimonial">Testimonials</a>
           </li>
-          <li className='nav-item'>
-            <a href='#contact'>Contact</a>
+          <li className="nav-item">
+            <a href="#contact">Contact</a>
           </li>
         </ul>
+        <div className="nav-button">
+        <button className="btn">
+    <Link to="/signup">
+      Sign-up <i className="fa-solid fa-arrow-right"></i>
+    </Link>
+  </button>
+  <button className="btn">
+    <Link to="/login">
+      Log-in <i className="fa-solid fa-arrow-right"></i>
+    </Link>
+  </button>
+        </div>
       </div>
-      <div className='nav-button'>
-        <button className='btn'>
-          <Link to='/signup'>
-            Sign-up<i className='fa-solid fa-arrow-right'></i>
-          </Link>
-        </button>
-        <button className='btn'>
-          <Link to='/login'>
-            Log-in<i className='fa-solid fa-arrow-right'></i>
-          </Link>
-        </button>
-      </div>
-    </nav>
+    </nav >
   );
 }
 
 export default Navbar;
+

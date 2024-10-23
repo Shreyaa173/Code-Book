@@ -8,4 +8,6 @@ import Navbar from "./Navbar";
 import Slideshow from "./Slideshow";
 import TestimonialCard from "./TestimonialCard";
 import Home from './Home';
+import ProgressBar from "./ProgressBar";
+import '@fortawesome/fontawesome-free/css/all.min.css';
 export {Card,Contact,CourseCards,Courses,Footer,Home,Introduction,Navbar,Slideshow,TestimonialCard};
