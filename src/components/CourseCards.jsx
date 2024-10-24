@@ -1,24 +1,12 @@
-import React from "react";
-import next from "../assets/next.png";
-import react from "../assets/react.svg";
-import php from "../assets/php.png";
-import swift from "../assets/swift.png";
-import go from "../assets/go.png";
-import Ruby from "../assets/ruby.png";
-import node from "../assets/node.png";
-import python from "../assets/python.png";
-import HTML from "../assets/HTML.png";
-import kotlin from "../assets/kotlin.png";
-import java from "../assets/java.png";
-import Chash from "../assets/Chash.png";
-import CSS from "../assets/CSS.png";
-import CPP from "../assets/CPP.png";
-import JS from "../assets/JS.png";
-import c from "../assets/C.png";
+import React, { useContext } from "react";
+import { useNavigate } from "react-router-dom";
+import AuthContext from "../context/AuthContext"; // Adjust based on actual file location
 import Card from "./Card";
-import arrow from "../assets/arrow.png"
 
 function CourseCards({ searchTerm }) {
+  const navigate = useNavigate();
+  const { isAuthenticated } = useContext(AuthContext); // Use context to get authentication status
+
   const courses = [
     {
       imgurl: java,
@@ -132,43 +120,55 @@ function CourseCards({ searchTerm }) {
     course.coursename.toLowerCase().includes(searchTerm)
   );
 
-    return (
-      <div className="course-page" id="course-page">
-        <div className="courses">
-          {filteredCourses.length > 0 ? (
-            <>
-              {filteredCourses.map((course, index) => (
+  const handleCardClick = (course) => {
+    if (!isAuthenticated) {
+      navigate("/login"); // Redirect to login if not authenticated
+    } else {
+      navigate(`/course/${course.coursename}`); // Navigate to the course detail page
+    }
+  };
+
+  return (
+    <div className="course-page" id="course-page">
+      <div className="courses">
+        {filteredCourses.length > 0 ? (
+          <>
+            {filteredCourses.map((course, index) => (
+              <div key={index} onClick={() => handleCardClick(course)}>
                 <Card
-                  key={index}
                   imgurl={course.imgurl}
                   coursename={course.coursename}
                   authorname={course.authorname}
                   Notes={course.Notes}
                   ytlink={course.ytlink}
                 />
-              ))}
-              <div className="arrow-container">
-                <a href="/courses"><img src={arrow} alt="Arrow" className="arrow-image" /></a>
               </div>
-            </>
-          ) : (
-            <a href="https://img.freepik.com/free-vector/hand-drawn-no-data-illustration_23-2150544961.jpg?w=1060&t=st=1729348558~exp=1729349158~hmac=e9edf6c5c2ad2259ebe6a41759c11690e61df13c3a0831cc00367ececf6b89a5" className="course-box">
-              <div className="course-image">
-                <img
-                  src="https://img.freepik.com/free-vector/hand-drawn-no-data-illustration_23-2150544961.jpg?w=1060&t=st=1729348558~exp=1729349158~hmac=e9edf6c5c2ad2259ebe6a41759c11690e61df13c3a0831cc00367ececf6b89a5"
-                  alt="No course found"
-                />
-              </div>
-              <div className="course-text">
-                <h3 className="course-name">No Courses Found</h3>
-                <p>Try searching for something else!</p>
-              </div>
-            </a>
-          )}
-        </div>
-        <div id="testimonials"></div>
+            ))}
+            <div className="arrow-container">
+              <a href="/courses">
+                <img src={arrow} alt="Arrow" className="arrow-image" />
+              </a>
+            </div>
+          </>
+        ) : (
+          <a href="https://img.freepik.com/free-vector/hand-drawn-no-data-illustration_23-2150544961.jpg?w=1060&t=st=1729348558~exp=1729349158~hmac=e9edf6c5c2ad2259ebe6a41759c11690e61df13c3a0831cc00367ececf6b89a5" className="course-box">
+            <div className="course-image">
+              <img
+                src="https://img.freepik.com/free-vector/hand-drawn-no-data-illustration_23-2150544961.jpg?w=1060&t=st=1729348558~exp=1729349158~hmac=e9edf6c5c2ad2259ebe6a41759c11690e61df13c3a0831cc00367ececf6b89a5"
+                alt="No course found"
+              />
+            </div>
+            <div className="course-text">
+              <h3 className="course-name">No Courses Found</h3>
+              <p>Try searching for something else!</p>
+            </div>
+          </a>
+        )}
       </div>
-    );
+      <div id="testimonials"></div>
+    </div>
+  );
 }
 
 export default CourseCards;
+
