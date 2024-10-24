@@ -24,108 +24,161 @@ function CourseCards({ searchTerm }) {
       imgurl: java,
       coursename: "Java",
       authorname: "Kunal Kushwaha",
-      ytlink: "https://www.youtube.com/playlist?list=PL9gnSGHSqcnr_DxHsP7AW9ftq0AtAyYqJ", // Introduction to Java
-      gfgLink: "https://www.geeksforgeeks.org/java/",
-    },
+      lessons: 65,
+      ytlink:
+        "https://www.youtube.com/playlist?list=PL9gnSGHSqcnr_DxHsP7AW9ftq0AtAyYqJ",
+        docsLink:
+        "https://docs.oracle.com/en/java/",
+        bookslink:
+        "https://github.com/EbookFoundation/free-programming-books/blob/main/books/free-programming-books-langs.md#java"
+       
+      },
     {
       imgurl: c,
       coursename: "C",
-      authorname: "College Wallah",
-      ytlink: "https://www.youtube.com/playlist?list=PLxgZQoSe9cg1drBnejUaDD9GEJBGQ5hMt", // C Programming Tutorial
-      gfgLink: "https://www.geeksforgeeks.org/c-programming-language/",
+      authorname: "Sandeep Jain",
+      lessons: 50,
+      ytlink: "https://www.youtube.com/@sandeepjain",
+      docsLink:
+      "https://www.geeksforgeeks.org/c-programming-language/?ref=ghm",
+      bookslink:
+      "https://github.com/EbookFoundation/free-programming-books/blob/main/books/free-programming-books-langs.md#c"
     },
     {
       imgurl: CPP,
-      coursename: "C++",
-      authorname: "Codehelp",
-      ytlink: "https://www.youtube.com/playlist?list=PLDzeHZWIZsTryvtXdMr6rPh4IDexB5NIA", // C++ Programming Tutorial
-      gfgLink: "https://www.geeksforgeeks.org/c-plus-plus/",
+      coursename: "CPP",
+      authorname: "Gaurav Sen",
+      lessons: 45,
+      ytlink: "https://www.youtube.com/@gkcs",
+      docsLink:
+      "https://www.geeksforgeeks.org/c-plus-plus/?ref=ghm",
+      bookslink:
+      "https://github.com/EbookFoundation/free-programming-books/blob/main/books/free-programming-books-langs.md#c-2"
     },
     {
       imgurl: Chash,
       coursename: "C#",
-      authorname: "Code with Harry",
-      ytlink: "https://www.youtube.com/watch?v=SuLiu5AK9Ps", // C# Programming Tutorial
-      gfgLink: "https://www.geeksforgeeks.org/csharp-programming-language/",
+      authorname: "Anuj Bhaiya",
+      lessons: 40,
+      ytlink: "https://www.youtube.com/@AnujBhaiya",
+      docsLink:
+      "https://learn.microsoft.com/en-us/dotnet/csharp/",
+      bookslink:"https://github.com/EbookFoundation/free-programming-books/blob/main/books/free-programming-books-langs.md#c-1"
+
     },
     {
       imgurl: Ruby,
       coursename: "Ruby",
-      authorname: "Free Code Camp",
-      ytlink: "https://youtu.be/t_ispmWmdjY?si=cGPcXmH321aiCWEx", // Ruby Programming Tutorial
-      gfgLink: "https://www.geeksforgeeks.org/ruby/",
+      authorname: "Rajat Talesra",
+      lessons: 1,
+      ytlink: "https://www.youtube.com/watch?v=w9yNsTAp-Mg&ab_channel=RajatTalesra",
+      docsLink:
+      "https://www.tutorialspoint.com/ruby/index.htm",
+      bookslink:"https://github.com/EbookFoundation/free-programming-books/blob/main/books/free-programming-books-langs.md#ruby"
     },
     {
       imgurl: python,
       coursename: "Python",
-      authorname: "Code with Harry",
-      ytlink: "https://youtu.be/UrsmFxEIp5k?si=MkQ8K4HxBO19sU23", // Python Programming Tutorial
-      gfgLink: "https://www.geeksforgeeks.org/python-programming-language/",
+      authorname: "Tanay Pratap",
+      lessons: 70,
+      ytlink: "https://www.youtube.com/@tanaypratap",
+      docsLink:"https://docs.python.org/3/",
+      bookslink:"https://github.com/EbookFoundation/free-programming-books/blob/main/books/free-programming-books-langs.md#python"
     },
     {
       imgurl: CSS,
       coursename: "CSS",
-      authorname: "Free Code Camp",
-      ytlink: "https://www.youtube.com/watch?v=1Rs2ND1ryYc", // CSS Crash Course
-      gfgLink: "https://www.geeksforgeeks.org/css/",
+      authorname: "Prateek Narang",
+      lessons: 60,
+      ytlink: "https://www.youtube.com/@PrateekNarang27/playlists",
+      docsLink: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+      bookslink: "https://github.com/EbookFoundation/free-programming-books/blob/main/books/free-programming-books-langs.md#html-and-css"
     },
     {
       imgurl: go,
       coursename: "Go",
-      authorname: "Alex Mux",
-      ytlink: "https://youtu.be/8uiZC0l4Ajw?si=QXJnV58ksxBxVRLP", // Go Programming Tutorial
-      gfgLink: "https://www.geeksforgeeks.org/go-programming-language/",
+      authorname: "freeCodeCamp",
+      lessons: 1,
+      ytlink: "https://www.youtube.com/watch?v=un6ZyFkqFKo&ab_channel=freeCodeCamp.org",
+      docsLink: "https://golang.org/doc/",
+      bookslink: "https://github.com/EbookFoundation/free-programming-books/blob/main/books/free-programming-books-langs.md#go"
     },
     {
       imgurl: HTML,
       coursename: "HTML",
-      authorname: "Apna College",
-      ytlink: "https://youtu.be/HcOc7P5BMi4?si=zw6ntozRp5KCo1M3", // HTML Crash Course
-      gfgLink: "https://www.geeksforgeeks.org/html/",
+      authorname: "Vishal Kumar",
+      lessons: 25,
+      ytlink: "https://www.youtube.com/@tbhvishalkumar",
+      docsLink: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+      bookslink: "https://github.com/EbookFoundation/free-programming-books/blob/main/books/free-programming-books-langs.md#html-and-css"
     },
     {
       imgurl: JS,
-      coursename: "JavaScript",
-      authorname: "KGCoding",
-      ytlink: "https://youtu.be/cpoXLj24BDY?si=09lg2YIRb7_bmQn1", // JavaScript Crash Course
-      gfgLink: "https://www.geeksforgeeks.org/javascript/",
+      coursename: "Javascript",
+      authorname: "Nikhil Malankar",
+      lessons: 55,
+      ytlink: "https://www.youtube.com/@nikmlnkr",
+      docsLink: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+      bookslink: "https://github.com/EbookFoundation/free-programming-books/blob/main/books/free-programming-books-langs.md#javascript"
     },
     {
       imgurl: kotlin,
       coursename: "Kotlin",
-      authorname: "Free Code Camp",
-      ytlink: "https://youtu.be/F9UC9DY-vIU?si=CmdTnIKtAZlE-QrW", // Kotlin Programming Tutorial
-      gfgLink: "https://www.geeksforgeeks.org/kotlin/",
+      authorname: "Sanket Singh",
+      lessons: 42,
+      ytlink: "https://www.youtube.com/@SanketSingh1",
+      docsLink: "https://kotlinlang.org/docs/home.html",
+      bookslink: "https://github.com/EbookFoundation/free-programming-books/blob/main/books/free-programming-books-langs.md#kotlin"
+
     },
     {
       imgurl: node,
       coursename: "Node.js",
-      authorname: "Programming with Mosh",
-      ytlink: "https://www.youtube.com/watch?v=TlB_eWDSMt4", // Node.js Crash Course
-      gfgLink: "https://www.geeksforgeeks.org/node-js/",
+      authorname: "Hitesh Choudhary",
+      lessons: 50,
+      ytlink: "https://www.youtube.com/@HiteshCodeLab",
+      docsLink: "https://nodejs.org/en/docs/",
+      bookslink: "https://github.com/EbookFoundation/free-programming-books/blob/main/books/free-programming-books-langs.md#nodejs"
     },
     {
       imgurl: swift,
       coursename: "Swift",
-      authorname: "Free Code Camp",
-      ytlink: "https://youtu.be/comQ1-x2a1Q?si=PO3ITz3xy9Q2DjDf", // Swift Programming Tutorial
-      gfgLink: "https://www.geeksforgeeks.org/swift-programming-language/",
+      authorname: "Kunal Kushwaha",
+      lessons: 65,
+      ytlink: "https://www.youtube.com/@kunalkushwaha",
+      docsLink: "https://swift.org/documentation/",
+      bookslink: "https://github.com/EbookFoundation/free-programming-books/blob/main/books/free-programming-books-langs.md#swift"
     },
     {
       imgurl: php,
       coursename: "PHP",
-      authorname: "Free Code Camp",
-      ytlink: "https://www.youtube.com/watch?v=OK_JCtrrv-c", // PHP for Beginners
-      gfgLink: "https://www.geeksforgeeks.org/php/",
+      authorname: "Anurag Tiwari",
+      lessons: 65,
+      ytlink: "https://www.youtube.com/@anuragtiwarime",
+      docsLink: "https://www.php.net/docs.php",
+      bookslink: "https://github.com/EbookFoundation/free-programming-books/blob/main/books/free-programming-books-langs.md#php"
     },
     {
       imgurl: react,
       coursename: "React.js",
-      authorname: "Aman Dhattarwal",
-      ytlink: "https://youtu.be/gY5sGvq-8h8?si=8XOL3vp2xWAmoXdr", // React Crash Course
-      gfgLink: "https://www.geeksforgeeks.org/reactjs/",
+      authorname: "Amman Dhattarwal",
+      lessons: 65,
+      ytlink: "https://www.youtube.com/watch?v=gY5sGvq-8h8",
+      docsLink: "https://reactjs.org/docs/getting-started.html",
+      bookslink: "https://github.com/EbookFoundation/free-programming-books/blob/main/books/free-programming-books-langs.md#react"
+    },
+    {
+      imgurl: next,
+      coursename: "Next.js",
+      authorname: "College Wallah",
+      lessons: 25,
+      ytlink: "https://www.youtube.com/@CollegeWallahbyPW",
+      docsLink: "https://nextjs.org/docs",
+      bookslink: "https://github.com/EbookFoundation/free-programming-books/blob/main/books/free-programming-books-langs.md#nextjs"
     },
   ];
+
+
 
   // Filter courses based on the search term
   const filteredCourses = courses.filter((course) =>
@@ -145,6 +198,8 @@ function CourseCards({ searchTerm }) {
                   authorname={course.authorname}
                   Notes={course.Notes}
                   ytlink={course.ytlink}
+                  docsLink={course.docsLink}
+                  bookslink={course.bookslink}
                 />
               ))}
               <div className="arrow-container">

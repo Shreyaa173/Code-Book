@@ -439,6 +439,16 @@ nav {
   margin-right: 8px;
 }
 
+
+
+.course-box .course-name,
+.course-box .course-author,
+.course-box .lessons,
+.course-box .link-style {
+  color: #d3d3d3; /* Light grey color */
+  padding-top: 2px;
+}
+
 .arrow-container {
   text-align: center; /* Center align the arrow */
   margin-top: 20px; /* Add some spacing */
