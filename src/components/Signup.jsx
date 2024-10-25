@@ -1,31 +1,56 @@
 import React, { useState } from "react";
 import "./Signup.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { auth, googleProvider } from "./firebase";
+import { signInWithPopup } from "firebase/auth";
+import axios from "axios";
 
 export default function SignupPage() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setError("");
-
     if (!name || !email || !password) {
       setError("Please fill in all fields");
       return;
     }
-
     console.log("Signup attempted with:", { name, email, password });
   };
 
-  const handleGoogleLogin = () => {
-    console.log("Google login attempted");
+  const handleGoogleLogin = async () => {
+    try {
+      const result = await signInWithPopup(auth, googleProvider);
+      const idToken = await result.user.getIdToken();
+      console.log("Google login successful:", result.user);
+
+      // Send the ID token to your server
+      await axios.post("http://localhost:5000/auth/google", { idToken });
+
+      // Redirect after successful login
+      navigate("/dashboard");
+    } catch (error) {
+      console.error("Google login failed:", error);
+      setError("Google login failed. Please try again.");
+    }
   };
 
-  const handleAppleLogin = () => {
-    console.log("Apple login attempted");
+  const handleAppleLogin = async () => {
+    try {
+      // Placeholder for Apple login logic
+      const response = await axios.get("http://localhost:5000/auth/apple");
+      console.log("Apple login successful:", response.data);
+
+      // Redirect after successful login
+      navigate("/dashboard");
+    } catch (error) {
+      console.error("Apple login failed:", error);
+      setError("Apple login failed. Please try again.");
+    }
   };
 
   return (
