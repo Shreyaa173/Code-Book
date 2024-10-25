@@ -25,8 +25,8 @@ function Contact() {
 
     emailjs
       .send(
-        "service_h0dsy27",  //service id generated for that template
-        "template_j31ld6u", //You can set up your own template 
+        "service_eswbn1c",  //service id generated for that template
+        "template_6ogvajl", //You can set up your own template 
         {
           from_name: formData.name,
           to_name: "Shreya Gupta",
