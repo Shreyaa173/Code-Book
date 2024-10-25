@@ -20,59 +20,77 @@ export default function SignupPage() {
     console.log("Signup attempted with:", { name, email, password });
   };
 
+  const handleGoogleLogin = () => {
+    console.log("Google login attempted");
+  };
+
+  const handleAppleLogin = () => {
+    console.log("Apple login attempted");
+  };
+
   return (
-    <div className='container'>
-      <div className='card'>
-        <div className='card-header'>
-          <div className='logo'>
-            <span className='icon'>🎓</span>
+    <div className="container">
+      <div className="card">
+        <div className="card-header">
+          <div className="logo">
+            <span className="icon">🎓</span>
             <h1>Join CodeBook</h1>
           </div>
-          <p className='description'>
+          <p className="description">
             Create your account and start learning today!
           </p>
         </div>
-        <div className='card-content'>
+        <div className="card-content">
           <form onSubmit={handleSubmit}>
-            <div className='input-group'>
-              <label htmlFor='name'>Full Name</label>
+            <div className="input-group">
+              <label htmlFor="name">Full Name</label>
               <input
-                id='name'
-                type='text'
-                placeholder='Your Name'
+                id="name"
+                type="text"
+                placeholder="Your Name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 required
               />
             </div>
-            <div className='input-group'>
-              <label htmlFor='email'>Email</label>
+            <div className="input-group">
+              <label htmlFor="email">Email</label>
               <input
-                id='email'
-                type='email'
-                placeholder='you@example.com'
+                id="email"
+                type="email"
+                placeholder="you@example.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
               />
             </div>
-            <div className='input-group'>
-              <label htmlFor='password'>Password</label>
+            <div className="input-group">
+              <label htmlFor="password">Password</label>
               <input
-                id='password'
-                type='password'
+                id="password"
+                type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
               />
             </div>
-            {error && <div className='error-alert'>{error}</div>}
-            <button type='submit' className='signup-button'>
-              Sign-Up <i className='fa-solid fa-arrow-right'></i>
+            {error && <div className="error-alert">{error}</div>}
+            <button type="submit" className="signup-button">
+              Sign-Up <i className="fa-solid fa-arrow-right"></i>
             </button>
           </form>
-          <div className='signup-link'>
-            Already have an account? <Link to='/login'>Log in</Link>
+
+          <div className="oauth-buttons">
+            <button onClick={handleGoogleLogin} className="google-button">
+              <i className="fab fa-google"></i> Sign up with Google
+            </button>
+            <button onClick={handleAppleLogin} className="apple-button">
+              <i className="fab fa-apple"></i> Sign up with Apple
+            </button>
+          </div>
+
+          <div className="signup-link">
+            Already have an account? <Link to="/login">Log in</Link>
           </div>
         </div>
       </div>

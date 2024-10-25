@@ -13,7 +13,7 @@
 .card {
   width: 100%;
   max-width: 400px;
-  background: linear-gradient(to bottom, #401291, #7c54ac); 
+  background: linear-gradient(to bottom, #401291, #7c54ac);
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -111,6 +111,42 @@
 
 .signup-button i {
   margin-left: 8px;
+}
+
+/* OAuth Buttons */
+.oauth-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.google-button, .apple-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 40px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  transition: background-color 0.2s;
+}
+
+.google-button:hover, .apple-button:hover {
+  background-color: #e0c8ff;
+  color: rgb(11, 10, 10);
+  transform: scale(1.05);
+}
+
+.google-button i {
+  color: #0266C8; /* Google red */
+}
+
+.apple-button i {
+  color: #000; /* Black for Apple */
 }
 
 /* Signup link styling */
