@@ -7,6 +7,7 @@ function Contact() {
     phone: "",
     message: "",
   });
+  
   const handleChange = (e) => {
     setFormData((prev) => {
       return {
