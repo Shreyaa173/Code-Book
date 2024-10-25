@@ -435,6 +435,7 @@ nav {
 .lessons {
   font-size: 0.95rem;
   color: #ccc;
+  cursor: pointer;
 }
 
 .lessons:hover{
