@@ -7,7 +7,6 @@ import Login from "./components/Login";
 import Signup from "./components/Signup";
 import PrivacyPolicy from "./components/PrivacyPolicy"; 
 import TermsOfUse from "./components/TermsOfUse";
-import Community from "./components/Community";
 
 
 function App() {
@@ -17,7 +16,6 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/login' element={<Login />} />
         <Route path='/signup' element={<Signup />} />
-        <Route path='/community' element={<Community />} />
         <Route path='/privacy-policy' element={<PrivacyPolicy />} /> 
         <Route path='/terms-of-use' element={<TermsOfUse />} />
         <Route path='/courses' element={<AllCourses />} />
