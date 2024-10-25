@@ -1,11 +1,16 @@
 import React, { useState } from "react";
 import "./Login.css";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import {login} from "../services/operations/authAPI"
 
 export default function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const navigate = useNavigate();
+	const dispatch = useDispatch();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -15,7 +20,7 @@ export default function LoginPage() {
       setError("Please fill in all fields");
       return;
     }
-
+    dispatch(login(email, password, navigate));
     console.log("Login attempted with:", { email, password });
   };
 
