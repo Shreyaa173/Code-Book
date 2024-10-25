@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to bottom, #e0c8ff, #430c7a);
+    background: linear-gradient(to bottom, #e0c8ff, #000000);
     padding: 16px;
     animation: fadeIn 1s ease-in-out;
   }
@@ -18,7 +18,7 @@
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    background: #13072e;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     animation: slideIn 0.5s ease-in-out;
   }

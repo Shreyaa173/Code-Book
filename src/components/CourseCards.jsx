@@ -95,14 +95,14 @@ function CourseCards({ searchTerm }) {
       coursename: "Kotlin",
       authorname: "Free Code Camp",
       ytlink: "https://youtu.be/F9UC9DY-vIU?si=CmdTnIKtAZlE-QrW", // Kotlin Programming Tutorial
-      gfgLink: "https://www.geeksforgeeks.org/kotlin/",
+      gfgLink: "https://www.geeksforgeeks.org/kotlin-programming-language/",
     },
     {
       imgurl: node,
       coursename: "Node.js",
       authorname: "Programming with Mosh",
       ytlink: "https://www.youtube.com/watch?v=TlB_eWDSMt4", // Node.js Crash Course
-      gfgLink: "https://www.geeksforgeeks.org/node-js/",
+      gfgLink: "https://www.geeksforgeeks.org/nodejs/",
     },
     {
       imgurl: swift,
@@ -145,6 +145,7 @@ function CourseCards({ searchTerm }) {
                   authorname={course.authorname}
                   Notes={course.Notes}
                   ytlink={course.ytlink}
+                  gfgLink={course.gfgLink}
                 />
               ))}
               <div className="arrow-container">
