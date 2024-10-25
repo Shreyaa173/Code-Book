@@ -258,6 +258,13 @@ function AllCourseCard({ searchTerm }) {
       authorname: "Derek Banas",
       ytlink: "https://youtu.be/SykxWpFwMGs?si=31iPLIB7BAGlehDm", // Prolog Programming Tutorial
       gfgLink: "https://www.geeksforgeeks.org/prolog-programming-language/",
+    },
+    {
+      imgurl: clojure,
+      coursename: "Clojure",
+      authorname: "Derek Banas",
+      ytlink: "https://youtu.be/ciGyHkDuPAE?si=Gr_vcXT3Usibp6-9", // Prolog Programming Tutorial
+      gfgLink: "https://www.geeksforgeeks.org/prolog-programming-language/",
     }
   ];  
   
