@@ -364,7 +364,7 @@ nav {
 
 .course-box {
   height: 50vh;
-  width: 100%;
+  width: 21%;
   border-radius: 20px;
   border: 1px solid #ececf9;
   position: relative;
@@ -385,15 +385,17 @@ nav {
 
 .course-image {
   width: 100%;
-  height: 60%;
+  height: 65%; 
   overflow: hidden;
   display: grid;
   place-items: center;
 }
 
-.course-image img {
-  width: 80%;
-  height: 80%;
+.course-image a img {
+  width: 88%;
+  height: 55%; 
+  margin-top: 20px;
+  margin-left: 20px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   filter: contrast(1.5);
@@ -433,6 +435,10 @@ nav {
 .lessons {
   font-size: 0.95rem;
   color: #ccc;
+}
+
+.lessons:hover{
+  color: #007bff;
 }
 
 .lessons i {

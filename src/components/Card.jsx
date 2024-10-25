@@ -1,18 +1,26 @@
 import React from 'react';
 
-export default function Card({ imgurl, coursename, authorname, notes, ytlink, }) {
+export default function Card({ imgurl, coursename, authorname, notes, ytlink, gfgLink }) {
   return (
-    //ytlink prop into the Card component 
-    //target="_blank" attribute in the anchor tag to open the course link in a new tab
-    <a href={ytlink} target="_blank" rel="noopener noreferrer" className="course-box">
+    <div className="course-box">
       <div className="course-image">
-        <img src={imgurl} alt={coursename} />
+        {/* Link for the image to open the YouTube course */}
+        <a href={ytlink} target="_blank" rel="noopener noreferrer">
+          <img src={imgurl} alt={coursename} />
+        </a>
       </div>
       <div className="course-text">
         <p className="course-name">{coursename}</p>
-        <p className="course-author"><i className="fa-solid fa-user-tie"></i>By {authorname}</p>
-        <p className="lessons"><i className="fa-brands fa-leanpub"></i>{notes} Notes</p>
+        <p className="course-author">
+          <i className="fa-solid fa-user-tie"></i> By {authorname}
+        </p>
+        {/* Link for the Notes section to open in a new tab */}
+        <a href={gfgLink} target="_blank" rel="noopener noreferrer">
+          <p className="lessons">
+            <i className="fa-brands fa-leanpub"></i> {notes} Notes
+          </p>
+        </a>
       </div>
-    </a>
+    </div>
   );
 }
