@@ -1,6 +1,14 @@
+<p align="center">
+  <img src="https://img.shields.io/github/stars/Shreyaa173/Code-Book?style=social" alt="GitHub stars"/>
+  <img src="https://img.shields.io/github/forks/Shreyaa173/Code-Book?style=social" alt="GitHub forks"/>
+  <img src="https://img.shields.io/github/issues/Shreyaa173/Code-Book" alt="GitHub issues"/>
+  <img src="https://img.shields.io/github/issues-pr/Shreyaa173/Code-Book" alt="Open PRs"/>
+  <img src="https://img.shields.io/github/issues-pr-closed/Shreyaa173/Code-Book" alt="Closed PRs"/>
+</p>
+
 # CodeBook: Empowering Education through Coding Resources
 
-* CodeBook is a web app I built using HTML, CSS, and JavaScript to empower education by providing coding resources and tools.
+* CodeBook is a web app I built using React to empower education by providing coding resources and tools.
 * CodeBook is a one-stop platform for learners and educators to access comprehensive coding tutorials, interactive code editors, and curated project ideas.
 * Whether you're a beginner or an experienced coder, CodeBook has something to offer to boost your coding skills.
 
@@ -13,7 +21,7 @@
 ## Welcome to CodeBook
 
 In today’s digital world, coding skills are essential for success. CodeBook is here to support both learners and educators by offering a vast collection of resources and tools to help you master coding. With easy-to-follow tutorials, real-time code editors, and project ideas, CodeBook is your partner in coding excellence.
-
+ 
 ## CodeBook: Empowering Education through Coding Resources
 [Live Demo](https://codebook-eight.vercel.app/)
 
