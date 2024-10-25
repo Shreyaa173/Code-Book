@@ -1,10 +1,9 @@
-<p align="center">
-  <img src="https://img.shields.io/github/stars/Shreyaa173/Code-Book?style=social" alt="GitHub stars"/>
-  <img src="https://img.shields.io/github/forks/Shreyaa173/Code-Book?style=social" alt="GitHub forks"/>
-  <img src="https://img.shields.io/github/issues/Shreyaa173/Code-Book" alt="GitHub issues"/>
-  <img src="https://img.shields.io/github/issues-pr/Shreyaa173/Code-Book" alt="Open PRs"/>
-  <img src="https://img.shields.io/github/issues-pr-closed/Shreyaa173/Code-Book" alt="Closed PRs"/>
-</p>
+## Project Stats
+
+| ⭐ Stars | 🍴 Forks | 🐛 Issues | 🔔 Open PRs | 🚀 Closed PRs |
+|---------|----------|-----------|-------------|--------------|
+| ![GitHub Repo stars](https://img.shields.io/github/stars/Shreyaa173/Code-Book?style=for-the-badge) | ![GitHub forks](https://img.shields.io/github/forks/Shreyaa173/Code-Book?style=for-the-badge) | ![GitHub issues](https://img.shields.io/github/issues/Shreyaa173/Code-Book?style=for-the-badge) | ![GitHub open pull requests](https://img.shields.io/github/issues-pr/Shreyaa173/Code-Book?style=for-the-badge) | ![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/Shreyaa173/Code-Book?style=for-the-badge) |
+
 
 # CodeBook: Empowering Education through Coding Resources
 

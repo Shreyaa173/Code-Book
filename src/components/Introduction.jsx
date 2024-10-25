@@ -12,14 +12,14 @@ return (
                             <p>Welcome to Code Book, your ultimate coding destination. Whether you're a coding novice or a seasoned developer, we've got you covered. Master in-demand languages like Python, JavaScript, and Java while building real-world projects. Join our vibrant community of learners to collaborate and grow together. Start your coding journey today and unlock endless possibilities.</p>
                         </div>
                         <div className="explore">
-                            <button className="explore-btn"><a href="#explore">Get Started (It's free)<i className="fa-solid fa-laptop-file"></i></a></button>
+                            <button className="explore-btn"><a href= "/signup">Get Started (It's free)<i className="fa-solid fa-laptop-file"></i></a></button>
                         </div>
                     </div>    
                     <div className="right-image">
                         <img src={home} alt="" className="home-image"/>
                     </div>
         </div>
-        <div className="explore" id="explore"></div>
+        <div className="courses" id="courses"></div>
         </div>
     </>
 )
