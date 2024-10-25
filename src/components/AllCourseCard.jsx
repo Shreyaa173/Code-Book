@@ -1,6 +1,6 @@
 import React from "react";
 import next from "../assets/next.png";
-import react from "../assets/react.svg";
+import react from "../assets/react.png";
 import php from "../assets/php.png";
 import swift from "../assets/swift.png";
 import go from "../assets/go.png";
@@ -25,7 +25,7 @@ import lua from "../assets/lua.png";
 import objc from "../assets/objc.png";
 import perl from "../assets/perl.png";
 import prolog from "../assets/prolog.png";
-import R from "../assets/R.png";
+import R from "../assets/RL.png";
 import rust from "../assets/rust.png";
 import scala from "../assets/scala.png";
 import shell from "../assets/shell.png";

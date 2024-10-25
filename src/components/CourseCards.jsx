@@ -1,6 +1,6 @@
 import React from "react";
 import next from "../assets/next.png";
-import react from "../assets/react.svg";
+import react from "../assets/react.png";
 import php from "../assets/php.png";
 import swift from "../assets/swift.png";
 import go from "../assets/go.png";
