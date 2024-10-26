@@ -1,9 +1,16 @@
 import React, { useState } from "react";
 import "./Signup.css";
+
 import { Link, useNavigate } from "react-router-dom";
 import { auth, googleProvider } from "./firebase";
 import { signInWithPopup } from "firebase/auth";
 import axios from "axios";
+
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { signUp } from "../services/operations/authAPI";
+
 
 export default function SignupPage() {
   const [name, setName] = useState("");
@@ -12,6 +19,9 @@ export default function SignupPage() {
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
+	const dispatch = useDispatch();
+
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setError("");
@@ -19,6 +29,10 @@ export default function SignupPage() {
       setError("Please fill in all fields");
       return;
     }
+
+    console.log(name, email, password);
+    dispatch(signUp(name, email, password, navigate));
+
     console.log("Signup attempted with:", { name, email, password });
   };
 
