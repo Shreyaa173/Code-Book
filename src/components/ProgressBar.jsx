@@ -17,7 +17,6 @@ const ProgressBar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
   return (
     <div className="progress-container">
       <div className="progress-bar" style={{ width: `${scrollPercentage}%` }} />
