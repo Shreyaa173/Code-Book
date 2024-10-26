@@ -1,4 +1,3 @@
-import React from "react";
 import next from "../assets/next.png";
 import react from "../assets/react.png";
 import php from "../assets/php.png";
@@ -15,7 +14,7 @@ import CSS from "../assets/CSS.png";
 import CPP from "../assets/CPP.png";
 import JS from "../assets/JS.png";
 import c from "../assets/C.png";
-import groovy from "../assets/groovy.png"
+import groovy from "../assets/groovy.png";
 import assembly from "../assets/assembly.png";
 import dart from "../assets/dart.png";
 import elixir from "../assets/elixir.png";
@@ -30,8 +29,8 @@ import rust from "../assets/rust.png";
 import scala from "../assets/scala.png";
 import shell from "../assets/shell.png";
 import sql from "../assets/sql.png";
-import typescript from "../assets/typescript.png"
-import clojure from "../assets/clojure.png"
+import typescript from "../assets/typescript.png";
+import clojure from "../assets/clojure.png";
 import Card from "./Card";
 
 function AllCourseCard({ searchTerm }) {
@@ -40,21 +39,24 @@ function AllCourseCard({ searchTerm }) {
       imgurl: java,
       coursename: "Java",
       authorname: "Kunal Kushwaha",
-      ytlink: "https://www.youtube.com/playlist?list=PL9gnSGHSqcnr_DxHsP7AW9ftq0AtAyYqJ", // Introduction to Java
+      ytlink:
+        "https://www.youtube.com/playlist?list=PL9gnSGHSqcnr_DxHsP7AW9ftq0AtAyYqJ", // Introduction to Java
       gfgLink: "https://www.geeksforgeeks.org/java/",
     },
     {
       imgurl: c,
       coursename: "C",
       authorname: "College Wallah",
-      ytlink: "https://www.youtube.com/playlist?list=PLxgZQoSe9cg1drBnejUaDD9GEJBGQ5hMt", // C Programming Tutorial
+      ytlink:
+        "https://www.youtube.com/playlist?list=PLxgZQoSe9cg1drBnejUaDD9GEJBGQ5hMt", // C Programming Tutorial
       gfgLink: "https://www.geeksforgeeks.org/c-programming-language/",
     },
     {
       imgurl: CPP,
       coursename: "C++",
       authorname: "Codehelp",
-      ytlink: "https://www.youtube.com/playlist?list=PLDzeHZWIZsTryvtXdMr6rPh4IDexB5NIA", // C++ Programming Tutorial
+      ytlink:
+        "https://www.youtube.com/playlist?list=PLDzeHZWIZsTryvtXdMr6rPh4IDexB5NIA", // C++ Programming Tutorial
       gfgLink: "https://www.geeksforgeeks.org/c-plus-plus/",
     },
     {
@@ -153,7 +155,8 @@ function AllCourseCard({ searchTerm }) {
       coursename: "Rust",
       authorname: "Harkirat Singh",
       ytlink: "https://youtu.be/qP7LzZqGh30?si=-1HbbjzodHaXBGHy", // Rust Programming Tutorial
-      gfgLink: "https://www.geeksforgeeks.org/introduction-to-rust-programming-language/",
+      gfgLink:
+        "https://www.geeksforgeeks.org/introduction-to-rust-programming-language/",
     },
     {
       imgurl: typescript,
@@ -194,7 +197,8 @@ function AllCourseCard({ searchTerm }) {
       imgurl: shell,
       coursename: "Shell Scripting",
       authorname: "Edureka",
-      ytlink: "https://www.geeksforgeeks.org/introduction-linux-shell-shell-scripting/", // Shell Scripting Tutorial
+      ytlink:
+        "https://www.geeksforgeeks.org/introduction-linux-shell-shell-scripting/", // Shell Scripting Tutorial
     },
     {
       imgurl: groovy,
@@ -208,7 +212,8 @@ function AllCourseCard({ searchTerm }) {
       coursename: "Assembly",
       authorname: "Free Code Camp",
       ytlink: "https://youtu.be/gfmRrPjnEw4?si=GISmTpHqN25AbtPp", // Assembly Language Programming
-      gfgLink: "https://www.tutorialspoint.com/assembly_programming/assembly_introduction.htm",
+      gfgLink:
+        "https://www.tutorialspoint.com/assembly_programming/assembly_introduction.htm",
     },
     {
       imgurl: elixir,
@@ -265,49 +270,51 @@ function AllCourseCard({ searchTerm }) {
       authorname: "Derek Banas",
       ytlink: "https://youtu.be/ciGyHkDuPAE?si=Gr_vcXT3Usibp6-9", // Prolog Programming Tutorial
       gfgLink: "https://clojure-doc.org/articles/tutorials/introduction/",
-    }
-  ];  
-  
-    // Filter courses based on the search term
-    const filteredCourses = courses.filter((course) =>
-      course.coursename.toLowerCase().includes(searchTerm.toLowerCase())
-    );
-  
-    return (
-      <div className="course-page" id="course-page">
-        <div className="courses">
-          {filteredCourses.length > 0 ? (
-            <>
-              {filteredCourses.map((course, index) => (
-                <Card
-                  key={index}
-                  imgurl={course.imgurl}
-                  coursename={course.coursename}
-                  authorname={course.authorname}
-                  ytlink={course.ytlink}
-                  gfgLink={course.gfgLink} // Pass GFG link as a prop
-                />
-              ))}
-            </>
-          ) : (
-            <a href="https://img.freepik.com/free-vector/hand-drawn-no-data-illustration_23-2150544961.jpg?w=1060&t=st=1729348558~exp=1729349158~hmac=e9edf6c5c2ad2259ebe6a41759c11690e61df13c3a0831cc00367ececf6b89a5" className="course-box">
-              <div className="course-image">
-                <img
-                  src="https://img.freepik.com/free-vector/hand-drawn-no-data-illustration_23-2150544961.jpg?w=1060&t=st=1729348558~exp=1729349158~hmac=e9edf6c5c2ad2259ebe6a41759c11690e61df13c3a0831cc00367ececf6b89a5"
-                  alt="No course found"
-                />
-              </div>
-              <div className="course-text">
-                <h3 className="course-name">No Courses Found</h3>
-                <p>Try searching for something else!</p>
-              </div>
-            </a>
-          )}
-        </div>
-        <div id="testimonials"></div>
+    },
+  ];
+
+  // Filter courses based on the search term
+  const filteredCourses = courses.filter((course) =>
+    course.coursename.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  return (
+    <div className="course-page" id="course-page">
+      <div className="courses">
+        {filteredCourses.length > 0 ? (
+          <>
+            {filteredCourses.map((course, index) => (
+              <Card
+                key={index}
+                imgurl={course.imgurl}
+                coursename={course.coursename}
+                authorname={course.authorname}
+                ytlink={course.ytlink}
+                gfgLink={course.gfgLink} // Pass GFG link as a prop
+              />
+            ))}
+          </>
+        ) : (
+          <a
+            href="https://img.freepik.com/free-vector/hand-drawn-no-data-illustration_23-2150544961.jpg?w=1060&t=st=1729348558~exp=1729349158~hmac=e9edf6c5c2ad2259ebe6a41759c11690e61df13c3a0831cc00367ececf6b89a5"
+            className="course-box"
+          >
+            <div className="course-image">
+              <img
+                src="https://img.freepik.com/free-vector/hand-drawn-no-data-illustration_23-2150544961.jpg?w=1060&t=st=1729348558~exp=1729349158~hmac=e9edf6c5c2ad2259ebe6a41759c11690e61df13c3a0831cc00367ececf6b89a5"
+                alt="No course found"
+              />
+            </div>
+            <div className="course-text">
+              <h3 className="course-name">No Courses Found</h3>
+              <p>Try searching for something else!</p>
+            </div>
+          </a>
+        )}
+      </div>
+      <div id="testimonials"></div>
     </div>
   );
 }
-  
 
 export default AllCourseCard;

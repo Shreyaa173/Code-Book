@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import CourseCards from './CourseCards';
+import { useState } from "react";
+import CourseCards from "./CourseCards";
 
 function Courses() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -9,7 +9,7 @@ function Courses() {
   };
 
   return (
-    <div id='courses'>
+    <div id="courses">
       <div className="course-head">
         <div className="search-icon">
           <h2>Our Courses</h2>
@@ -21,7 +21,9 @@ function Courses() {
               value={searchTerm}
               onChange={handleSearchChange}
             />
-            <button className='mag'><i className="fa-solid fa-magnifying-glass"></i></button>
+            <button className="mag">
+              <i className="fa-solid fa-magnifying-glass"></i>
+            </button>
           </div>
         </div>
       </div>

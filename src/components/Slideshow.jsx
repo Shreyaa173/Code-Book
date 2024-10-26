@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import B1 from "../assets/B1.png";
 import G1 from "../assets/G1.png";
 import B2 from "../assets/B2.png";
@@ -159,15 +159,15 @@ function Slideshow() {
       <div className="testimonials">
         <h1 className="why">Why Choose Us??</h1>
         <div className="wrapper">
-        <div className="dots-container">
-          {testimonials.map((_, index) => (
-            <span
-              key={index}
-              className={`dot ${currentIndex === index ? "active" : ""}`}
-              onClick={() => handleDotClick(index)}
-            ></span>
-          ))}
-        </div>
+          <div className="dots-container">
+            {testimonials.map((_, index) => (
+              <span
+                key={index}
+                className={`dot ${currentIndex === index ? "active" : ""}`}
+                onClick={() => handleDotClick(index)}
+              ></span>
+            ))}
+          </div>
           <ul ref={carouselref} className="carousels">
             {testimonials.map((testimonial, index) => (
               <TestimonialCard

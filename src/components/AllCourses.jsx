@@ -1,12 +1,11 @@
-import React from 'react'
-import AllCourse from "./AllCourse"
+import AllCourse from "./AllCourse";
 
 const AllCourses = () => {
-return (
+  return (
     <>
-    <AllCourse />
+      <AllCourse />
     </>
-)
-}
+  );
+};
 
-export default AllCourses
+export default AllCourses;

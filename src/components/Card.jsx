@@ -1,6 +1,11 @@
-import React from 'react';
-
-export default function Card({ imgurl, coursename, authorname, notes, ytlink, gfgLink }) {
+export default function Card({
+  imgurl,
+  coursename,
+  authorname,
+  notes,
+  ytlink,
+  gfgLink,
+}) {
   return (
     <div className="course-box">
       <div className="course-image">

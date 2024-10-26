@@ -1,4 +1,3 @@
-import React from "react";
 import Navbar from "./Navbar";
 import Introduction from "./Introduction";
 import { Courses, Slideshow, Contact, Footer } from "./index";

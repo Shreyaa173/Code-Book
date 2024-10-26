@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState } from "react";
 
 import Logo from "../assets/logo.png";
 import ProgressBar from "./ProgressBar";
@@ -22,14 +21,22 @@ function Navbar() {
       <ProgressBar />
       <div className="nav-up">
         <div className="nav-icon">
-          <a href="/"><img src={Logo} alt="Logo" className="logo" /></a>
+          <a href="/">
+            <img src={Logo} alt="Logo" className="logo" />
+          </a>
           <p>Code Book</p>
         </div>
-        <div className={`hamburger ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
-          <i className={`fa ${isOpen ? 'fa-times' : 'fa-bars'}`} aria-hidden="true"></i>
+        <div
+          className={`hamburger ${isOpen ? "open" : ""}`}
+          onClick={toggleMenu}
+        >
+          <i
+            className={`fa ${isOpen ? "fa-times" : "fa-bars"}`}
+            aria-hidden="true"
+          ></i>
         </div>
       </div>
-      <div className={`nav-content ${isOpen ? 'show' : ''}`}>
+      <div className={`nav-content ${isOpen ? "show" : ""}`}>
         <ul className="nav-list">
           <li className="nav-item">
             <a href="/">Home</a>
@@ -45,27 +52,30 @@ function Navbar() {
           </li>
         </ul>
         <div className="nav-button">
-          {
-            !user? (<><button className="btn">
-    <a href="/signup">
-      Sign-up <i className="fa-solid fa-arrow-right"></i>
-    </a>
-  </button>
-  <button className="btn">
-    <a href="/login">
-      Log-in <i className="fa-solid fa-arrow-right"></i>
-    </a>
-  </button></>) : <button className="btn" onClick={() => dispatch(logout(navigate))}>
+          {!user ? (
+            <>
+              <button className="btn">
+                <a href="/signup">
+                  Sign-up <i className="fa-solid fa-arrow-right"></i>
+                </a>
+              </button>
+              <button className="btn">
+                <a href="/login">
+                  Log-in <i className="fa-solid fa-arrow-right"></i>
+                </a>
+              </button>
+            </>
+          ) : (
+            <button className="btn" onClick={() => dispatch(logout(navigate))}>
               <div>
                 LogOut <i className="fa-solid fa-arrow-right"></i>
               </div>
             </button>
-        }
+          )}
         </div>
       </div>
-    </nav >
+    </nav>
   );
 }
 
 export default Navbar;
-
