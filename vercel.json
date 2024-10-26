@@ -1,8 +1,15 @@
 {
-"rewrites": [
-    {
-    "source": "/(.*)",
-    "destination": "/index.html"
-    }
-]
-}
+    "rewrites": [
+      {
+        "source": "/(.*)",
+        "destination": "/index.html"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/api/(.*)",
+        "dest": "/api/$1"
+      }
+    ]
+  }
+  

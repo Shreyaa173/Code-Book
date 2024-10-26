@@ -23,7 +23,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(
 	cors({
-		origin: "*",
+		origin: 'https://code-book-kappa.vercel.app',
 		methods: ['GET', 'POST', 'PUT','DELETE','OPTIONS'],
 		credentials: true,
 	})
