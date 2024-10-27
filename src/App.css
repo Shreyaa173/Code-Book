@@ -23,13 +23,14 @@ html {
 }
 
 .progress-bar {
-  height: 100%;
+  height: inherit;
   width: 0;
   background: linear-gradient(90deg, #6a529a, #7434ff);
   box-shadow: 0 0 15px rgba(59, 58, 132, 0.8), 0 0 30px rgba(146, 120, 199, 0.8);
   transition: width 0.4s ease;
 }
 
+/* scrollbar styles aren't working in firefox */
 ::-webkit-scrollbar {
   width: 12px;
   height: 12px;
@@ -67,17 +68,15 @@ body {
 }
 
 nav {
-  height: 20px;
+  height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 30px;
   position: fixed;
   top: 0;
   width: 100%;
   background: #13072e;
   z-index: 2;
-  padding-bottom: 25px;
 }
 
 .nav-up {
@@ -85,6 +84,8 @@ nav {
 }
 
 .nav-icon {
+  /* margin-top: 6px; */
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -92,7 +93,7 @@ nav {
 
 .logo {
   height: 80px;
-  margin-left: 5%
+  margin-left: 5%;
 }
 
 .nav-icon p {
@@ -108,41 +109,51 @@ nav {
 }
 
 .nav-list {
-  list-style: none;
   display: flex;
+  flex: 1;
+  justify-content: center;
+  list-style: none;
 }
 
 .nav-item {
+  width: auto;
+  text-align: center;
   margin-left: 5vw;
   font-size: 1.15rem;
   cursor: pointer;
   position: relative;
 }
-.nav-item::before{
-  content: '';
+.nav-item::before {
+  content: "";
   position: absolute;
-  bottom:-10px;
+  bottom: -10px;
   left: -5%;
   width: 0%;
   height: 3px;
   background-color: #ffcc4a;
   border-radius: 3px;
-  transition: width 0.4s ease-in-out;
+  transition: width 0.28s ease-in-out;
 }
-.nav-item:hover{
+
+.nav-item:hover {
   color: #ffcc4a;
-  &::before{
+  &::before {
     width: 110%;
   }
 }
+
 .nav-item a {
+  display: inline-block; /* Ensure the link is treated as a block element */
+
   color: white;
   text-decoration: none;
   opacity: 0.8;
+  transition: all 0.15s ease-in-out;
 }
 
 .nav-item a:hover {
   opacity: 1;
+  transform: scale(1.1);
   font-weight: 500;
 }
 
@@ -152,8 +163,11 @@ nav {
 
 .nav-button a {
   text-decoration: none;
-  color: black;
-  font-weight: 300;
+  color: #b3aaff;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav-content {
@@ -164,28 +178,28 @@ nav {
 }
 
 .nav-button .btn {
-  font-size: 1.25rem;
+  font-size: 1.05rem;
   height: 2.5rem;
   width: 8rem;
   margin-right: 2vw;
   border-radius: 30px;
   border: none;
   cursor: pointer;
-  background: white;
+  background-color: transparent;
   transition: all 0.3s ease-in-out;
-  border: 2px solid white;
+  border: 2px solid #7434ff;
   transition: all 0.3s ease-in-out;
 }
 
 .btn i {
-  color: black;
+  color: #7434ff;
   border: none;
   margin-left: 10px;
   transition: rotate 0.3s ease-in-out;
 }
 
 .btn:hover {
-  background: transparent;
+  background: #3f2182;
   color: white;
   font-weight: 400;
 }
@@ -203,7 +217,6 @@ nav {
   display: none;
 }
 
-
 .home-text {
   height: fit-content;
   width: 95vw;
@@ -212,7 +225,6 @@ nav {
   margin-left: 2.5vw;
   border-radius: 30px;
   display: flex;
-
 }
 
 .top-button {
@@ -385,7 +397,7 @@ nav {
 
 .course-image {
   width: 100%;
-  height: 68%; 
+  height: 68%;
   overflow: hidden;
   display: grid;
   place-items: center;
@@ -393,7 +405,7 @@ nav {
 
 .course-image a img {
   width: 88%;
-  height: 60%; 
+  height: 60%;
   margin-top: 20px;
   margin-left: 20px;
   border-top-left-radius: 20px;
@@ -406,7 +418,7 @@ nav {
   text-align: left;
 }
 
-.courses h2{
+.courses h2 {
   font-size: 6rem;
 }
 
@@ -438,7 +450,7 @@ nav {
   cursor: pointer;
 }
 
-.lessons:hover{
+.lessons:hover {
   color: #007bff;
 }
 
@@ -474,7 +486,7 @@ nav {
   box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
 }
 
-.slideshow-container{
+.slideshow-container {
   padding-top: 3%;
 }
 
@@ -495,7 +507,7 @@ nav {
 /* Carousel Container */
 .wrapper {
   position: relative;
-  padding:20px;
+  padding: 20px;
 }
 
 .wrapper .carousels {
@@ -604,13 +616,15 @@ nav {
 }
 
 /* Position the Next button */
-.slider:nth-of-type(2) { /* Select the second slider button (Next) */
+.slider:nth-of-type(2) {
+  /* Select the second slider button (Next) */
   right: 15px;
   bottom: 45%;
 }
 
 /* Position the Previous button */
-.slider:nth-of-type(1) { /* Select the first slider button (Previous) */
+.slider:nth-of-type(1) {
+  /* Select the first slider button (Previous) */
   left: 15px; /* Position it on the left */
   bottom: 45%;
 }
@@ -624,7 +638,6 @@ nav {
 .slider:active {
   transform: scale(0.95); /* Slightly shrink on click */
 }
-
 
 /* Custom scrollbar removal */
 .testimonals::-webkit-scrollbar {
@@ -699,7 +712,7 @@ textarea {
   font-size: 1.1rem;
   background-color: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  &::placeholder{
+  &::placeholder {
     color: #ccc;
   }
 }
@@ -816,8 +829,8 @@ h1 {
   margin: auto;
   margin-top: -60px;
 }
-.foot p{
-  font-family:'FontAwesome';
+.foot p {
+  font-family: "FontAwesome";
   letter-spacing: 2px;
 }
 
@@ -830,7 +843,7 @@ h1 {
   flex-basis: 30%;
 }
 
-.resources li a:hover{
+.resources li a:hover {
   text-decoration-line: underline;
   color: white;
 }
@@ -913,7 +926,7 @@ h1 {
   border: 1px solid rgba(255, 255, 255, 0.2);
   color: #fff;
   transition: box-shadow 0.3s ease;
-  &::placeholder{
+  &::placeholder {
     color: #ccc;
   }
 }
@@ -950,7 +963,7 @@ h1 {
   object-fit: cover;
 }
 
-@media (max-width:660px) {
+@media (max-width: 660px) {
   .home-text {
     flex-direction: column;
   }
@@ -1053,7 +1066,7 @@ h1 {
     position: static;
   }
 
-  .course-box{
+  .course-box {
     height: 20rem;
     width: 17rem;
     margin-bottom: 0;
@@ -1136,7 +1149,6 @@ h1 {
   .third .search {
     margin-left: 0px;
   }
-
 }
 
 @media (min-width: 661px) and (max-width: 1200px) {
@@ -1188,7 +1200,6 @@ h1 {
   .search-icon h2 {
     padding: 1rem;
     font-size: 4rem;
-
   }
 
   .search-bar {
@@ -1287,7 +1298,6 @@ h1 {
     justify-content: space-around;
     flex-direction: column;
     gap: 20px;
-
   }
 
   .footer .right {
@@ -1331,18 +1341,18 @@ h1 {
 
   .courses {
     margin: 0;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
   }
 
-  .course-box{
+  .course-box {
     margin-bottom: 0;
   }
   .course-page a {
     width: 20rem;
-        height: 25rem;
+    height: 25rem;
   }
 
   .contact-us {
