@@ -402,7 +402,7 @@ nav {
 }
 
 .course-text {
-  padding: 20px;
+  padding: 20px 10px;
   text-align: left;
 }
 
@@ -653,6 +653,19 @@ nav {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .nav-item {
+    font-size: 1.2rem !important;
+    margin-left: 5px;
+  }
+  .nav-button .btn {
+    height: 2rem;
+    width: 6rem;
+    font-size: 1rem;
+  }
+  .nav-list {
+    gap: 10;
+  }
+  
   .testimonals .why {
     font-size: 3rem;
   }
@@ -660,6 +673,26 @@ nav {
   .carousels .card {
     min-width: 250px;
   }
+  
+  .left-text {
+    width: 100%;
+  }
+  .right-text {
+    width: 100%;
+  }
+  .right-image {
+    padding-top: 80px;
+  }
+  .course-text {
+    margin: -24px 1px 0px 0px;
+  }
+  .courses {
+    padding-bottom: 0;
+  }
+
+
+
+
 
   .user img {
     width: 80px;
@@ -975,7 +1008,7 @@ h1 {
   } */
 
   .nav-icon p {
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
 
   .nav-content {
@@ -1019,7 +1052,7 @@ h1 {
   .fa-times {
     font-size: 2rem;
     color: white;
-    padding: 25px;
+    padding: 25px 25px 25px 5px;
   }
 
   .mid-text {
@@ -1031,6 +1064,38 @@ h1 {
     width: -webkit-fill-available;
     padding: 20px;
   }
+  .top-text{
+    text-align: center;
+  }
+  .explore {
+    text-align: center;
+  }
+
+  .top-button {
+   margin-left: 0;
+   margin-top: 50px;
+  }
+  .explore-btn {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 30px;
+  }
+  .mid-text {
+    margin-top: 30px;
+  }
+  .mid-text p {
+    line-height: 1.8rem;
+    font-size: 1rem;
+    text-align : center;
+  }
+
+  .course-head {
+    padding-top: 50px;
+  }
+
+
+
+
 
   .search-icon {
     flex-direction: column;
@@ -1038,15 +1103,17 @@ h1 {
 
   .search-icon h2 {
     padding: 10px;
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   .search-bar {
-    width: 80%;
+    width: 75%;
   }
 
   .search-icon .search-bar input {
     width: 100%;
+    height: 5.5vh;
+    margin-right: 5px;
   }
 
   .search-icon .mag {
@@ -1066,30 +1133,51 @@ h1 {
   }
 
   .course-page {
-    padding: 0px;
+    margin-top: 40px;
   }
+  .course-image {
+    height: 64%;
+  }
+  .course-image a img {
+    width: 80%;
+    height: 184px; 
+    margin-top: 20px;
+    margin-left: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    filter: contrast(1.5);
+  }
+  
 
   .testimonals .why {
     font-size: 3rem;
   }
-
-  .wrapper .carousels {
-    width: 100vw;
+  
+  .carousels .card {
+    padding: 0px;
   }
+  /* .wrapper .carousels {
+    width: 100vw;
+    padding: 60px 2px;
+  } */
 
   .contact-us {
     flex-direction: column;
-    margin-top: 20vw;
+    margin-top: 30px;
   }
 
   .form {
-    margin-left: 30px;
+    /* margin-left: 20px;
+     */
+    justify-content: center;
+    align-items: center;
   }
 
   .form input,
   textarea {
     width: 65vw;
     height: 5vh;
+    margin: 15px;
   }
 
   .center {
@@ -1100,23 +1188,33 @@ h1 {
   .contact-us .center input {
     width: 65vw;
   }
+  .contact-text {
+    font-size: 2.3rem;
+  }
 
   .submit-btn {
-    margin-left: 3rem;
+    margin-left: 1rem;
+    margin-top: -2rem;
   }
 
   .details p {
     width: 80vw;
-    padding: 40px;
+    padding: 10px 40px;
   }
-
+  .details-source {
+    padding: 0px;
+    margin-top: -20px;
+  }
   .footer {
     height: auto;
-    margin-top: 20rem;
+    margin-top: 3rem;
   }
 
   .footer-top {
     flex-direction: column;
+  }
+  .footer .left {
+    width: 100%;
   }
 
   .foot {
@@ -1130,11 +1228,36 @@ h1 {
   }
 
   .about-text {
-    width: 80vw;
+    width: 100%;
+    text-align: center;
+  }
+  .about-text h3 {
+    margin-left: 0;
+    padding: 20px;
+    font-size: 1rem;
   }
 
+  .footer .right {
+    width: 100%;
+  }
+  .foot p {
+    font-size: 1rem;
+  }
+  .resources {
+    justify-content: space-around;
+  }
+  .resources li {
+    margin-left: 0;
+  }
+  .resources .third {
+    margin-top: 10px;
+  }
+  .resources h3 {
+    margin-bottom: 5px
+  }
   .third .search {
     margin-left: 0px;
+    margin-top: -10px;
   }
 
 }
@@ -1157,19 +1280,43 @@ h1 {
   }
 
   .nav-item {
-    font-size: 1.5rem;
+    font-size: 1.3rem !important;
+    margin-left: 1.6vw;
+  }
+  .nav-button .btn {
+    height: 2rem;
+    width: 7rem;
+    font-size: 1.2rem;
   }
 
   .home-text {
     flex-direction: row;
     justify-content: space-between;
-    width: 90%;
+    width: 95%;
     margin-top: 200px;
     padding: 20px 0;
+    gap:70px;
   }
 
+  .left-text {
+    width: 100%;
+  }
+  .right-text {
+    width: 100%;
+  }
+  .right-image {
+    padding-top: 80px;
+  }
+
+  .course-text {
+    margin: -24px 1px 0px 0px;
+  }
+
+  .left-text .right-text {
+    width: 100%;
+  }
   .mid-text {
-    width: 60vw;
+    width: 100%;
     /* Adjusted for better readability */
   }
 
