@@ -9,6 +9,7 @@ export default function SignupPage() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [confirmPassword, setCPassword] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
 	const dispatch = useDispatch();
@@ -19,6 +20,10 @@ export default function SignupPage() {
 
     if (!name || !email || !password) {
       setError("Please fill in all fields");
+      return;
+    }
+    if (password !== confirmPassword) {
+      setError("Password do not match");
       return;
     }
     console.log(name, email, password);
@@ -69,8 +74,20 @@ export default function SignupPage() {
               <input
                 id='password'
                 type='password'
+                placeholder="Enter password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
+                required
+              />
+            </div>
+            <div className='input-group'>
+              <label htmlFor='cpassword'>Confirm Password</label>
+              <input
+                id='cpassword'
+                type='password'
+                value={confirmPassword}
+                placeholder="Re-Enter password"
+                onChange={(e) => setCPassword(e.target.value)}
                 required
               />
             </div>
