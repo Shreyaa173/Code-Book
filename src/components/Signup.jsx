@@ -4,12 +4,15 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { signUp } from "../services/operations/authAPI";
+import { FaEye } from "react-icons/fa";
+import { FaEyeSlash } from "react-icons/fa";
 
 export default function SignupPage() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const [pass, setPass] = useState(true);
   const navigate = useNavigate();
 	const dispatch = useDispatch();
 
@@ -62,15 +65,20 @@ export default function SignupPage() {
                 required
               />
             </div>
-            <div className='input-group'>
+            <div className='input-group' style={{flex: "row"}}>
               <label htmlFor='password'>Password</label>
               <input
                 id='password'
-                type='password'
+                type={pass? "password": "text"}
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
               />
+              <div style={{marginLeft: "370px", height:"auto", width: "auto", marginTop: "-30px"}} onClick={()=>setPass(!pass)}>
+                {
+                  !pass?<FaEye style={{height: "20px", width: "20px", color: "black"}} />:<FaEyeSlash style={{height: "20px", width: "20px", color: "black"}}/>
+                }
+              </div>
             </div>
             {error && <div className='error-alert'>{error}</div>}
             <button type='submit' className='signup-button'>
