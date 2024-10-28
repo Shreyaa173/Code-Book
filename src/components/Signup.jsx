@@ -18,6 +18,10 @@ export default function SignupPage() {
 	const dispatch = useDispatch();
 
   const handleSubmit = (e) => {
+    const emailRegex = /^[\w\.-]+@[a-zA-Z\d\.-]+\.[a-zA-Z]{2,}$/;
+    const usernameRegex = /^[a-zA-Z0-9_]{3,20}$/;
+    // Password validation regex (at least 8 characters, one uppercase, one lowercase, one digit, one special character)
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
     e.preventDefault();
     setError("");
 
@@ -29,6 +33,20 @@ export default function SignupPage() {
       setError("Password do not match");
       return;
     }
+    if (!emailRegex.test(email)) {
+			setError("Please enter valid email");
+			return;
+    }
+    if (!usernameRegex.test(name)) {
+			setError("Please enter valid name");
+			return;
+    }
+    if (!passwordRegex.test(password)) {
+			setError(
+				"Password having at least 8 characters, one uppercase, one lowercase, one digit, one special character"
+			);
+			return;
+		}
     console.log(name, email, password);
     dispatch(signUp(name, email, password, navigate));
     console.log("Signup attempted with:", { name, email, password });
@@ -77,7 +95,6 @@ export default function SignupPage() {
               <input
                 id='password'
                 type={pass? "password": "text"}
-                type='password'
                 placeholder="Enter password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
