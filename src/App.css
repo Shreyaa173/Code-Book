@@ -375,13 +375,13 @@ nav {
   grid-template-columns: repeat(4, 1fr);
   gap: 28px;
   justify-items: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
 .course-box {
   height: 26rem;
   width: 20rem;
+  min-width: 16rem;
   border-radius: 20px;
   position: relative;
   overflow: hidden;
@@ -398,7 +398,7 @@ nav {
 
 .course-box:hover {
   transform: translateY(-10px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
@@ -471,19 +471,15 @@ nav {
 }
 
 .arrow-container {
-  text-align: center; /* Center align the arrow */
-  margin-top: 20px; /* Add some spacing */
-  margin-left: 20px; /* Add some spacing */
+  display: flex;
+  column-span: all;
+  justify-content: center;
+  align-items: center;
 }
 
 .arrow-image {
   width: 200px; /* Set desired width */
   height: auto; /* Maintain aspect ratio */
-}
-
-.course-box:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
 .course-box:hover .course-name {
@@ -619,6 +615,7 @@ nav {
   height: 50px;
   width: 50px;
   border-radius: 50%;
+  border: none;
   background-color: #bdb4ff; /* Light purple */
   color: black;
   font-size: 1.5rem;
@@ -674,28 +671,6 @@ nav {
 
 .dot.active {
   background-color: #4caf50; /* Active dot color */
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .testimonals .why {
-    font-size: 3rem;
-  }
-
-  .carousels .card {
-    min-width: 250px;
-  }
-
-  .user img {
-    width: 80px;
-    height: 80px;
-  }
-
-  .slider {
-    height: 40px;
-    width: 40px;
-    font-size: 1.25rem;
-  }
 }
 
 .contact-us {
@@ -973,6 +948,28 @@ h1 {
   height: auto;
   max-width: 150px;
   object-fit: cover;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .testimonals .why {
+    font-size: 3rem;
+  }
+
+  .carousels .card {
+    min-width: 250px;
+  }
+
+  .user img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .slider {
+    height: 40px;
+    width: 40px;
+    font-size: 1.25rem;
+  }
 }
 
 @media (max-width: 660px) {
