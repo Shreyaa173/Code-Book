@@ -22,6 +22,24 @@ function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
+    const emailRegex = /^[\w\.-]+@[a-zA-Z\d\.-]+\.[a-zA-Z]{2,}$/;
+		const usernameRegex = /^[a-zA-Z0-9_]{3,20}$/;
+	
+		e.preventDefault();
+		setError("");
+		
+		if (!emailRegex.test(formData.email)) {
+			alert("Please enter valid email");
+			return;
+		}
+		if (!usernameRegex.test(formData.name)) {
+			alert("Please enter valid name");
+			return;
+		}
+    if (formData.message.length < 5) {
+      alert("Please enter few words!");
+      return
+    }
 
     emailjs
       .send(
