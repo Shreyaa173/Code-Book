@@ -271,4 +271,6 @@ const courses = [
   },
 ];
 
-export default courses;
+export default function getCourses() {
+  return courses;
+}

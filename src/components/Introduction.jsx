@@ -11,13 +11,13 @@ function Introduction() {
             </div>
             <div className="mid-text">
               <p>
-                Welcome to Code Book, your ultimate coding destination. Whether
-                you&apos;re a coding novice or a seasoned developer, we&apos;ve
-                got you covered. Master in-demand languages like Python,
-                JavaScript, and Java while building real-world projects. Join
-                our vibrant community of learners to collaborate and grow
-                together. Start your coding journey today and unlock endless
-                possibilities.
+                flex: 1; Welcome to <strong>Code Book</strong>, your ultimate
+                coding destination. Whether you&apos;re a coding novice or a
+                seasoned developer, we&apos;ve got you covered. Master in-demand
+                languages like Python, JavaScript, and Java while building
+                real-world projects. Join our vibrant community of learners to
+                collaborate and grow together. Start your coding journey today
+                and unlock endless possibilities.
               </p>
             </div>
             <div className="explore">

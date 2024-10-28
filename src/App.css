@@ -143,11 +143,10 @@ nav {
 }
 
 .nav-item a {
-  display: inline-block; /* Ensure the link is treated as a block element */
-
+  font-weight: 500;
   color: white;
   text-decoration: none;
-  opacity: 0.8;
+  opacity: 0.4;
   transition: all 0.15s ease-in-out;
 }
 
@@ -285,6 +284,7 @@ nav {
 
 .explore-btn:hover {
   box-shadow: 1px 1px 10px rgb(255, 234, 182);
+  filter: brightness(1.05);
 }
 
 .home-image {
@@ -297,6 +297,9 @@ nav {
 /* General layout improvements */
 .course-page {
   width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 80px;
 }
 
@@ -318,15 +321,15 @@ nav {
 .search-icon h2 {
   font-size: 6rem;
   font-weight: 700;
+  width: 50%;
   color: white;
-  padding-left: 100px;
+  text-align: center;
 }
 
 .search-bar {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 50%;
   position: relative;
 }
 
@@ -351,8 +354,10 @@ nav {
   border: none;
   background-color: transparent;
   cursor: pointer;
+  /* background-color: #00cccc; */
+  height: 3.5rem;
   position: absolute;
-  right: 200px;
+  right: 26%;
 }
 
 .search-icon i {
@@ -367,55 +372,53 @@ nav {
 
 .courses {
   display: grid;
-  grid-template-columns: repeat(4, 2fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 28px;
-  justify-content: center;
+  justify-items: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
 .course-box {
-  height: 55vh;
-  width: 21%;
+  height: 26rem;
+  width: 20rem;
   border-radius: 20px;
-  border: 1px solid #ececf9;
   position: relative;
   overflow: hidden;
-  transition: all 0.3s ease;
-  margin-bottom: 10vh;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out,
+    all 0.3s ease;
   background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid transparent;
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: grid;
+  grid-template-rows: auto 6rem;
+  cursor: pointer;
 }
 
 .course-box:hover {
   transform: translateY(-10px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .course-image {
-  width: 100%;
-  height: 68%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   overflow: hidden;
-  display: grid;
-  place-items: center;
 }
 
 .course-image a img {
-  width: 88%;
-  height: 60%;
-  margin-top: 20px;
-  margin-left: 20px;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  width: 70%;
   filter: contrast(1.5);
 }
 
 .course-text {
-  padding: 20px;
+  padding: 20px 10px;
   text-align: left;
+  position: relative;
 }
 
 .courses h2 {
@@ -430,7 +433,7 @@ nav {
 .course-name {
   font-size: 1.5rem;
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   color: #fff;
 }
 
@@ -446,11 +449,20 @@ nav {
 
 .lessons {
   font-size: 0.95rem;
+  width: fit-content;
   color: #ccc;
   cursor: pointer;
+  padding: 5px 10px;
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  border-radius: 10px;
+  transition: all 0.15s ease-in-out;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .lessons:hover {
+  border: 1px solid #007bff;
   color: #007bff;
 }
 
@@ -1148,6 +1160,21 @@ h1 {
 
   .third .search {
     margin-left: 0px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-item {
+    font-size: 1.2rem !important;
+    margin-left: 5px;
+  }
+  .nav-button .btn {
+    height: 2rem;
+    width: 6rem;
+    font-size: 1rem;
+  }
+  .nav-list {
+    gap: 10;
   }
 }
 
