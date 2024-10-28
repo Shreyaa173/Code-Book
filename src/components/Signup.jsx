@@ -11,6 +11,7 @@ export default function SignupPage() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [confirmPassword, setCPassword] = useState("");
   const [error, setError] = useState("");
   const [pass, setPass] = useState(true);
   const navigate = useNavigate();
@@ -22,6 +23,10 @@ export default function SignupPage() {
 
     if (!name || !email || !password) {
       setError("Please fill in all fields");
+      return;
+    }
+    if (password !== confirmPassword) {
+      setError("Password do not match");
       return;
     }
     console.log(name, email, password);
@@ -52,6 +57,8 @@ export default function SignupPage() {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 required
+		pattern="[a-zA-Z ]+" oninvalid="this.setCustomValidity('Numbers and Symbols are not allowed')" 
+                oninput="this.setCustomValidity('')"
               />
             </div>
             <div className='input-group'>
@@ -70,6 +77,8 @@ export default function SignupPage() {
               <input
                 id='password'
                 type={pass? "password": "text"}
+                type='password'
+                placeholder="Enter password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
@@ -79,6 +88,17 @@ export default function SignupPage() {
                   !pass?<FaEye style={{height: "20px", width: "20px", color: "black"}} />:<FaEyeSlash style={{height: "20px", width: "20px", color: "black"}}/>
                 }
               </div>
+            </div>
+            <div className='input-group'>
+              <label htmlFor='cpassword'>Confirm Password</label>
+              <input
+                id='cpassword'
+                type='password'
+                value={confirmPassword}
+                placeholder="Re-Enter password"
+                onChange={(e) => setCPassword(e.target.value)}
+                required
+              />
             </div>
             {error && <div className='error-alert'>{error}</div>}
             <button type='submit' className='signup-button'>
