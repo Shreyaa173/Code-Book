@@ -2,8 +2,6 @@ import React from 'react'
 import Navbar from './Navbar'
 import Introduction from './Introduction'
 import { Courses, Slideshow, Contact, Footer } from "./index";
-import Faq from "./Faq";
-
 function Home() {
   return (
     <div>
@@ -12,7 +10,6 @@ function Home() {
         <Courses />
         <Slideshow />
         <Contact />
-        <Faq />
         <Footer />
     </div>
   )
