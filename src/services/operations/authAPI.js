@@ -1,7 +1,5 @@
 /** @format */
-
 import { toast } from "react-hot-toast";
-
 import { setLoading, setToken } from "../../slices/authSlice";
 import { setUser } from "../../slices/profileSlice";
 import { apiConnector } from "../apiConnector";
@@ -9,83 +7,105 @@ import { endpoints } from "../apis";
 
 const { SIGNUP_API, LOGIN_API } = endpoints;
 
-export function signUp(
-	name,
-	email,
-	password,
-	navigate
-) {
-	return async (dispatch) => {
-		const toastId = toast.loading("Loading...");
-		dispatch(setLoading(true));
-		try {
-			const response = await apiConnector("POST", SIGNUP_API, {
-				name,
-				email,
-				password,
-			});
+// Utility functions to improve code reuse
+const handleApiError = (error, action) => {
+  console.log(`${action} API ERROR............`, error);
+  toast.error(`${action} Failed`);
+  return error;
+};
 
-			console.log("SIGNUP API RESPONSE............", response);
+const handleLocalStorage = (token, user, shouldSave = true) => {
+  if (shouldSave) {
+    localStorage.setItem("token", JSON.stringify(token));
+    localStorage.setItem("user", JSON.stringify(user));
+  } else {
+    localStorage.removeItem("token");
+    localStorage.removeItem("user");
+  }
+};
 
-			if (!response.data.success) {
-				throw new Error(response.data.message);
-			}
-			toast.success("Signup Successful");
-			navigate("/login");
-		} catch (error) {
-			console.log("SIGNUP API ERROR............", error);
-			toast.error("Signup Failed");
-			navigate("/signup");
-		}
-		dispatch(setLoading(false));
-		toast.dismiss(toastId);
-	};
+const generateUserImage = (firstName, lastName) => 
+  `https://api.dicebear.com/5.x/initials/svg?seed=${firstName}${lastName}`;
+
+const executeApiAction = async (dispatch, action, apiCall) => {
+  const toastId = toast.loading("Loading...");
+  dispatch(setLoading(true));
+  try {
+    const result = await apiCall();
+    return result;
+  } finally {
+    dispatch(setLoading(false));
+    toast.dismiss(toastId);
+  }
+};
+
+export function signUp(name, email, password, navigate) {
+  return async (dispatch) => {
+    await executeApiAction(dispatch, "Signup", async () => {
+      try {
+        const response = await apiConnector("POST", SIGNUP_API, {
+          name,
+          email,
+          password,
+        });
+
+        console.log("SIGNUP API RESPONSE............", response);
+
+        if (!response.data.success) {
+          throw new Error(response.data.message);
+        }
+
+        toast.success("Signup Successful");
+        navigate("/login");
+        return response;
+      } catch (error) {
+        handleApiError(error, "Signup");
+        navigate("/signup");
+        throw error;
+      }
+    });
+  };
 }
 
 export function login(email, password, navigate) {
-	return async (dispatch) => {
-		const toastId = toast.loading("Loading...");
-		dispatch(setLoading(true));
-		try {
-			const response = await apiConnector("POST", LOGIN_API, {
-				email,
-				password,
-			});
+  return async (dispatch) => {
+    await executeApiAction(dispatch, "Login", async () => {
+      try {
+        const response = await apiConnector("POST", LOGIN_API, {
+          email,
+          password,
+        });
 
-			console.log("LOGIN API RESPONSE............", response);
+        console.log("LOGIN API RESPONSE............", response);
 
-			if (!response.data.success) {
-				throw new Error(response.data.message);
-			}
+        if (!response.data.success) {
+          throw new Error(response.data.message);
+        }
 
-			toast.success("Login Successful");
-			dispatch(setToken(response.data.token));
-			const userImage = response.data?.user?.image
-				? response.data.user.image
-				: `https://api.dicebear.com/5.x/initials/svg?seed=${response.data.user.firstName}${response.data.user.lastName}`;
+        const { token, user } = response.data;
+        const userImage = user?.image || generateUserImage(user.firstName, user.lastName);
 
-			dispatch(setUser({ ...response.data.user, image: userImage }));
+        dispatch(setToken(token));
+        dispatch(setUser({ ...user, image: userImage }));
+        handleLocalStorage(token, user);
 
-			localStorage.setItem("token", JSON.stringify(response.data.token));
-
-			localStorage.setItem("user", JSON.stringify(response.data.user)); // now i'm able to understand the significance of local storage
-			navigate("/");
-		} catch (error) {
-			console.log("LOGIN API ERROR............", error);
-			toast.error("Login Failed");
-		}
-		dispatch(setLoading(false));
-		toast.dismiss(toastId);
-	};
+        toast.success("Login Successful");
+        navigate("/");
+        return response;
+      } catch (error) {
+        handleApiError(error, "Login");
+        throw error;
+      }
+    });
+  };
 }
 
 export function logout(navigate) {
-	return (dispatch) => {
-		dispatch(setToken(null));
-		dispatch(setUser(null));
-		localStorage.removeItem("token");
-		localStorage.removeItem("user");
-		toast.success("Logged Out");
-		navigate("/");
-	};
+  return (dispatch) => {
+    dispatch(setToken(null));
+    dispatch(setUser(null));
+    handleLocalStorage(null, null, false);
+    toast.success("Logged Out");
+    navigate("/");
+  };
 }
