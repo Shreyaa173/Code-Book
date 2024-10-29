@@ -475,6 +475,7 @@ nav {
   column-span: all;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .arrow-image {
@@ -525,6 +526,7 @@ nav {
   scroll-behavior: smooth;
   padding: 60px 10px;
   white-space: nowrap; /* Prevent wrapping of items */
+  overflow-x: hidden;
 }
 
 .carousels::-webkit-scrollbar {
@@ -1100,8 +1102,8 @@ h1 {
   }
 
   .contact-us {
+    display: flex;
     flex-direction: column;
-    margin-top: 20vw;
   }
 
   .form {
