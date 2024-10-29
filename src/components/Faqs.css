@@ -1,0 +1,93 @@
+/* Main FAQ container */
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #13072E;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header styling */
+h1 {
+    text-align: center;
+    color: #086b09;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* FAQ item question styling */
+.faq-item h3 {
+    background-color: #e0f2fe;
+    border-radius: 0.5rem;
+    padding: 15px;
+    font-size: 1.3rem;
+    font-weight: bolder;
+    margin: 1rem 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+    color: #333;
+}
+
+.faq-item h3:hover {
+    background-color: #bfdbfe;
+    transform: translateY(-2px);
+}
+
+/* FAQ answer styling */
+.faq-answer {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    padding: 10px;
+    background-color: #423563;
+    border-left: 4px solid #1d4ed8;
+    border-radius: 0.5rem;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 100px;
+    opacity: 1;
+}
+
+/* Button container */
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+/* Back button styling */
+.back-button {
+    background-color: #08a01a;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #1e40af;
+}
