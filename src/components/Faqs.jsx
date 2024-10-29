@@ -70,7 +70,7 @@ const Faqs = () => {
 
   return (
     <div className="faq-container">
-      <h1>Frequently Asked Questions</h1>
+      <h1 id="faq">Frequently Asked Questions</h1>
       {faqs.map((faq, index) => (
         <div className={`faq-item ${activeIndex === index ? 'active' : ''}`} key={index}>
           <h3 onClick={() => toggleAnswer(index)}>{faq.question}</h3>
