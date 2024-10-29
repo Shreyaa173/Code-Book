@@ -22,6 +22,24 @@ function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
+    const emailRegex = /^[\w\.-]+@[a-zA-Z\d\.-]+\.[a-zA-Z]{2,}$/;
+		const usernameRegex = /^[a-zA-Z0-9_]{3,20}$/;
+	
+		e.preventDefault();
+		setError("");
+		
+		if (!emailRegex.test(formData.email)) {
+			alert("Please enter valid email");
+			return;
+		}
+		if (!usernameRegex.test(formData.name)) {
+			alert("Please enter valid name");
+			return;
+		}
+    if (formData.message.length < 5) {
+      alert("Please enter few words!");
+      return
+    }
 
     emailjs
       .send(
@@ -59,7 +77,7 @@ function Contact() {
   };
   return (
     <div>
-      <h1>Contact us</h1>
+      <h1 className="contact-text">Contact us</h1>
       <div className="contact-us">
         <div className="form">
           <form>
@@ -108,13 +126,13 @@ function Contact() {
             satisfaction is important to us, and we look forward to assisting
             you!
           </p>
-          <p>
+          <p className="details-source">
             <i className="fa-solid fa-phone"></i> +12 9876543210
           </p>
-          <p>
+          <p className="details-source">
             <i className="fa-solid fa-envelope-circle-check"></i> xyz@email.com
           </p>
-          <p>
+          <p className="details-source">
             <i className="fa-solid fa-map-location-dot"></i> Delhi,India
           </p>
         </div>

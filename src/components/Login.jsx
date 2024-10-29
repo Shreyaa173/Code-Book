@@ -3,13 +3,17 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { login } from "../services/operations/authAPI";
 import "./Login.css";
+import { FaEye } from "react-icons/fa";
+import { FaEyeSlash } from "react-icons/fa";
+
 
 export default function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
-	const dispatch = useDispatch();
+  const dispatch = useDispatch();
+  const [pass, setPass] = useState(true);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -59,16 +63,21 @@ export default function LoginPage() {
                 required
               />
             </div>
-            <div className='input-group'>
+            <div className='input-group' style={{flex: "row"}}>
               <label htmlFor='password'>Password</label>
               <input
                 id='password'
-                type='password'
+                type={pass? "password": "text"}
                 placeholder='••••••••'
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
               />
+              <div style={{marginLeft: "370px", height:"auto", width: "auto", marginTop: "-30px"}} onClick={()=>setPass(!pass)}>
+                {
+                  !pass?<FaEye style={{height: "20px", width: "20px", color: "black"}} />:<FaEyeSlash style={{height: "20px", width: "20px", color: "black"}}/>
+                }
+              </div>
             </div>
             {error && <div className='error-alert'>{error}</div>}
             <button type='submit' className='login-button'>

@@ -7,7 +7,8 @@ import Login from "./components/Login";
 import Signup from "./components/Signup";
 import PrivacyPolicy from "./components/PrivacyPolicy"; 
 import TermsOfUse from "./components/TermsOfUse";
-
+import Error from "./components/Error";
+import Faqs from "./components/Faqs.jsx"
 
 function App() {
   return (
@@ -19,7 +20,8 @@ function App() {
         <Route path='/privacy-policy' element={<PrivacyPolicy />} /> 
         <Route path='/terms-of-use' element={<TermsOfUse />} />
         <Route path='/courses' element={<AllCourses />} />
-
+        <Route path='/faqs' element={<Faqs />} />
+        <Route path="*" element={<Error />} />
       </Routes>
     </Router>
   );
