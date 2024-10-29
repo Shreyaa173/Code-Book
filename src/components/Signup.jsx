@@ -1,146 +1,103 @@
-// import React, { useState } from "react";
-// import "./Signup.css";
-// import { Link } from "react-router-dom";
-
-// export default function SignupPage() {
-//   const [name, setName] = useState("");
-//   const [email, setEmail] = useState("");
-//   const [password, setPassword] = useState("");
-//   const [error, setError] = useState("");
-
-//   const handleSubmit = (e) => {
-//     e.preventDefault();
-//     setError("");
-
-//     if (!name || !email || !password) {
-//       setError("Please fill in all fields");
-//       return;
-//     }
-
-//     console.log("Signup attempted with:", { name, email, password });
-//   };
-
-//   return (
-//     <div className='container'>
-//       <div className='card'>
-//         <div className='card-header'>
-//           <div className='logo'>
-//             <span className='icon'>🎓</span>
-//             <h1>Join CodeBook</h1>
-//           </div>
-//           <p className='description'>
-//             Create your account and start learning today!
-//           </p>
-//         </div>
-//         <div className='card-content'>
-//           <form onSubmit={handleSubmit}>
-//             <div className='input-group'>
-//               <label htmlFor='name'>Full Name</label>
-//               <input
-//                 id='name'
-//                 type='text'
-//                 placeholder='Your Name'
-//                 value={name}
-//                 onChange={(e) => setName(e.target.value)}
-//                 required
-//               />
-//             </div>
-//             <div className='input-group'>
-//               <label htmlFor='email'>Email</label>
-//               <input
-//                 id='email'
-//                 type='email'
-//                 placeholder='you@example.com'
-//                 value={email}
-//                 onChange={(e) => setEmail(e.target.value)}
-//                 required
-//               />
-//             </div>
-//             <div className='input-group'>
-//               <label htmlFor='password'>Password</label>
-//               <input
-//                 id='password'
-//                 type='password'
-//                 value={password}
-//                 onChange={(e) => setPassword(e.target.value)}
-//                 required
-//               />
-//             </div>
-//             {error && <div className='error-alert'>{error}</div>}
-//             <button type='submit' className='signup-button'>
-//               Sign-Up <i className='fa-solid fa-arrow-right'></i>
-//             </button>
-//           </form>
-//           <div className='signup-link'>
-//             Already have an account? <Link to='/login'>Log in</Link>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
-
-// src/components/SignUpForm.js
 import React, { useState } from "react";
-import { signUp } from "../api"; // Import the API function
+import { signUp } from "../services/operations/authAPI";
+import { Link, useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
-const SignUpForm = () => {
-  const [formData, setFormData] = useState({ name: "", email: "", password: "" });
+export default function SignUpForm() {
+  const [formData, setFormData] = useState({ name: "", email: "", password: "", confirmPassword: "" });
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
+  const [passVisible, setPassVisible] = useState(true);
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    try {
-      const response = await signUp(formData);
-      setSuccess("Account created successfully!");
-      setError("");
-      setFormData({ name: "", email: "", password: "" }); // Clear the form
-    } catch (err) {
-      setError("Sign-up failed. Please try again.");
-      setSuccess("");
+    setError("");
+
+    const emailRegex = /^[\w\.-]+@[a-zA-Z\d\.-]+\.[a-zA-Z]{2,}$/;
+    const usernameRegex = /^[a-zA-Z0-9_]{3,20}$/;
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+
+    if (formData.password !== formData.confirmPassword) {
+      setError("Passwords do not match");
+      return;
     }
+    if (!emailRegex.test(formData.email)) {
+      setError("Please enter a valid email");
+      return;
+    }
+    if (!usernameRegex.test(formData.name)) {
+      setError("Please enter a valid name");
+      return;
+    }
+    if (!passwordRegex.test(formData.password)) {
+      setError("Password must have at least 8 characters, one uppercase, one lowercase, one digit, and one special character");
+      return;
+    }
+
+    dispatch(signUp(formData.name, formData.email, formData.password, navigate));
+    setSuccess("Account created successfully!");
+    setError("");
+    setFormData({ name: "", email: "", password: "", confirmPassword: "" });
   };
 
   return (
-    <div>
-      <h2>Join CodeBook</h2>
-      {success && <p style={{ color: "green" }}>{success}</p>}
-      {error && <p style={{ color: "red" }}>{error}</p>}
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="name"
-          value={formData.name}
-          onChange={handleChange}
-          placeholder="Full Name"
-          required
-        />
-        <input
-          type="email"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-          placeholder="Email"
-          required
-        />
-        <input
-          type="password"
-          name="password"
-          value={formData.password}
-          onChange={handleChange}
-          placeholder="Password"
-          required
-        />
-        <button type="submit">Sign Up</button>
-      </form>
+    <div className="container">
+      <div className="card">
+        <h1>Join CodeBook</h1>
+        {success && <p style={{ color: "green" }}>{success}</p>}
+        {error && <p style={{ color: "red" }}>{error}</p>}
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            name="name"
+            placeholder="Full Name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
+          <div>
+            <input
+              type={passVisible ? "password" : "text"}
+              name="password"
+              placeholder="Password"
+              value={formData.password}
+              onChange={handleChange}
+              required
+            />
+            <span onClick={() => setPassVisible(!passVisible)}>
+              {passVisible ? <FaEye /> : <FaEyeSlash />}
+            </span>
+          </div>
+          <input
+            type="password"
+            name="confirmPassword"
+            placeholder="Confirm Password"
+            value={formData.confirmPassword}
+            onChange={handleChange}
+            required
+          />
+          <button type="submit">Sign Up</button>
+        </form>
+        <p>
+          Already have an account? <Link to="/login">Log in</Link>
+        </p>
+      </div>
     </div>
   );
-};
-
-export default SignUpForm;
+}

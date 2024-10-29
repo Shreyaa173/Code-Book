@@ -1,0 +1,62 @@
+/* Error.css */
+
+.error-section {
+    padding: 40px;
+    background-color: white;
+}
+
+.error-container {
+    text-align: center;
+}
+
+.error-image {
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    background-image: url('https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif');
+}
+
+.error-title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: black;
+}
+
+@media (min-width: 1024px) {
+    .error-title {
+        font-size: 3.75rem;
+    }
+}
+
+.error-content {
+    margin-top: -3rem;
+}
+
+.error-subtitle {
+    font-size: 2.5rem;
+    margin-bottom: 0.25rem;
+    font-weight: 600;
+}
+
+.error-description {
+    font-weight: 600;
+}
+
+.error-home-button {
+    padding: 13px 40px;
+    font-size: 1.125rem;
+    background-color: #3ccf4e;
+    /* Caribbean Green */
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: inline-block;
+    border-radius: 9999px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.error-home-button:hover {
+    background-color: #34a853;
+}

@@ -1,6 +1,6 @@
 import React from "react";
 import next from "../assets/next.png";
-import react from "../assets/react.svg";
+import react from "../assets/react.png";
 import php from "../assets/php.png";
 import swift from "../assets/swift.png";
 import go from "../assets/go.png";
@@ -25,7 +25,7 @@ import lua from "../assets/lua.png";
 import objc from "../assets/objc.png";
 import perl from "../assets/perl.png";
 import prolog from "../assets/prolog.png";
-import R from "../assets/R.png";
+import R from "../assets/RL.png";
 import rust from "../assets/rust.png";
 import scala from "../assets/scala.png";
 import shell from "../assets/shell.png";
@@ -111,14 +111,14 @@ function AllCourseCard({ searchTerm }) {
       coursename: "Kotlin",
       authorname: "Free Code Camp",
       ytlink: "https://youtu.be/F9UC9DY-vIU?si=CmdTnIKtAZlE-QrW", // Kotlin Programming Tutorial
-      gfgLink: "https://www.geeksforgeeks.org/kotlin/",
+      gfgLink: "https://www.geeksforgeeks.org/kotlin-programming-language/",
     },
     {
       imgurl: node,
       coursename: "Node.js",
       authorname: "Programming with Mosh",
       ytlink: "https://www.youtube.com/watch?v=TlB_eWDSMt4", // Node.js Crash Course
-      gfgLink: "https://www.geeksforgeeks.org/node-js/",
+      gfgLink: "https://www.geeksforgeeks.org/nodejs/",
     },
     {
       imgurl: swift,
@@ -153,7 +153,7 @@ function AllCourseCard({ searchTerm }) {
       coursename: "Rust",
       authorname: "Harkirat Singh",
       ytlink: "https://youtu.be/qP7LzZqGh30?si=-1HbbjzodHaXBGHy", // Rust Programming Tutorial
-      gfgLink: "https://www.geeksforgeeks.org/rust-programming-language/",
+      gfgLink: "https://www.geeksforgeeks.org/introduction-to-rust-programming-language/",
     },
     {
       imgurl: typescript,
@@ -167,7 +167,7 @@ function AllCourseCard({ searchTerm }) {
       coursename: "Dart",
       authorname: "Codemy",
       ytlink: "https://youtu.be/JZukfxvc7Mc?si=TAWdsi8gKgvWEKqJ", // Dart Programming Tutorial
-      gfgLink: "https://www.geeksforgeeks.org/dart-programming-language/",
+      gfgLink: "https://www.geeksforgeeks.org/dart-tutorial/",
     },
     {
       imgurl: R,
@@ -194,70 +194,77 @@ function AllCourseCard({ searchTerm }) {
       imgurl: shell,
       coursename: "Shell Scripting",
       authorname: "Edureka",
-      ytlink: "https://youtu.be/GtovwKDemnI?si=8DOJxdXDwqWoRcOu", // Shell Scripting Tutorial
+      ytlink: "https://www.geeksforgeeks.org/introduction-linux-shell-shell-scripting/", // Shell Scripting Tutorial
     },
     {
       imgurl: groovy,
       coursename: "Groovy",
       authorname: "Awaix Mirza",
       ytlink: "https://youtu.be/vDtENU-3Lwo?si=iGizt4rmeVZnpCe7", // Groovy Programming Tutorial
-      gfgLink: "https://www.geeksforgeeks.org/groovy-programming-language/",
+      gfgLink: "https://www.tutorialspoint.com/groovy/index.htm",
     },
     {
       imgurl: assembly,
       coursename: "Assembly",
       authorname: "Free Code Camp",
       ytlink: "https://youtu.be/gfmRrPjnEw4?si=GISmTpHqN25AbtPp", // Assembly Language Programming
-      gfgLink: "https://www.geeksforgeeks.org/introduction-of-8086-and-its-architecture/",
+      gfgLink: "https://www.tutorialspoint.com/assembly_programming/assembly_introduction.htm",
     },
     {
       imgurl: elixir,
       coursename: "Elixir",
       authorname: "Celeb Curry",
       ytlink: "https://youtu.be/-lgtb-YSUWE?si=cx9lYEfhp-ouTGEh", // Elixir Programming Crash Course
-      gfgLink: "https://www.geeksforgeeks.org/elixir-programming-language/",
+      gfgLink: "https://elixir-lang.org/",
     },
     {
       imgurl: fsharp,
       coursename: "F#",
       authorname: "Exercism",
       ytlink: "https://youtu.be/AOF9njfbfnY?si=289yof6eRm1gWAGw", // F# Programming Tutorial
-      gfgLink: "https://www.geeksforgeeks.org/f-programming-language/",
+      gfgLink: "https://fsharp.org/",
     },
     {
       imgurl: haskell,
       coursename: "Haskell",
       authorname: "Derek Banas",
       ytlink: "https://youtu.be/02_H3LjqMr8?si=f9J-CAUxJ-ERPZq-", // Haskell Crash Course
-      gfgLink: "https://www.geeksforgeeks.org/haskell-programming-language/",
+      gfgLink: "haskell.org",
     },
     {
       imgurl: lua,
       coursename: "Lua",
       authorname: "Steve Teacher",
       ytlink: "https://youtu.be/1srFmjt1Ib0?si=f5Ft8ftiucKiPQc2", // Lua Programming Tutorial
-      gfgLink: "https://www.geeksforgeeks.org/lua-programming-language/",
+      gfgLink: "https://lua.org",
     },
     {
       imgurl: objc,
       coursename: "Objective-C",
       authorname: "Alex Paul",
       ytlink: "https://youtu.be/2CPt99dnroQ?si=5gcqjPeW2YCo8Ahs", // Objective-C Crash Course
-      gfgLink: "https://www.geeksforgeeks.org/objective-c-programming-language/",
+      gfgLink: "https://objc.io",
     },
     {
       imgurl: perl,
       coursename: "Perl",
       authorname: "Derek Banas",
       ytlink: "https://youtu.be/WEghIXs8F6c?si=IAUKdRzQCXlhjB3W", // Perl Programming Tutorial
-      gfgLink: "https://www.geeksforgeeks.org/perl-programming-language/",
+      gfgLink: "https://perl.org",
     },
     {
       imgurl: prolog,
       coursename: "Prolog",
       authorname: "Derek Banas",
       ytlink: "https://youtu.be/SykxWpFwMGs?si=31iPLIB7BAGlehDm", // Prolog Programming Tutorial
-      gfgLink: "https://www.geeksforgeeks.org/prolog-programming-language/",
+      gfgLink: "https://swi-prplog.org",
+    },
+    {
+      imgurl: clojure,
+      coursename: "Clojure",
+      authorname: "Derek Banas",
+      ytlink: "https://youtu.be/ciGyHkDuPAE?si=Gr_vcXT3Usibp6-9", // Prolog Programming Tutorial
+      gfgLink: "https://clojure-doc.org/articles/tutorials/introduction/",
     }
   ];  
   

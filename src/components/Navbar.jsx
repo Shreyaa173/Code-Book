@@ -3,10 +3,16 @@ import { Link } from "react-router-dom";
 
 import Logo from "../assets/logo.png";
 import ProgressBar from "./ProgressBar";
+import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { logout } from "../services/operations/authAPI";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-
+  const navigate = useNavigate();
+  const { user } = useSelector((state) => state.profile);
+  const dispatch = useDispatch();
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
@@ -29,7 +35,7 @@ function Navbar() {
             <a href="/">Home</a>
           </li>
           <li className="nav-item">
-            <a href="#explore">Courses</a>
+            <a href="#courses">Courses</a>
           </li>
           <li className="nav-item">
             <a href="#testimonials">Testimonials</a>
@@ -39,7 +45,8 @@ function Navbar() {
           </li>
         </ul>
         <div className="nav-button">
-        <button className="btn">
+          {
+            !user? (<><button className="btn">
     <a href="/signup">
       Sign-up <i className="fa-solid fa-arrow-right"></i>
     </a>
@@ -48,7 +55,12 @@ function Navbar() {
     <a href="/login">
       Log-in <i className="fa-solid fa-arrow-right"></i>
     </a>
-  </button>
+  </button></>) : <button className="btn" onClick={() => dispatch(logout(navigate))}>
+              <div>
+                LogOut <i className="fa-solid fa-arrow-right"></i>
+              </div>
+            </button>
+        }
         </div>
       </div>
     </nav >
