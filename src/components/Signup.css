@@ -131,6 +131,27 @@
   font-weight: 400;
 }
 
+.google-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; /* Adjust as necessary */
+}
+
+.google-button {
+  background-color: #4285F4; /* Google blue */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.google-button:hover {
+  background-color: #357AE8; /* Darker blue on hover */
+}
+
 /* Animations */
 @keyframes fadeIn {
   from {
