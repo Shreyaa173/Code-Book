@@ -43,6 +43,9 @@ function Navbar() {
           <li className="nav-item">
             <a href="#contact">Contact</a>
           </li>
+          <li className="nav-item">
+            <a href="#faq">FAQ</a>
+          </li>
         </ul>
         <div className="nav-button">
           {

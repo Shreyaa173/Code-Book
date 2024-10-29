@@ -1,0 +1,91 @@
+
+
+.help-center-container {
+    padding: 2.5rem 1rem;
+    background-color: #0a0b1e; /* Dark background */
+    color: #e2e8f0; /* Light text color */
+  }
+  
+  .help-center-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+  
+  .help-center-header h1 {
+    font-size: 60px;
+    font-weight: bold;
+    background: white; /* Green to blue gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .help-center-header p {
+    margin-top: 3rem;
+    font-size: 1.125rem;
+    color: #cbd5e1;
+  }
+  
+  .help-center-search {
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.25rem;
+    width: 100%;
+    max-width: 500px;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    border: 2px solid #3b82f6; /* Blue border */
+    background-color: #1e293b; /* Darker input background */
+    color: #e2e8f0;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  
+  .help-center-search::placeholder {
+    color: #94a3b8; /* Light gray placeholder */
+  }
+  
+  .help-center-search:focus {
+    border-color: #4ade80; /* Green focus border */
+  }
+  
+  .help-center-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    padding-top: 2rem;
+  }
+  
+  .help-topic {
+    background-color: #1e293b; /* Dark card background */
+    border: 2px solid #3b82f6; /* Blue border */
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    width: 100%;
+    max-width: 300px;
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s;
+    color: #e2e8f0;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .help-topic:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(59, 130, 246, 0.3); /* Blue shadow */
+  }
+  
+  .help-icon {
+    font-size: 2rem;
+  }
+  
+  .help-topic h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+  }
+  
+  .help-topic p {
+    font-size: 0.9375rem;
+    color: #cbd5e1; /* Light gray text */
+  }
+  
