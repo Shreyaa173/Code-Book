@@ -5,22 +5,23 @@ import AllCourses from "./components/AllCourses";
 import Home from "./components/Home";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
-import PrivacyPolicy from "./components/PrivacyPolicy"; 
+import PrivacyPolicy from "./components/PrivacyPolicy";
 import TermsOfUse from "./components/TermsOfUse";
 import Error from "./components/Error";
-import Faqs from "./components/Faqs.jsx"
-
+import Faqs from "./components/Faqs.jsx";
+import Resetpassword from "./components/Resetpassword.jsx";
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/login' element={<Login />} />
-        <Route path='/signup' element={<Signup />} />
-        <Route path='/privacy-policy' element={<PrivacyPolicy />} /> 
-        <Route path='/terms-of-use' element={<TermsOfUse />} />
-        <Route path='/courses' element={<AllCourses />} />
-        <Route path='/faqs' element={<Faqs />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/resetpassword" element={<Resetpassword />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms-of-use" element={<TermsOfUse />} />
+        <Route path="/courses" element={<AllCourses />} />
+        <Route path="/faqs" element={<Faqs />} />
         <Route path="*" element={<Error />} />
       </Routes>
     </Router>
