@@ -114,5 +114,35 @@ router.post("/login", async (req, res) => {
     }
 });
 
+router.delete("/deleteProfile", async (req, res) => {
+    try {
+        const { email } = req.body;
+        const user = await User.findOne({ email: email });
+        if (!user) {
+            return res.status(404).json({
+                success: false,
+                message: "User not found",
+            });
+        }
+        const { _id } = user;
+        console.log(_id)
+
+        // Now Delete User
+        await User.findByIdAndDelete({ _id: _id });
+        res.status(200).json({
+            success: true,
+            message: "User deleted successfully",
+        });
+
+        //
+    } catch (error) {
+        console.log(error.message);
+        res.status(500).json({
+            success: false,
+            message: "User Cannot be deleted successfully",
+        });
+    }
+})
+
 // Export the router to use it in the main server file
 module.exports = router;
