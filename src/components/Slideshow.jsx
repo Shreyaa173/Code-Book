@@ -63,43 +63,46 @@ function Slideshow() {
   };
 
   return (
-    <div className="slideshow-container">
-      <div className="testimonials">
-        <h1 className="why">Why Choose Us??</h1>
-        <div className="wrapper">
-          <div className="dots-container">
-            {testimonials.map((_, index) => (
-              <span
-                key={index}
-                className={`dot ${currentIndex === index ? "active" : ""}`}
-                onClick={() => handleDotClick(index)}
-              ></span>
-            ))}
-          </div>
-          <ul ref={carouselref} className="carousels">
-            {testimonials.map((testimonial, index) => (
-              <TestimonialCard
-                key={index}
-                description={testimonial.description}
-                name={testimonial.name}
-                imgurl={testimonial.imgurl}
-                role={testimonial.role}
-                location={testimonial.location}
-              />
-            ))}
-          </ul>
-          <div>
-            <button ref={btnPrev} className="slider">
-              <i className="fa-solid fa-angle-left"></i>
-            </button>
-            <button ref={btnNext} className="slider">
-              <i className="fa-solid fa-angle-right"></i>
-            </button>
-            <div id="contact"></div>
+    <>
+      <div id="testimonials"></div>
+      <div className="slideshow-container">
+        <div className="testimonials">
+          <h1 className="why">Why Choose Us??</h1>
+          <div className="wrapper">
+            <div className="dots-container">
+              {testimonials.map((_, index) => (
+                <span
+                  key={index}
+                  className={`dot ${currentIndex === index ? "active" : ""}`}
+                  onClick={() => handleDotClick(index)}
+                ></span>
+              ))}
+            </div>
+            <ul ref={carouselref} className="carousels">
+              {testimonials.map((testimonial, index) => (
+                <TestimonialCard
+                  key={index}
+                  description={testimonial.description}
+                  name={testimonial.name}
+                  imgurl={testimonial.imgurl}
+                  role={testimonial.role}
+                  location={testimonial.location}
+                />
+              ))}
+            </ul>
+            <div>
+              <button ref={btnPrev} className="slider">
+                <i className="fa-solid fa-angle-left"></i>
+              </button>
+              <button ref={btnNext} className="slider">
+                <i className="fa-solid fa-angle-right"></i>
+              </button>
+              <div id="contact"></div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

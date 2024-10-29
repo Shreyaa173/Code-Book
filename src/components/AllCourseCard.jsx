@@ -41,7 +41,6 @@ function AllCourseCard({ searchTerm }) {
           </a>
         )}
       </div>
-      <div id="testimonials"></div>
     </div>
   );
 }

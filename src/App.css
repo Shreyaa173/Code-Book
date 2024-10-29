@@ -354,7 +354,6 @@ nav {
   border: none;
   background-color: transparent;
   cursor: pointer;
-  /* background-color: #00cccc; */
   height: 3.5rem;
   position: absolute;
   right: 26%;
@@ -677,7 +676,7 @@ nav {
 
 .contact-us {
   height: auto;
-  margin-top: 5vw;
+  margin: 5vw 0;
   width: 100%;
   display: flex;
 }
