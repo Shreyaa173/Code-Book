@@ -951,28 +951,6 @@ h1 {
   object-fit: cover;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .testimonals .why {
-    font-size: 3rem;
-  }
-
-  .carousels .card {
-    min-width: 250px;
-  }
-
-  .user img {
-    width: 80px;
-    height: 80px;
-  }
-
-  .slider {
-    height: 40px;
-    width: 40px;
-    font-size: 1.25rem;
-  }
-}
-
 @media (max-width: 660px) {
   .home-text {
     flex-direction: column;
@@ -993,9 +971,13 @@ h1 {
     margin-right: 20px;
   }
 
-  /* .nav-text, .nav-button {
-    display: none;
-  } */
+  .nav-up {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row !important;
+  }
 
   .nav-icon p {
     font-size: 2rem;
@@ -1049,9 +1031,16 @@ h1 {
     width: 80vw;
   }
 
+  .right-image {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+  }
+
   .home-image {
+    width: 80%;
     margin: 0px;
-    width: -webkit-fill-available;
+    /* width: -webkit-fill-available; */
     padding: 20px;
   }
 
@@ -1161,22 +1150,64 @@ h1 {
   }
 }
 
-@media (max-width: 768px) {
+@media (min-width: 601px) and (max-width: 840px) {
+  nav {
+    padding: 20px 0;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-up {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-icon p {
+    font-size: 2rem;
+  }
   .nav-item {
-    font-size: 1.2rem !important;
-    margin-left: 5px;
+    font-size: 1.1rem;
+    margin-left: 4px;
   }
-  .nav-button .btn {
-    height: 2rem;
-    width: 6rem;
-    font-size: 1rem;
+
+  .nav-content {
+    margin-top: 1rem;
   }
+
   .nav-list {
-    gap: 10;
+    margin-right: 5%;
+    gap: 14px;
+  }
+
+  .nav-button .btn {
+    margin-right: 2vw;
+    width: 7.2rem;
+    height: 2.4rem;
+  }
+
+  #introduction {
+    margin-top: 12rem;
+    padding-bottom: 1rem;
+  }
+
+  .right-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .home-image {
+    width: 80%;
+    display: flex;
+    margin-left: 10%;
+  }
+
+  .courses {
   }
 }
 
-@media (min-width: 661px) and (max-width: 1200px) {
+@media (min-width: 841px) and (max-width: 1200px) {
   nav {
     padding: 20px 0;
     height: auto;
@@ -1194,27 +1225,35 @@ h1 {
   }
 
   .nav-item {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+  }
+
+  .nav-content {
+    margin-top: 1rem;
+  }
+
+  .nav-list {
+    margin-right: 5%;
+  }
+
+  #introduction {
+    height: fit-content;
+    padding-bottom: 1rem;
   }
 
   .home-text {
-    flex-direction: row;
-    justify-content: space-between;
-    width: 90%;
     margin-top: 200px;
-    padding: 20px 0;
   }
 
-  .mid-text {
-    width: 60vw;
-    /* Adjusted for better readability */
+  .right-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .home-image {
-    width: 100%;
-    /* Scaled for medium-sized screens */
-    margin: 10px auto;
-    padding: 20px 0;
+    width: 80%;
+    margin-left: 10%;
   }
 
   .search-icon {
@@ -1352,7 +1391,8 @@ h1 {
 
 @media (min-width: 1201px) and (max-width: 1700px) {
   .home-image {
-    margin-left: 100px;
+    margin-left: 20%;
+    margin-top: 15%;
   }
 
   .explore-btn {
@@ -1365,24 +1405,11 @@ h1 {
   }
 
   .courses {
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
   }
 
-  .course-box {
-    margin-bottom: 0;
-  }
-  .course-page a {
-    width: 20rem;
-    height: 25rem;
-  }
-
-  .contact-us {
-    margin-bottom: 20px;
-    width: 100%;
-    height: auto;
+  .search-icon h2 {
+    font-size: 5rem;
+    flex: 70%;
   }
 }
