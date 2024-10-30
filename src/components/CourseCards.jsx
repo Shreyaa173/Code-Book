@@ -153,26 +153,9 @@ function CourseCards({ searchTerm }) {
 								Notes={course.Notes}
 								ytlink={course.ytlink}
 								gfgLink={course.gfgLink}
-								pdfLink={`https://www.google.com/search?q=${course.coursename}+site:drive.google.com`}
-								style={{
-									transition: "box-shadow 0.5s ease-in-out",
-									backgroundColor: "#2B2043",
-									boxShadow: "0px 0px 8px rgba(43, 32, 67, 0.3)",
-									":hover": {
-										boxShadow: "0px 4px 15px rgba(43, 32, 67, 0.6)",
-									},
-								}}
 							/>
 						))}
-						<div
-							className="arrow-container"
-							style={{
-								transition: "box-shadow 0.3s ease-in-out",
-								boxShadow: "0px 0px 5px rgba(43, 32, 67, 0.2)",
-								":hover": {
-									boxShadow: "0px 4px 10px rgba(43, 32, 67, 0.5)",
-								},
-							}}>
+						<div className="arrow-container">
 							<a href="/courses">
 								<img
 									src={arrow}
@@ -185,25 +168,11 @@ function CourseCards({ searchTerm }) {
 				) : (
 					<a
 						href="https://img.freepik.com/free-vector/hand-drawn-no-data-illustration_23-2150544961.jpg?w=1060&t=st=1729348558~exp=1729349158~hmac=e9edf6c5c2ad2259ebe6a41759c11690e61df13c3a0831cc00367ececf6b89a5"
-						className="course-box"
-						style={{
-							transition: "box-shadow 0.5s ease-in-out",
-							boxShadow: "0px 0px 8px rgba(43, 32, 67, 0.2)",
-							":hover": {
-								boxShadow: "0px 4px 15px rgba(43, 32, 67, 0.4)",
-							},
-						}}>
+						className="course-box">
 						<div className="course-image">
 							<img
 								src="https://img.freepik.com/free-vector/hand-drawn-no-data-illustration_23-2150544961.jpg?w=1060&t=st=1729348558~exp=1729349158~hmac=e9edf6c5c2ad2259ebe6a41759c11690e61df13c3a0831cc00367ececf6b89a5"
 								alt="No course found"
-								style={{
-									transition: "box-shadow 0.5s ease-in-out",
-									boxShadow: "0px 0px 10px rgba(43, 32, 67, 0.3)",
-									":hover": {
-										boxShadow: "0px 4px 20px rgba(43, 32, 67, 0.6)",
-									},
-								}}
 							/>
 						</div>
 						<div className="course-text">
