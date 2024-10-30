@@ -4,7 +4,9 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const User = require("../models/User");
 require("dotenv").config();
+const Profile = require("../models/Profile");
 const nodemailer = require("nodemailer");
+
 
 // Validation middleware
 const validateAuthFields = (req, res, next) => {
@@ -67,15 +69,22 @@ router.post("/signup", validateAuthFields, validateEmail, async (req, res) => {
       });
     }
 
-    const hashedPassword = await bcrypt.hash(password, 10);
-    const user = await User.create({
-      name,
-      email,
-      password: hashedPassword,
-      image: `https://api.dicebear.com/5.x/initials/svg?seed=${encodeURIComponent(
-        name
-      )}`,
-    });
+        const profileDetails = await Profile.create({
+            gender: null,
+            dateOfBirth: null,
+            about: null,
+            contactNumber: null,
+        });
+
+        const hashedPassword = await bcrypt.hash(password, 10);
+        const user = await User.create({
+            name,
+            email,
+            password: hashedPassword,
+            image: `https://api.dicebear.com/5.x/initials/svg?seed=${encodeURIComponent(name)}`,
+            additionalDetails: profileDetails._id,
+        });
+
 
     res.status(201).json({
       success: true,
@@ -238,6 +247,56 @@ router.delete("/deleteProfile", async (req, res) => {
         res.status(500).json({
             success: false,
             message: "User Cannot be deleted successfully",
+        });
+    }
+})
+
+router.put("/update-profile", async (req, res) => {
+    try {
+        const { name = "", email, gender = "", dateOfBirth = "", about = "", contactNumber ="" } = req.body;
+    
+        const userDetails = await User.findOne({ email: email });
+        const profile = await Profile.findById(userDetails.additionalDetails);
+        
+        // updation  in user profile
+        if (name !== userDetails.name && name !== "") {
+			const user = await User.findOneAndUpdate( {email: email}, {
+				name: name
+			});
+			await user.save();
+        }
+        
+        // Update the profile fields
+		if (dateOfBirth !== "") {
+			profile.dateOfBirth = dateOfBirth;
+		}
+		if (about !== "") {
+			profile.about = about;
+		}
+		if (contactNumber !== "") {
+			profile.contactNumber = contactNumber;
+		}
+		if (gender !== "") {
+			profile.gender = gender;
+        }
+        
+        // Save the updated profile
+		await profile.save();
+
+		// Find the updated user details
+		const updatedUserDetails = await User.findOne({email: email}).populate("additionalDetails").exec();
+
+		return res.json({
+			success: true,
+			message: "Profile updated successfully",
+			updatedUserDetails,
+		});
+        // 
+    } catch (error) {
+        console.log(error.message);
+        return res.status(500).json({
+            success: false,
+            error: error.message,
         });
     }
 })

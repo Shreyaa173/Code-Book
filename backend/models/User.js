@@ -31,6 +31,11 @@ const userSchema = new mongoose.Schema(
 			type: String,
 			required: true,
 		},
+		additionalDetails: {
+			type: mongoose.Schema.Types.ObjectId,
+			required: true,
+			ref: "Profile",
+		},
 		// Add timestamps for when the document is created and last modified
 	},
 	{ timestamps: true }
