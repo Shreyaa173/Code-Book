@@ -6,7 +6,7 @@ const User = require("../models/User");
 require("dotenv").config();
 const Profile = require("../models/Profile");
 const nodemailer = require("nodemailer");
-
+const rateLimit = require("express-rate-limit");
 
 // Validation middleware
 const validateAuthFields = (req, res, next) => {
@@ -35,7 +35,7 @@ const validateEmail = (req, res, next) => {
 
 // JWT token generation utility
 const generateToken = (user) => {
-  return jwt.sign({ email: user.email, id: user._id }, process.env.JWT_SECRET, {
+  return jwt.sign({ email: user.email, id: user._id }, "Aysuh", {
     expiresIn: "24h",
   });
 };
@@ -69,22 +69,23 @@ router.post("/signup", validateAuthFields, validateEmail, async (req, res) => {
       });
     }
 
-        const profileDetails = await Profile.create({
-            gender: null,
-            dateOfBirth: null,
-            about: null,
-            contactNumber: null,
-        });
+    const profileDetails = await Profile.create({
+      gender: null,
+      dateOfBirth: null,
+      about: null,
+      contactNumber: null,
+    });
 
-        const hashedPassword = await bcrypt.hash(password, 10);
-        const user = await User.create({
-            name,
-            email,
-            password: hashedPassword,
-            image: `https://api.dicebear.com/5.x/initials/svg?seed=${encodeURIComponent(name)}`,
-            additionalDetails: profileDetails._id,
-        });
-
+    const hashedPassword = await bcrypt.hash(password, 10);
+    const user = await User.create({
+      name,
+      email,
+      password: hashedPassword,
+      image: `https://api.dicebear.com/5.x/initials/svg?seed=${encodeURIComponent(
+        name
+      )}`,
+      additionalDetails: profileDetails._id,
+    });
 
     res.status(201).json({
       success: true,
@@ -96,8 +97,20 @@ router.post("/signup", validateAuthFields, validateEmail, async (req, res) => {
   }
 });
 
+// Rate limiter middleware for login
+const loginLimiter = rateLimit({
+  windowMs: 5 * 60 * 1000, // 5 minutes
+  max: 5, // Limit each IP to 5 login requests per windowMs
+  message: {
+    success: false,
+    message:
+      "Too many login attempts from this IP, please try again after 5 minutes.",
+  },
+  standardHeaders: true,
+  legacyHeaders: false,
+});
 // Route for user login
-router.post("/login", validateAuthFields, async (req, res) => {
+router.post("/login", loginLimiter, validateAuthFields, async (req, res) => {
   try {
     const { email, password } = req.body;
     const user = await User.findOne({ email }).select("+password");
@@ -219,89 +232,97 @@ router.post("/resetpassword", async (req, resp) => {
   }
 });
 
-
-
 router.delete("/deleteProfile", async (req, res) => {
-    try {
-        const { email } = req.body;
-        const user = await User.findOne({ email: email });
-        if (!user) {
-            return res.status(404).json({
-                success: false,
-                message: "User not found",
-            });
-        }
-        const { _id } = user;
-        console.log(_id)
-
-        // Now Delete User
-        await User.findByIdAndDelete({ _id: _id });
-        res.status(200).json({
-            success: true,
-            message: "User deleted successfully",
-        });
-
-        //
-    } catch (error) {
-        console.log(error.message);
-        res.status(500).json({
-            success: false,
-            message: "User Cannot be deleted successfully",
-        });
+  try {
+    const { email } = req.body;
+    const user = await User.findOne({ email: email });
+    if (!user) {
+      return res.status(404).json({
+        success: false,
+        message: "User not found",
+      });
     }
-})
+    const { _id } = user;
+    console.log(_id);
+
+    // Now Delete User
+    await User.findByIdAndDelete({ _id: _id });
+    res.status(200).json({
+      success: true,
+      message: "User deleted successfully",
+    });
+
+    //
+  } catch (error) {
+    console.log(error.message);
+    res.status(500).json({
+      success: false,
+      message: "User Cannot be deleted successfully",
+    });
+  }
+});
 
 router.put("/update-profile", async (req, res) => {
-    try {
-        const { name = "", email, gender = "", dateOfBirth = "", about = "", contactNumber ="" } = req.body;
-    
-        const userDetails = await User.findOne({ email: email });
-        const profile = await Profile.findById(userDetails.additionalDetails);
-        
-        // updation  in user profile
-        if (name !== userDetails.name && name !== "") {
-			const user = await User.findOneAndUpdate( {email: email}, {
-				name: name
-			});
-			await user.save();
-        }
-        
-        // Update the profile fields
-		if (dateOfBirth !== "") {
-			profile.dateOfBirth = dateOfBirth;
-		}
-		if (about !== "") {
-			profile.about = about;
-		}
-		if (contactNumber !== "") {
-			profile.contactNumber = contactNumber;
-		}
-		if (gender !== "") {
-			profile.gender = gender;
-        }
-        
-        // Save the updated profile
-		await profile.save();
+  try {
+    const {
+      name = "",
+      email,
+      gender = "",
+      dateOfBirth = "",
+      about = "",
+      contactNumber = "",
+    } = req.body;
 
-		// Find the updated user details
-		const updatedUserDetails = await User.findOne({email: email}).populate("additionalDetails").exec();
+    const userDetails = await User.findOne({ email: email });
+    const profile = await Profile.findById(userDetails.additionalDetails);
 
-		return res.json({
-			success: true,
-			message: "Profile updated successfully",
-			updatedUserDetails,
-		});
-        // 
-    } catch (error) {
-        console.log(error.message);
-        return res.status(500).json({
-            success: false,
-            error: error.message,
-        });
+    // updation  in user profile
+    if (name !== userDetails.name && name !== "") {
+      const user = await User.findOneAndUpdate(
+        { email: email },
+        {
+          name: name,
+        }
+      );
+      await user.save();
     }
-})
+
+    // Update the profile fields
+    if (dateOfBirth !== "") {
+      profile.dateOfBirth = dateOfBirth;
+    }
+    if (about !== "") {
+      profile.about = about;
+    }
+    if (contactNumber !== "") {
+      profile.contactNumber = contactNumber;
+    }
+    if (gender !== "") {
+      profile.gender = gender;
+    }
+
+    // Save the updated profile
+    await profile.save();
+
+    // Find the updated user details
+    const updatedUserDetails = await User.findOne({ email: email })
+      .populate("additionalDetails")
+      .exec();
+
+    return res.json({
+      success: true,
+      message: "Profile updated successfully",
+      updatedUserDetails,
+    });
+    //
+  } catch (error) {
+    console.log(error.message);
+    return res.status(500).json({
+      success: false,
+      error: error.message,
+    });
+  }
+});
 
 // Export the router to use it in the main server file
 module.exports = router;
-
-
