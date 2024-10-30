@@ -1,6 +1,7 @@
 /** @format */
 
 import React from "react";
+import { MdPictureAsPdf } from "react-icons/md";
 
 export default function Card({
 	imgurl,
@@ -9,7 +10,9 @@ export default function Card({
 	notes,
 	ytlink,
 	gfgLink,
+	pdfLink,
 }) {
+	console.log(pdfLink);
 	return (
 		<div className="course-box">
 			<div className="course-image">
@@ -36,6 +39,21 @@ export default function Card({
 					rel="noopener noreferrer">
 					<p className="lessons">
 						<i className="fa-brands fa-leanpub"></i> {notes} Notes
+					</p>
+				</a>
+				<a
+					href={pdfLink}
+					target="_blank"
+					rel="noopener noreferrer">
+					<p
+						className="lessons"
+						style={{
+							display: "flex",
+							justifyContent: "flex-start",
+							alignItems: "center",
+							gap: "15px",
+						}}>
+						<MdPictureAsPdf style={{ width: "15px", height: "15px" }} /> Pdfs
 					</p>
 				</a>
 			</div>
