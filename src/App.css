@@ -363,7 +363,7 @@ nav {
 }
 
 .course-box {
-  height:60vh;
+  height: 55vh;
   width: 21%;
   border-radius: 20px;
   border: 1px solid #ececf9;
@@ -385,7 +385,7 @@ nav {
 
 .course-image {
   width: 100%;
-  height: 60%; 
+  height: 68%; 
   overflow: hidden;
   display: grid;
   place-items: center;
@@ -433,7 +433,6 @@ nav {
 }
 
 .lessons {
-  margin-top: 10px;
   font-size: 0.95rem;
   color: #ccc;
   cursor: pointer;
