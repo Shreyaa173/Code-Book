@@ -153,6 +153,7 @@ function CourseCards({ searchTerm }) {
 								Notes={course.Notes}
 								ytlink={course.ytlink}
 								gfgLink={course.gfgLink}
+								pdfLink={`https://www.google.com/search?q=${course.coursename}+site:drive.google.com`}
 								style={{
 									transition: "box-shadow 0.5s ease-in-out",
 									backgroundColor: "#2B2043",
