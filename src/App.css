@@ -1191,6 +1191,16 @@ h1 {
     padding-bottom: 1rem;
   }
 
+  .search-icon {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .search-icon h2 {
+    padding: 1rem;
+    font-size: 4rem;
+  }
+
   .right-image {
     display: flex;
     justify-content: center;
@@ -1204,6 +1214,7 @@ h1 {
   }
 
   .courses {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -1281,23 +1292,11 @@ h1 {
   }
 
   .courses {
-    grid-template-columns: repeat(3, 2fr);
-    padding: 20px;
-    width: 100%;
-    gap: 20px;
-    margin: 0px;
-  }
-
-  .course-box {
-    width: auto;
-    height: 20rem;
-    margin-bottom: 0;
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .course-page {
-    padding: 10px;
-    margin-top: 0px;
-    width: 90vw;
+    display: flex;
   }
 
   .wrapper .carousels {
