@@ -2,20 +2,19 @@
 <html lang="en">
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=DM+Serif+Display:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=DM+Serif+Display:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- ... existing head content ... -->
     <style>
+        /* Loader styling */
         #loader-wrapper {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            /* background-color: #100d0d; */
-            background-image:url(src/assets/bk.jpg) ;
+            background-image: url(src/assets/bk.jpg);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -33,36 +32,114 @@
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
+
+        /* Toggle Button Styling */
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            background-color: #250141;
+            color: white;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .theme-toggle:hover {
+            background-color: #4b145e;
+        }
+
+        /* Tooltip styling */
+        .theme-toggle[aria-label]:hover::after {
+            content: attr(aria-label);
+            position: absolute;
+            top: 50px;
+            right: -10px;
+            background-color: #4b145e;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            white-space: nowrap;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Light and Dark Theme Styles */
+        body.light-mode {
+            background-color: #ffffff;
+            color: #000000;
+        }
+        body.dark-mode {
+            background-color: #100d0d;
+            color: #ffffff;
+        }
     </style>
 </head>
-<body>
+<body class="light-mode">
     <div id="loader-wrapper">
         <div class="loader"></div>
     </div>
-    <div id="root"></div>
 
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle" id="themeToggleButton" aria-label="Switch to Dark Mode">🌞</button>
+    
+    <!-- Main Content -->
+    <div id="root"></div>
+    
+    <!-- Chatbot Embed -->
+    <div id="chatbotContainer"></div>
     <script>
         window.embeddedChatbotConfig = {
-        chatbotId: "rfrWIJLugIrq6XpUHDKwC",
-        domain: "www.chatbase.co"
-        }
-        </script>
-        <script
-        src="https://www.chatbase.co/embed.min.js"
-        chatbotId="rfrWIJLugIrq6XpUHDKwC"
-        domain="www.chatbase.co"
-        defer>
-        </script>
-    <script type="module" src="./src/main.jsx"></script> <!-- Use relative path -->
+            chatbotId: "rfrWIJLugIrq6XpUHDKwC",
+            domain: "www.chatbase.co"
+        };
+    </script>
+    <script src="https://www.chatbase.co/embed.min.js"></script>
 
-    <script type="module" src="./src/main.jsx"></script>
+    <!-- Theme Toggle Script -->
     <script>
+        const themeToggleButton = document.getElementById("themeToggleButton");
+
+        // Check LocalStorage for theme
+        function applyStoredTheme() {
+            const storedTheme = localStorage.getItem("theme");
+            if (storedTheme === "dark") {
+                document.body.classList.replace("light-mode", "dark-mode");
+                themeToggleButton.textContent = "🌜";
+                themeToggleButton.setAttribute("aria-label", "Switch to Light Mode");
+            }
+        }
+
+        // Toggle Theme on Button Click
+        themeToggleButton.addEventListener("click", () => {
+            if (document.body.classList.contains("light-mode")) {
+                document.body.classList.replace("light-mode", "dark-mode");
+                themeToggleButton.textContent = "🌜";
+                themeToggleButton.setAttribute("aria-label", "Switch to Light Mode");
+                localStorage.setItem("theme", "dark");
+            } else {
+                document.body.classList.replace("dark-mode", "light-mode");
+                themeToggleButton.textContent = "🌞";
+                themeToggleButton.setAttribute("aria-label", "Switch to Dark Mode");
+                localStorage.setItem("theme", "light");
+            }
+        });
+
+        // Apply stored theme on load
+        applyStoredTheme();
+
+        // Hide Loader after Page Load
         window.addEventListener('load', function() {
             setTimeout(function() {
                 document.getElementById('loader-wrapper').style.display = 'none';
-            }, 1000); // Hide loader after 1 second (adjust as needed)
+            }, 1000);
         });
     </script>
-
 </body>
 </html>
