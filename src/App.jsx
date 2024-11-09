@@ -10,6 +10,7 @@ import TermsOfUse from "./components/TermsOfUse";
 import Error from "./components/Error";
 import Faqs from "./components/Faqs.jsx";
 import Resetpassword from "./components/Resetpassword.jsx";
+import Community from "./components/Community.jsx";
 function App() {
   return (
     <Router>
@@ -22,6 +23,7 @@ function App() {
         <Route path="/terms-of-use" element={<TermsOfUse />} />
         <Route path="/courses" element={<AllCourses />} />
         <Route path="/faqs" element={<Faqs />} />
+        <Route path='/community' element={<Community />} />
         <Route path="*" element={<Error />} />
       </Routes>
     </Router>
